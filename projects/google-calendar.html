@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; }
+        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
         .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .case-study-section { margin: 2rem 0; }
+        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
+        .case-study-section { margin: 2rem 0; line-height: 1.8; }
         .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; }
-        .cta-link:hover { background: #50948e; }
+        .case-study-section ul { margin-left: 2rem; }
+        .case-study-section li { margin-bottom: 0.8rem; }
+        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
+        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
+        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -30,28 +37,78 @@
         <a href="/" class="back-link">← Back to Home</a>
         
         <h1>Google Calendar: Product Thinking</h1>
-        <p class="subtitle">Performance Metrics | Problem Prioritization | Product Thinking | Solution Prioritization | Wireframes</p>
+        <p class="subtitle">A comprehensive product thinking exercise exploring performance metrics, problem prioritization, and solution design.</p>
+
+        <div class="tags">
+            <span class="tag">Product Thinking</span>
+            <span class="tag">Wireframes</span>
+            <span class="tag">Performance Metrics</span>
+            <span class="tag">Problem Prioritization</span>
+            <span class="tag">Solution Design</span>
+        </div>
 
         <div class="case-study-section">
-            <h2>Overview</h2>
-            <p>This case study explores comprehensive product thinking for Google Calendar, focusing on understanding performance metrics, prioritizing problems, and designing user-centric solutions through wireframes and strategic product decisions.</p>
+            <h2>Project Overview</h2>
+            <p>This case study showcases a deep dive into Google Calendar's product strategy, examining how to enhance user experience through data-driven decision making and user-centric design thinking.</p>
+            
+            <div class="highlight">
+                <strong>Objective:</strong> Analyze Google Calendar's product landscape and propose strategic improvements through comprehensive product thinking frameworks.
+            </div>
         </div>
 
         <div class="case-study-section">
             <h2>Key Focus Areas</h2>
             <ul>
-                <li><strong>Performance Metrics:</strong> Analyzing key KPIs and user engagement metrics</li>
-                <li><strong>Problem Prioritization:</strong> Identifying and ranking user pain points</li>
-                <li><strong>Product Thinking:</strong> Strategic approach to product development</li>
-                <li><strong>Solution Prioritization:</strong> Evaluating solution impact and feasibility</li>
-                <li><strong>Wireframes:</strong> Visual design and user flow documentation</li>
+                <li><strong>Performance Metrics:</strong> Understanding key KPIs including user engagement, scheduling frequency, and feature adoption rates</li>
+                <li><strong>Problem Prioritization:</strong> Identifying and ranking user pain points such as scheduling conflicts, notification management, and multi-calendar coordination</li>
+                <li><strong>Product Thinking:</strong> Developing a strategic framework for product improvements</li>
+                <li><strong>Solution Prioritization:</strong> Evaluating solution impact, technical feasibility, and user value</li>
+                <li><strong>Wireframes:</strong> Creating visual mockups for proposed features and UI improvements</li>
             </ul>
         </div>
 
         <div class="case-study-section">
-            <h2>Explore Full Case Study</h2>
-            <p>Access the detailed presentation with in-depth analysis, wireframes, and recommendations:</p>
-            <a href="https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing" target="_blank" class="cta-link">View Full Case Study →</a>
+            <h2>Methodology</h2>
+            <p>The analysis employed a structured product thinking approach:</p>
+            <ul>
+                <li>Competitive analysis of calendar applications</li>
+                <li>User research and pain point identification</li>
+                <li>Metrics analysis and KPI tracking</li>
+                <li>Solution ideation and prioritization</li>
+                <li>Wireframe design and user flow documentation</li>
+            </ul>
+        </div>
+
+        <div class="case-study-section">
+            <h2>Key Insights</h2>
+            <div class="highlight">
+                <ul>
+                    <li>Users struggle with managing multiple calendar sources efficiently</li>
+                    <li>Notification fatigue is a key pain point affecting user satisfaction</li>
+                    <li>Integration with other Google Workspace tools drives adoption</li>
+                    <li>Mobile scheduling experience needs optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study-section">
+            <h2>Proposed Solutions</h2>
+            <ul>
+                <li>Enhanced multi-calendar management interface</li>
+                <li>Intelligent notification system with user preference controls</li>
+                <li>Improved mobile scheduling interface with quick-add features</li>
+                <li>Smart conflict detection and resolution suggestions</li>
+            </ul>
+        </div>
+
+        <div class="case-study-section">
+            <h2>View Full Presentation</h2>
+            <p>Explore the complete case study with detailed wireframes, analysis, and recommendations:</p>
+            <a href="https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing" target="_blank" class="cta-link">📊 View Full Case Study Presentation →</a>
+            
+            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
+                <em>Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations.</em>
+            </p>
         </div>
     </section>
 
