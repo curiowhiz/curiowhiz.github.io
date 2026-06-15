@@ -301,39 +301,69 @@ async function loadExperience() {
 function setupNavigation() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const navbar = document.querySelector('.navbar');
+    const body = document.body;
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            const isExpanded = navLinks.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            });
-        });
+    if (!hamburger || !navLinks) {
+        console.warn('⚠️ Navigation elements missing');
+        return;
     }
 
+    const closeMenu = () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        body.classList.remove('nav-open');
+    };
+
+    const openMenu = () => {
+        hamburger.classList.add('active');
+        navLinks.classList.add('active');
+        if (navBackdrop) navBackdrop.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        body.classList.add('nav-open');
+    };
+
+    hamburger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (hamburger.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close on backdrop click
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMenu);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
     // Sticky nav shadow on scroll
-    const navbar = document.querySelector('.navbar');
     if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        const handleScroll = () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 8);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
     }
 
     console.log('✅ Navigation initialized');
 }
-
 
 // ============================================================
 // FALLBACK if JS/JSON fails
