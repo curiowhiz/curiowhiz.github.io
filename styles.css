@@ -1182,7 +1182,7 @@ section {
 }
 
 /* ============================================================
-   13. CONTACT SECTION (v3 — Action-driven)
+   13. CONTACT SECTION
    ============================================================ */
 .contact {
     background: var(--bg-primary);
@@ -1194,93 +1194,22 @@ section {
     margin: 0 auto var(--space-2xl);
 }
 
-/* Two large action buttons side-by-side */
-.contact-actions-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-lg);
-    max-width: 720px;
-    margin: 0 auto var(--space-2xl);
-}
-
-@media (max-width: 640px) {
-    .contact-actions-grid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-    }
-}
-
-.contact-action-btn {
+.contact-buttons {
     display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-    padding: var(--space-lg) var(--space-xl);
-    background: var(--bg-card);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--text-primary);
-    text-align: left;
-    transition: all 0.25s ease;
-    box-shadow: var(--shadow-sm);
-}
-
-.contact-action-btn:hover {
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    color: var(--text-primary);
-}
-
-.contact-action-btn:hover .contact-action-icon {
-    background: var(--accent);
-    color: var(--bg-card);
-    transform: scale(1.05);
-}
-
-.contact-action-btn:hover .contact-action-title {
-    color: var(--accent);
-}
-
-.contact-action-icon {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-md);
-    background: var(--accent-light);
-    color: var(--accent);
-    display: flex;
-    align-items: center;
+    gap: var(--space-md);
     justify-content: center;
-    transition: all 0.25s ease;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
 }
 
-.contact-action-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
+.btn-lg {
+    padding: 16px 36px;
+    font-size: 1rem;
+    min-width: 160px;
+    justify-content: center;
 }
 
-.contact-action-title {
-    font-size: 1.0625rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    line-height: 1.2;
-    transition: color 0.25s ease;
-}
-
-.contact-action-sub {
-    font-size: 0.8125rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-}
-
-/* Subtle location line below */
 .contact-location {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
     font-size: 0.9375rem;
     color: var(--text-secondary);
     margin: 0;
@@ -1289,11 +1218,6 @@ section {
 .contact-location strong {
     color: var(--text-primary);
     font-weight: 600;
-}
-
-.contact-location-icon {
-    font-size: 1rem;
-    line-height: 1;
 }
 
 /* ============================================================
