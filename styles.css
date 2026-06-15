@@ -313,13 +313,10 @@ h3 {
     position: fixed;
     inset: 0;
     background: rgba(15, 23, 42, 0.35);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 1001;
-    /* below menu (1002), above page content */
 }
 
 body.nav-open {
@@ -1528,4 +1525,21 @@ section {
 
 .skip-nav:focus {
     top: 0;
+}
+
+/* ============================================================
+   NAV Z-INDEX HARDENING — ensures menu sits above backdrop
+   ============================================================ */
+@media (max-width: 768px) {
+    .nav-links {
+        z-index: 9999 !important;
+    }
+
+    .nav-backdrop {
+        z-index: 9998 !important;
+    }
+
+    .hamburger {
+        z-index: 10000 !important;
+    }
 }
