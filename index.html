@@ -52,12 +52,15 @@
          ============================================================ -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="#" class="logo">Rajan Gupta</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <a href="#" class="logo">Rajan Gupta<span class="logo-dot">.</span></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
@@ -66,6 +69,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
+        <!-- Backdrop for mobile menu -->
+        <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
     </nav>
 
     <main id="main">
@@ -123,31 +128,23 @@
             </div>
         </section>
 
-        <!-- ============================================================
-             ABOUT SECTION
-             ============================================================ -->
+        <!-- ... rest of your sections unchanged ... -->
+        <!-- ABOUT, CAPABILITIES, PROJECTS, TOOLS, EXPERIENCE, CONTACT sections remain exactly as you had them -->
+
         <section id="about" class="about">
             <div class="container">
                 <div class="about-grid">
-
                     <div class="about-left">
                         <span class="eyebrow">ABOUT</span>
                         <h2 id="about-headline" class="about-headline">Engineering rigor meets product judgment.</h2>
                     </div>
-
                     <div class="about-right">
-                        <div id="about-paragraphs" class="about-paragraphs">
-                            <!-- Populated by loader.js -->
-                        </div>
+                        <div id="about-paragraphs" class="about-paragraphs"></div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             CAPABILITIES SECTION
-             ============================================================ -->
         <section class="capabilities" aria-label="Capabilities">
             <div class="container">
                 <div class="section-header">
@@ -156,16 +153,10 @@
                     <p class="section-subtitle">From LLM evaluation to product strategy — the toolkit for shipping AI
                         products that actually work.</p>
                 </div>
-
-                <div id="capabilities-grid" class="capabilities-grid">
-                    <!-- Populated by loader.js -->
-                </div>
+                <div id="capabilities-grid" class="capabilities-grid"></div>
             </div>
         </section>
 
-        <!-- ============================================================
-             SELECTED WORK
-             ============================================================ -->
         <section id="projects" class="projects">
             <div class="container">
                 <div class="section-header">
@@ -174,16 +165,10 @@
                     <p class="section-subtitle">From product strategy to LLM evaluation — case studies grounded in
                         measurable outcomes.</p>
                 </div>
-
-                <div id="projects-grid" class="projects-grid">
-                    <!-- Populated by loader.js -->
-                </div>
+                <div id="projects-grid" class="projects-grid"></div>
             </div>
         </section>
 
-        <!-- ============================================================
-             TOOLS & PRODUCTS
-             ============================================================ -->
         <section id="tools" class="tools">
             <div class="container">
                 <div class="section-header">
@@ -192,16 +177,10 @@
                     <p class="section-subtitle">Open-source tools and AI workflows I've built to scale research,
                         evaluation, and prototyping.</p>
                 </div>
-
-                <div id="tools-grid" class="tools-grid">
-                    <!-- Populated by loader.js -->
-                </div>
+                <div id="tools-grid" class="tools-grid"></div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PROFESSIONAL EXPERIENCE
-             ============================================================ -->
         <section id="experience" class="experience">
             <div class="container">
                 <div class="section-header">
@@ -209,23 +188,17 @@
                     <h2 class="section-title">Professional Experience</h2>
                     <p class="section-subtitle">15+ years across banking, enterprise SaaS, and public sector.</p>
                 </div>
-
-                <div id="experience-timeline" class="experience-timeline">
-                    <!-- Populated by loader.js -->
-                </div>
+                <div id="experience-timeline" class="experience-timeline"></div>
             </div>
         </section>
 
-        <!-- ============================================================
-     CONTACT SECTION
-     ============================================================ -->
         <section id="contact" class="contact">
             <div class="container">
                 <div class="contact-inner">
                     <span class="eyebrow section-eyebrow">GET IN TOUCH</span>
                     <h2 class="contact-headline">Let's build something with rigor.</h2>
-                    <p class="contact-intro">Open to senior Product Manager and AI Product Manager roles.
-                        Always happy to discuss AI evaluation, system reliability, or product strategy.</p>
+                    <p class="contact-intro">Open to senior Product Manager and AI Product Manager roles. Always happy
+                        to discuss AI evaluation, system reliability, or product strategy.</p>
 
                     <div class="contact-links">
                         <a id="contact-email" href="mailto:rajangupta28@gmail.com" class="contact-link"
@@ -237,7 +210,6 @@
                             </svg>
                             <span>Email</span>
                         </a>
-
                         <a id="contact-linkedin" href="https://www.linkedin.com/in/rgdroll" target="_blank"
                             rel="noopener" class="contact-link" aria-label="View LinkedIn profile">
                             <svg class="contact-link-icon" width="20" height="20" viewBox="0 0 24 24"
@@ -247,7 +219,6 @@
                             </svg>
                             <span>LinkedIn</span>
                         </a>
-
                         <a href="https://github.com/curiowhiz" target="_blank" rel="noopener" class="contact-link"
                             aria-label="View GitHub profile">
                             <svg class="contact-link-icon" width="20" height="20" viewBox="0 0 24 24"
@@ -265,13 +236,9 @@
                             <span>Open to new opportunities</span>
                         </div>
                         <div class="contact-meta-divider"></div>
-                        <div class="contact-meta-item" id="contact-location">
-                            Toronto, Ontario · Canada
-                        </div>
+                        <div class="contact-meta-item" id="contact-location">Toronto, Ontario · Canada</div>
                         <div class="contact-meta-divider"></div>
-                        <div class="contact-meta-item">
-                            Responds within 24 hours
-                        </div>
+                        <div class="contact-meta-item">Responds within 24 hours</div>
                     </div>
                 </div>
             </div>
@@ -279,14 +246,64 @@
 
     </main>
 
-    <!-- ============================================================
-     FOOTER
-     ============================================================ -->
     <footer class="footer">
         <div class="container">
             <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
         </div>
     </footer>
+
+    <!-- Inline hamburger script (lightweight, no dependencies) -->
+    <script>
+        (function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const navBackdrop = document.getElementById('navBackdrop');
+            const body = document.body;
+
+            if (!hamburger || !navLinks) return;
+
+            const closeMenu = () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                navBackdrop.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                body.classList.remove('nav-open');
+            };
+
+            const openMenu = () => {
+                hamburger.classList.add('active');
+                navLinks.classList.add('active');
+                navBackdrop.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                body.classList.add('nav-open');
+            };
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.contains('active') ? closeMenu() : openMenu();
+            });
+
+            // Close on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close on backdrop click
+            navBackdrop.addEventListener('click', closeMenu);
+
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && hamburger.classList.contains('active')) closeMenu();
+            });
+
+            // Scrolled state for navbar
+            const navbar = document.querySelector('.navbar');
+            const handleScroll = () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 8);
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+        })();
+    </script>
 
     <!-- Loader Script -->
     <script src="js/loader.js"></script>
