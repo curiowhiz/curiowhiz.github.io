@@ -336,9 +336,45 @@ function setupNavigation() {
         }
     });
 
-    // Close on link click
+    // Handle nav link clicks — close menu, then smoothly scroll to section
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+
+            // Only intercept internal anchor links (e.g., #about)
+            if (href && href.startsWith('#') && href.length > 1) {
+                e.preventDefault();
+
+                const targetId = href.substring(1);
+                const target = document.getElementById(targetId);
+
+                if (!target) {
+                    console.warn('Target section not found:', targetId);
+                    closeMenu();
+                    return;
+                }
+
+                // Close menu first
+                closeMenu();
+
+                // Wait for menu close + body unlock, THEN scroll
+                setTimeout(() => {
+                    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update URL hash without causing a jump
+                    history.pushState(null, '', href);
+                }, 400);
+            } else {
+                // External link — just close the menu
+                closeMenu();
+            }
+        });
     });
 
     // Close on backdrop click
@@ -362,7 +398,7 @@ function setupNavigation() {
         handleScroll();
     }
 
-    console.log('✅ Navigation initialized');
+    console.log('✅ Navigation initialized (v2 with scroll fix)');
 }
 
 // ============================================================
