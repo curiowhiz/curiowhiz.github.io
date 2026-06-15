@@ -48,16 +48,19 @@
     <a href="#main" class="skip-nav">Skip to main content</a>
 
     <!-- ============================================================
-         NAVIGATION
+         NAVIGATION  (UPDATED — added logo dot, aria-controls, backdrop)
          ============================================================ -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="#" class="logo">Rajan Gupta</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <a href="#" class="logo">Rajan Gupta<span class="logo-dot">.</span></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
@@ -66,6 +69,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
+        <!-- Backdrop for mobile menu -->
+        <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
     </nav>
 
     <main id="main">
@@ -287,6 +292,65 @@
             <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
         </div>
     </footer>
+
+    <!-- ============================================================
+         NAVIGATION SCRIPT (NEW — handles hamburger + scroll state)
+         ============================================================ -->
+    <script>
+        (function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const navBackdrop = document.getElementById('navBackdrop');
+            const body = document.body;
+
+            if (!hamburger || !navLinks) return;
+
+            const closeMenu = () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                if (navBackdrop) navBackdrop.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                body.classList.remove('nav-open');
+            };
+
+            const openMenu = () => {
+                hamburger.classList.add('active');
+                navLinks.classList.add('active');
+                if (navBackdrop) navBackdrop.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                body.classList.add('nav-open');
+            };
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.contains('active') ? closeMenu() : openMenu();
+            });
+
+            // Close on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Close on backdrop click
+            if (navBackdrop) {
+                navBackdrop.addEventListener('click', closeMenu);
+            }
+
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && hamburger.classList.contains('active')) closeMenu();
+            });
+
+            // Scrolled state for navbar
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                const handleScroll = () => {
+                    navbar.classList.toggle('scrolled', window.scrollY > 8);
+                };
+                window.addEventListener('scroll', handleScroll, { passive: true });
+                handleScroll();
+            }
+        })();
+    </script>
 
     <!-- Loader Script -->
     <script src="js/loader.js"></script>
