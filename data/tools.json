@@ -1,0 +1,76 @@
+[
+    {
+        "id": "rag-simulator",
+        "name": "RAG Simulator",
+        "icon": "🧪",
+        "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems — built to help PMs and engineers visualize AI retrieval flows.",
+        "technologies": [
+            "AI/LLM",
+            "RAG",
+            "Web"
+        ],
+        "status": "active",
+        "githubUrl": "https://github.com/curiowhiz/curiowhiz.github.io/tree/main/rag_simulation",
+        "demoUrl": "https://rajangupta.ca/rag_simulation/",
+        "featured": true,
+        "darkCard": false,
+        "order": 1
+    },
+    {
+        "id": "n8n-research-automation",
+        "name": "N8n User Research Automation",
+        "icon": "🔄",
+        "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes — eliminating manual research bottlenecks.",
+        "technologies": [
+            "n8n",
+            "Automation",
+            "User Research"
+        ],
+        "status": "active",
+        "githubUrl": null,
+        "demoUrl": null,
+        "featured": false,
+        "darkCard": false,
+        "internalNote": "Internal workflow",
+        "order": 2
+    },
+    {
+        "id": "ai-pm-stack",
+        "name": "AI-Powered PM Workflow",
+        "icon": "🤖",
+        "description": "Personal framework integrating Claude AI, Google AI Studio, n8n, and Figma for accelerated product discovery, research synthesis, and prototyping.",
+        "technologies": [
+            "Claude AI",
+            "Google AI Studio",
+            "n8n",
+            "Figma"
+        ],
+        "status": "active",
+        "githubUrl": null,
+        "demoUrl": null,
+        "featured": false,
+        "darkCard": false,
+        "internalNote": "Personal workflow system",
+        "order": 3
+    },
+    {
+        "id": "ai-eval-harness",
+        "name": "AI Evaluation Harness",
+        "icon": "⚙️",
+        "description": "Open-source evaluation pipeline for PM task LLM outputs — using LLM-as-a-Judge methodology to benchmark Claude, GPT-4, and Gemini on latency, cost, and accuracy.",
+        "technologies": [
+            "Python",
+            "LLM-as-Judge",
+            "Evals",
+            "Open Source"
+        ],
+        "status": "building",
+        "statusLabel": "Building — Coming Q2 2025",
+        "githubUrl": null,
+        "demoUrl": null,
+        "featured": false,
+        "darkCard": true,
+        "codePreview": "// Coming soon: 50+ task golden dataset\n// Latency vs. accuracy trade-off analysis\n// Cost-per-query benchmarking",
+        "order": 4
+    }
+]

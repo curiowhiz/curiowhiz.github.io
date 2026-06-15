@@ -1,239 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strava: Identify Critical Funnels - Rajan Gupta</title>
+    <title>Strava: Identify Critical Funnels — Rajan Gupta</title>
+
+    <meta name="description"
+        content="Strava funnel analysis case study — identifying conversion bottlenecks across athlete acquisition, premium upgrade, and partner activation paths.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/strava.html">
+
+    <meta property="og:title" content="Strava: Identify Critical Funnels — Rajan Gupta">
+    <meta property="og:description"
+        content="Funnel analysis identifying growth opportunities across four critical user paths.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
-        .case-study-section { margin: 2rem 0; line-height: 1.8; }
-        .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .case-study-section ul { margin-left: 2rem; }
-        .case-study-section li { margin-bottom: 0.8rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
-        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
-        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
-        .funnel-stage { background: white; border: 1px solid #e0e0e0; padding: 1rem; margin: 0.75rem 0; border-radius: 4px; }
-        .funnel-stage strong { color: #387dc9; }
-    </style>
+    <link rel="stylesheet" href="project-detail.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="project-detail">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <h1>Strava: Identify Critical Funnels</h1>
-        <p class="subtitle">Analyzing key user funnels to identify growth opportunities for both athletes and business partners on the Strava platform.</p>
+    <main id="main">
 
-        <div class="tags">
-            <span class="tag">Product Analytics</span>
-            <span class="tag">Funnel Analysis</span>
-            <span class="tag">Product Strategy</span>
-            <span class="tag">Market Research</span>
-            <span class="tag">Competitive Analysis</span>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Project Overview</h2>
-            <p>This analytical deep-dive identified and optimized critical user conversion funnels at Strava, focusing on understanding the customer journey for both individual athletes and business partners (brands, gyms, races). The goal was to identify key value drivers that unlock business and customer success.</p>
-            
-            <div class="highlight">
-                <strong>Objective:</strong> Identify bottlenecks in critical conversion funnels and develop targeted improvement strategies to increase user engagement, retention, and monetization opportunities.
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#projects" class="back-link">← Back to Work</a>
+                <span class="eyebrow">PRODUCT CASE STUDY</span>
+                <h1>Strava: Identify Critical Funnels</h1>
+                <p class="subtitle">Analyzing four critical user funnels to identify growth opportunities for both
+                    athletes and business partners — surfacing an estimated $15M–$25M annual revenue opportunity.</p>
+                <div class="hero-ctas">
+                    <a href="https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Funnel Analysis →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Critical Funnels Analyzed</h2>
-            
-            <div class="funnel-stage">
-                <strong>Funnel #1: Athlete Signup & Activation</strong>
-                <br>
-                <br>
-                Landing → App Download → Account Creation → First Activity Upload → Profile Completion
-                <br>
-                <em>Current Conversion: 10% (Landing to Active User)</em>
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Product Case Study</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">PM Analysis</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Methods</span>
+                        <span class="metadata-value">Funnel & Cohort Analysis</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Outcome</span>
+                        <span class="metadata-value highlight">$15M–$25M ARR Opportunity</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="funnel-stage">
-                <strong>Funnel #2: Activity Engagement & Social Interaction</strong>
-                <br>
-                <br>
-                Record Activity → View Activity → Give Kudos → Follow Friends → Join Segment
-                <br>
-                <em>Current Conversion: 22% (Record to Social Engagement)</em>
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Strava had unclear visibility into where its highest-value users were dropping off. With 39%
+                            abandonment at signup, 61% failing to upload a first activity, and only 8% free-to-paid
+                            conversion, the platform needed a systematic funnel diagnosis before investing in fixes.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>Mapped four critical funnels (athlete activation, social engagement, premium conversion,
+                            partner activation), then layered cohort, segment, and competitive benchmarking analysis
+                            (vs. MapMyRun, Fitbit, Peloton) to contextualize each drop-off and quantify opportunity.</p>
+                    </div>
+                    <!-- DARK eval card: Funnel table -->
+                    <div class="summary-card dark">
+                        <div class="summary-card-icon">⚙️</div>
+                        <h3>Funnel Conversion Audit</h3>
+                        <p>Four funnels benchmarked end-to-end. The conversion rates below represent the full path from
+                            entry to value-realized state.</p>
+                        <div class="eval-data-block">
+                            <div class="data-header">funnel │ current │ target</div>
+                            <div class="data-row">
+                                <span>athlete_activation</span>
+                                <span class="data-value">10%</span>
+                                <span class="data-value">18%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>social_engagement</span>
+                                <span class="data-value">22%</span>
+                                <span class="data-value">35%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>premium_conversion</span>
+                                <span class="data-value">8%</span>
+                                <span class="data-value">15%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>partner_activation</span>
+                                <span class="data-value">15%</span>
+                                <span class="data-value">28%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>The Outcome</h3>
+                        <p>Identified five root-cause friction patterns and three prioritized solution tracks
+                            (acquisition simplification, premium value repositioning, partner activation enablement) —
+                            projected to lift conversion 80–87% across all four funnels.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="funnel-stage">
-                <strong>Funnel #3: Premium Subscription Path</strong>
-                <br>
-                <br>
-                Free User → Discover Premium → Trial Signup → Paid Conversion → Retention
-                <br>
-                <em>Current Conversion: 8% (Free to Paid)</em>
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">Funnels Analyzed</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+87%</div>
+                        <div class="metric-label">Premium Conversion Lift</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">$25M</div>
+                        <div class="metric-label">ARR Opportunity</div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="funnel-stage">
-                <strong>Funnel #4: Business Partner Activation</strong>
-                <br>
-                <br>
-                Discover API → API Signup → Integration → Campaign Creation → Active Campaign
-                <br>
-                <em>Current Conversion: 15% (Interest to Active Partner)</em>
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Analytical Methodology</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Funnel Analysis:</strong> Conversion + drop-off mapping across each user
+                                        journey</li>
+                                    <li><strong>Cohort Analysis:</strong> Behavior segmented by signup date, geography,
+                                        device</li>
+                                    <li><strong>Segment Analysis:</strong> Casual vs. serious athletes compared
+                                        head-to-head</li>
+                                    <li><strong>Competitive Benchmarking:</strong> Fitbit, MapMyRun, Peloton Digital
+                                        comparisons</li>
+                                    <li><strong>User Behavior Analysis:</strong> Session analytics, feature adoption,
+                                        engagement patterns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Critical Issues Identified</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Signup Friction (Critical):</strong> 39% abandon after download — email
+                                        verification + permission requests</li>
+                                    <li><strong>First Activity Upload (Critical):</strong> 61% fail to upload first
+                                        activity; empty network kills motivation</li>
+                                    <li><strong>Social Network Effect:</strong> Users with &lt; 5 friends show 3x higher
+                                        churn</li>
+                                    <li><strong>Premium Value Clarity (Critical):</strong> Only 18% of trial users
+                                        understand premium benefits</li>
+                                    <li><strong>Partner Integration Complexity:</strong> 75% of interested partners
+                                        deterred by docs and time-to-value</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Competitive Benchmarks</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>vs. MapMyRun:</strong> Stronger community engagement but heavier
+                                        onboarding (9 vs. 6 steps)</li>
+                                    <li><strong>vs. Fitbit:</strong> Fitbit's device integration delivers 45% higher
+                                        first-activity completion</li>
+                                    <li><strong>vs. Peloton Digital:</strong> Peloton's 28% free-to-paid (vs. Strava's
+                                        8%) signals value repositioning need</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Recommended Solution Tracks</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Athlete Acquisition:</strong></p>
+                                <ul>
+                                    <li>Compress signup to 3 steps; defer permission requests post-activation</li>
+                                    <li>One-click signup via Google/Apple ID</li>
+                                    <li>GPS auto-tracking — eliminate manual upload requirement</li>
+                                    <li>Intelligent friend suggestions to bootstrap the social graph</li>
+                                </ul>
+                                <p><strong>Premium Conversion:</strong></p>
+                                <ul>
+                                    <li>Sharper value comms: training plans, advanced segments, performance analytics
+                                    </li>
+                                    <li>Feature-gating to showcase premium-tier benefits in context</li>
+                                    <li>Goal-anchored first-month discount ("Track 10 activities")</li>
+                                    <li>A/B test pricing tiers — $4.99 / $9.99 / $14.99</li>
+                                </ul>
+                                <p><strong>Partner Activation:</strong></p>
+                                <ul>
+                                    <li>Reduce API complexity; ship a low-code dashboard</li>
+                                    <li>Pre-built templates for races, gyms, brands</li>
+                                    <li>Hands-on onboarding for first 5 partners (white-glove)</li>
+                                    <li>Revenue-sharing model to incentivize integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Data Analysis Methodology</h2>
-            <p>Leveraged multiple analytical approaches:</p>
-            <ul>
-                <li><strong>Funnel Analysis:</strong> Tracked conversion rates and drop-off points across user journeys</li>
-                <li><strong>Cohort Analysis:</strong> Analyzed user behavior by signup date, geography, and device type</li>
-                <li><strong>Segment Analysis:</strong> Compared performance across casual vs. serious athletes</li>
-                <li><strong>Competitive Benchmarking:</strong> Compared metrics against Fitbit, MapMyRun, and other fitness platforms</li>
-                <li><strong>User Behavior Analysis:</strong> Session analytics, feature adoption, and engagement patterns</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Findings</h2>
-            
-            <div class="highlight">
-                <strong>🔴 Critical Issue #1: Signup Friction</strong>
-                <br><br>
-                39% of users abandon after clicking "Download" without completing signup. Main barriers: Email verification, permission requests, and onboarding complexity.
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Ready for the Full Funnel Analysis?</h2>
+                <p>The Figma deck includes detailed funnel diagrams, cohort breakdowns, competitive benchmarking tables,
+                    and the full prioritized roadmap.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Funnel Analysis →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
+        </section>
 
-            <div class="highlight">
-                <strong>🟡 Critical Issue #2: First Activity Upload</strong>
-                <br><br>
-                61% of users fail to upload their first activity. Causes: Unclear upload process, GPS tracking concerns, and lack of social motivation in empty network.
+        <section class="related-projects-section">
+            <div class="container">
+                <span class="eyebrow">OTHER CASE STUDIES</span>
+                <div class="related-projects-grid">
+                    <a href="ladder-ai.html" class="related-project-link"><span class="related-project-name">Ladder
+                            AI</span><span class="related-project-desc">From AI Access to Fluency</span></a>
+                    <a href="google-calendar.html" class="related-project-link"><span
+                            class="related-project-name">Google Calendar</span><span
+                            class="related-project-desc">Product Thinking</span></a>
+                    <a href="google-news.html" class="related-project-link"><span class="related-project-name">Google
+                            News</span><span class="related-project-desc">User Growth Strategy</span></a>
+                    <a href="groww.html" class="related-project-link"><span
+                            class="related-project-name">Groww</span><span class="related-project-desc">Cut Abandonment
+                            Levels</span></a>
+                    <a href="boostcamp.html" class="related-project-link"><span
+                            class="related-project-name">Boostcamp</span><span class="related-project-desc">Auto
+                            Progression Feature</span></a>
+                    <a href="spotify.html" class="related-project-link"><span
+                            class="related-project-name">Spotify</span><span class="related-project-desc">Event Booking
+                            Experience</span></a>
+                </div>
             </div>
+        </section>
 
-            <div class="highlight">
-                <strong>🟡 Critical Issue #3: Social Network Effect</strong>
-                <br><br>
-                Users with fewer than 5 friends show 3x higher churn rate. Weak friend-finding features limit social stickiness.
-            </div>
-
-            <div class="highlight">
-                <strong>🔴 Critical Issue #4: Premium Value Clarity</strong>
-                <br><br>
-                Only 18% of trial users understand premium benefits. Low conversion to paid due to unclear ROI and pricing positioning.
-            </div>
-
-            <div class="highlight">
-                <strong>🟡 Critical Issue #5: Partner Integration Complexity</strong>
-                <br><br>
-                API documentation and integration process deter 75% of interested partners. Time-to-value is too high.
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Competitive Benchmarking</h2>
-            
-            <div class="highlight">
-                <strong>vs. MapMyRun:</strong> Strava lags in social features but leads in community engagement. MapMyRun has simpler onboarding (6 vs. 9 steps).
-            </div>
-
-            <div class="highlight">
-                <strong>vs. Fitbit App:</strong> Fitbit shows 45% higher first-activity completion due to device integration. Strava's manual approach is friction-heavy.
-            </div>
-
-            <div class="highlight">
-                <strong>vs. Peloton Digital:</strong> Peloton achieves 28% free-to-paid conversion through premium content and community challenges. Strava at 8% needs value repositioning.
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Recommended Solutions</h2>
-            
-            <p><strong>For Athlete Acquisition Funnel:</strong></p>
-            <ul>
-                <li>Simplify signup to 3-step onboarding; defer permission requests</li>
-                <li>Implement one-click signup via Google/Apple ID</li>
-                <li>Add GPS auto-tracking without manual upload requirement</li>
-                <li>Use intelligent friend suggestions to bootstrap social network</li>
-            </ul>
-
-            <p style="margin-top: 1.5rem;"><strong>For Premium Conversion:</strong></p>
-            <ul>
-                <li>Create clear value communication: Performance analytics, training plans, advanced segments</li>
-                <li>Implement feature-gating strategy to showcase premium benefits</li>
-                <li>Offer first-month discount tied to specific goals (e.g., "Track 10 activities")</li>
-                <li>A/B test pricing tiers ($4.99 vs. $9.99 vs. $14.99)</li>
-            </ul>
-
-            <p style="margin-top: 1.5rem;"><strong>For Partner Activation:</strong></p>
-            <ul>
-                <li>Reduce API integration complexity; provide low-code dashboard</li>
-                <li>Create pre-built templates for common use cases (races, gyms, brands)</li>
-                <li>Offer hands-on onboarding support for first 5 partners</li>
-                <li>Implement revenue-sharing model to incentivize integration</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Expected Impact</h2>
-            
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>📈 Athlete Signup to Active:</strong> Improve from 10% to 18% (80% increase)
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>💰 Free-to-Paid Conversion:</strong> Improve from 8% to 15% (87% increase)
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>🤝 Partner Activation:</strong> Improve from 15% to 28% (87% increase)
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>📊 Overall ARR Impact:</strong> Estimated +$15M-$25M annual revenue opportunity
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>View Full Case Study</h2>
-            <p>Explore the complete funnel analysis with detailed visualizations, segment breakdowns, and implementation roadmap:</p>
-            <a href="https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1" target="_blank" class="cta-link">📊 View Full Funnel Analysis in Figma →</a>
-            
-            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
-                <em>Note: The Figma deck includes detailed funnel diagrams, cohort analysis, competitive benchmarking tables, and prioritized roadmap.</em>
-            </p>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Takeaways</h2>
-            <ul>
-                <li>Identify and prioritize funnels with highest business impact and conversion opportunity</li>
-                <li>Combine quantitative funnel data with qualitative user research insights</li>
-                <li>Competitive benchmarking provides context for realistic target-setting</li>
-                <li>Focus on removing friction at top-of-funnel stages for exponential downstream impact</li>
-                <li>Implement systematic measurement to track funnel improvements over time</li>
-            </ul>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

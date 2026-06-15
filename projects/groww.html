@@ -1,198 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groww: Cut Abandonment Levels - Rajan Gupta</title>
+    <title>Groww: Cut Abandonment Levels — Rajan Gupta</title>
+
+    <meta name="description"
+        content="Groww abandonment reduction case study — user research, competitive analysis, and hypothesis-driven testing achieving 40% reduction.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/groww.html">
+
+    <meta property="og:title" content="Groww: Cut Abandonment Levels — Rajan Gupta">
+    <meta property="og:description" content="40% abandonment reduction through hypothesis-driven testing.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
-        .case-study-section { margin: 2rem 0; line-height: 1.8; }
-        .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .case-study-section ul { margin-left: 2rem; }
-        .case-study-section li { margin-bottom: 0.8rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
-        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
-        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
-        .finding { background: white; border-left: 4px solid #d27b2d; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="project-detail.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="project-detail">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <h1>Groww: Cut Abandonment Levels</h1>
-        <p class="subtitle">Reducing user abandonment in the investment app through user research, competitive analysis, and hypothesis-driven testing.</p>
+    <main id="main">
 
-        <div class="tags">
-            <span class="tag">User Research</span>
-            <span class="tag">Competitive Analysis</span>
-            <span class="tag">Hypothesis Testing</span>
-            <span class="tag">Market Research</span>
-            <span class="tag">Conversion Optimization</span>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Project Overview</h2>
-            <p>This product initiative tackled a critical business challenge: reducing user abandonment in the investment onboarding and account setup flows. The project combined rigorous user research with competitive benchmarking to identify friction points and design solutions.</p>
-            
-            <div class="highlight">
-                <strong>Objective:</strong> Reduce user abandonment rate by 40% through improved onboarding experience and feature accessibility.
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#projects" class="back-link">← Back to Work</a>
+                <span class="eyebrow">PRODUCT CASE STUDY</span>
+                <h1>Groww: Cut Abandonment Levels</h1>
+                <p class="subtitle">Reducing user abandonment in the investment app through user research, competitive
+                    analysis, and hypothesis-driven testing.</p>
+                <div class="hero-ctas">
+                    <a href="https://docs.google.com/presentation/d/1jTGkD5FC3_uAH463sOw0_CgOpuVl9IAM7ClsUCOi9V0/edit?usp=sharing"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Problem Statement</h2>
-            <p>Groww was experiencing high abandonment rates during:</p>
-            <ul>
-                <li>Account verification and KYC (Know Your Customer) process - 35% abandonment</li>
-                <li>First investment flow - 28% abandonment</li>
-                <li>Fund selection and portfolio setup - 22% abandonment</li>
-                <li>Payment integration - 18% abandonment</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Research Methodology</h2>
-            <p><strong>User Research Approach:</strong></p>
-            <ul>
-                <li>Conducted 25+ user interviews with abandoned and active users</li>
-                <li>Analyzed user behavior through heatmaps and session recordings</li>
-                <li>Surveyed 500+ users on friction points and pain areas</li>
-                <li>Tracked drop-off patterns across mobile and web platforms</li>
-            </ul>
-
-            <p style="margin-top: 1.5rem;"><strong>Competitive Research:</strong></p>
-            <ul>
-                <li>Analyzed onboarding flows of 8 competing fintech platforms</li>
-                <li>Benchmarked conversion rates and abandonment metrics</li>
-                <li>Identified best practices in KYC and verification</li>
-                <li>Evaluated UX patterns for payment integration</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Findings</h2>
-            
-            <div class="finding">
-                <strong>Finding #1 - KYC Complexity:</strong> Users found the verification process confusing with unclear instructions. Average time: 12 minutes. Users unfamiliar with financial terminology abandoned at 2x rate.
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Product Case Study</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">PM Analysis</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Methods</span>
+                        <span class="metadata-value">User Research, A/B Testing</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Outcome</span>
+                        <span class="metadata-value highlight">40% Abandonment Reduction</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="finding">
-                <strong>Finding #2 - Choice Paralysis:</strong> Overwhelming fund options without proper guidance led to decision fatigue. Users with more than 20 fund recommendations abandoned.
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Groww faced high abandonment: 35% during KYC, 28% in first investment, 22% in fund selection,
+                            18% at payment. Users — especially first-time investors — were dropping off due to
+                            complexity, choice paralysis, and trust gaps.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>Conducted 25+ user interviews, 500+ surveys, heatmap analysis, and benchmarked 8 competing
+                            fintech platforms. Identified KYC complexity, choice paralysis, trust gaps, and mobile
+                            friction as root causes.</p>
+                    </div>
+                    <!-- DARK eval card -->
+                    <div class="summary-card dark">
+                        <div class="summary-card-icon">⚙️</div>
+                        <h3>Hypothesis Testing Results</h3>
+                        <p>Three hypotheses tested through A/B experiments — all validated with statistically
+                            significant improvements.</p>
+                        <div class="eval-data-block">
+                            <div class="data-header">hypothesis │ test_type │ result</div>
+                            <div class="data-row">
+                                <span>simplified_kyc</span>
+                                <span class="data-value">A/B test</span>
+                                <span class="data-value">+32%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>curated_funds</span>
+                                <span class="data-value">A/B test</span>
+                                <span class="data-value">+40%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>education_inline</span>
+                                <span class="data-value">A/B test</span>
+                                <span class="data-value">+22%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>The Outcome</h3>
+                        <p>40% decrease in overall abandonment. 35% increase in completed first investments. Onboarding
+                            time reduced from 18 to 8 minutes. NPS improved from 32 to 54 points.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="finding">
-                <strong>Finding #3 - Trust & Education Gap:</strong> First-time investors needed more education on investment concepts before committing funds.
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Abandonment Reduction</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+35%</div>
+                        <div class="metric-label">Conversion Increase</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">32→54</div>
+                        <div class="metric-label">NPS Improvement</div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="finding">
-                <strong>Finding #4 - Mobile Friction:</strong> 60% of abandonment occurred on mobile due to small form fields and difficult document uploads.
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Research Methodology</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>User Research Approach:</strong></p>
+                                <ul>
+                                    <li>Conducted 25+ user interviews with abandoned and active users</li>
+                                    <li>Analyzed user behavior through heatmaps and session recordings</li>
+                                    <li>Surveyed 500+ users on friction points and pain areas</li>
+                                    <li>Tracked drop-off patterns across mobile and web platforms</li>
+                                </ul>
+                                <p><strong>Competitive Research:</strong></p>
+                                <ul>
+                                    <li>Analyzed onboarding flows of 8 competing fintech platforms</li>
+                                    <li>Benchmarked conversion rates and abandonment metrics</li>
+                                    <li>Identified best practices in KYC and verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Findings</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>KYC Complexity:</strong> 12 minute average; users unfamiliar with
+                                        financial terms abandoned at 2x rate</li>
+                                    <li><strong>Choice Paralysis:</strong> Users with more than 20 fund recommendations
+                                        abandoned</li>
+                                    <li><strong>Trust & Education Gap:</strong> First-time investors needed more
+                                        education before committing</li>
+                                    <li><strong>Mobile Friction:</strong> 60% of abandonment occurred on mobile due to
+                                        small forms and difficult uploads</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Solutions Implemented</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Simplified KYC:</strong> Redesigned 6-step process into 3 clear steps
+                                        with progress indicator</li>
+                                    <li><strong>Smart Fund Recommendations:</strong> AI-powered curation showing top 5
+                                        funds</li>
+                                    <li><strong>In-app Education:</strong> Tooltips, video tutorials, and glossary</li>
+                                    <li><strong>Mobile Optimization:</strong> Larger forms, camera document upload</li>
+                                    <li><strong>Progress Saving:</strong> Resume later without re-entering data</li>
+                                    <li><strong>Security Reassurance:</strong> Clear data privacy communication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Learnings</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Simplicity beats features — removing 50% of steps improved outcomes</li>
+                                    <li>User education is critical for financial products</li>
+                                    <li>Mobile-first design is essential for fintech apps</li>
+                                    <li>Hypothesis-driven testing validates assumptions before full implementation</li>
+                                    <li>Understanding user psychology drives better product decisions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Hypotheses & Testing</h2>
-            
-            <div class="highlight">
-                <strong>Hypothesis #1:</strong> Simplifying the KYC flow with step-by-step guidance will increase completion rate by 25%
-                <br><br>
-                <strong>Test:</strong> A/B tested streamlined 3-step KYC vs. previous 6-step flow
-                <br>
-                <strong>Result:</strong> ✅ 32% improvement in completion rate
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Ready for the Full Case Study?</h2>
+                <p>The presentation includes detailed user research transcripts, competitive analysis, A/B test results,
+                    and wireframes.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://docs.google.com/presentation/d/1jTGkD5FC3_uAH463sOw0_CgOpuVl9IAM7ClsUCOi9V0/edit?usp=sharing"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
+        </section>
 
-            <div class="highlight">
-                <strong>Hypothesis #2:</strong> Curated fund recommendations (top 5) vs. all funds will reduce abandonment in portfolio selection
-                <br><br>
-                <strong>Test:</strong> Tested curated recommendations with AI-based personalization
-                <br>
-                <strong>Result:</strong> ✅ 28% reduction in abandonment, 40% increase in conversion
+        <section class="related-projects-section">
+            <div class="container">
+                <span class="eyebrow">OTHER CASE STUDIES</span>
+                <div class="related-projects-grid">
+                    <a href="ladder-ai.html" class="related-project-link"><span class="related-project-name">Ladder
+                            AI</span><span class="related-project-desc">From AI Access to Fluency</span></a>
+                    <a href="google-calendar.html" class="related-project-link"><span
+                            class="related-project-name">Google Calendar</span><span
+                            class="related-project-desc">Product Thinking</span></a>
+                    <a href="google-news.html" class="related-project-link"><span class="related-project-name">Google
+                            News</span><span class="related-project-desc">User Growth Strategy</span></a>
+                    <a href="strava.html" class="related-project-link"><span
+                            class="related-project-name">Strava</span><span class="related-project-desc">Funnel
+                            Analysis</span></a>
+                    <a href="boostcamp.html" class="related-project-link"><span
+                            class="related-project-name">Boostcamp</span><span class="related-project-desc">Auto
+                            Progression Feature</span></a>
+                    <a href="spotify.html" class="related-project-link"><span
+                            class="related-project-name">Spotify</span><span class="related-project-desc">Event Booking
+                            Experience</span></a>
+                </div>
             </div>
+        </section>
 
-            <div class="highlight">
-                <strong>Hypothesis #3:</strong> Educational tooltips and micro-learning modules will improve completion in first investment flow
-                <br><br>
-                <strong>Test:</strong> Added contextual education features and glossary
-                <br>
-                <strong>Result:</strong> ✅ 22% improvement in completion, higher user confidence
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Solutions Implemented</h2>
-            <ul>
-                <li><strong>Simplified KYC:</strong> Redesigned 6-step process into 3 clear steps with progress indicator</li>
-                <li><strong>Smart Fund Recommendations:</strong> AI-powered curation showing top 5 recommended funds based on investment profile</li>
-                <li><strong>In-app Education:</strong> Tooltips, video tutorials, and glossary for financial terms</li>
-                <li><strong>Mobile Optimization:</strong> Larger form fields, improved document upload with camera functionality</li>
-                <li><strong>Progress Saving:</strong> Allow users to save progress and resume later without re-entering data</li>
-                <li><strong>Security Reassurance:</strong> Clear communication of security measures and data privacy</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Results & Impact</h2>
-            
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>📉 Overall Abandonment Reduction:</strong> 40% decrease in overall abandonment rate
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>💰 Conversion Increase:</strong> 35% increase in completed first investments
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>⏱️ Time Reduction:</strong> Average onboarding time reduced from 18 to 8 minutes
-            </div>
-
-            <div class="metric-box" style="background: #f5f5f5; padding: 1.5rem; border-radius: 4px; margin: 1rem 0;">
-                <strong>😊 User Satisfaction:</strong> NPS improved from 32 to 54 points
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>View Full Case Study</h2>
-            <p>Explore the complete analysis with detailed user research findings, competitive benchmarking, and implementation details:</p>
-            <a href="https://docs.google.com/presentation/d/1jTGkD5FC3_uAH463sOw0_CgOpuVl9IAM7ClsUCOi9V0/edit?usp=sharing" target="_blank" class="cta-link">📊 View Full Case Study Presentation →</a>
-            
-            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
-                <em>Note: The presentation includes detailed user research transcripts, competitive analysis, A/B test results, and wireframes.</em>
-            </p>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Learnings</h2>
-            <ul>
-                <li>Simplicity beats features - removing 50% of steps resulted in better outcomes</li>
-                <li>User education is critical for financial products - context matters</li>
-                <li>Mobile-first design is essential for fintech apps</li>
-                <li>Hypothesis-driven testing validates assumptions before full implementation</li>
-                <li>Understanding user psychology (choice paralysis, trust) drives better product decisions</li>
-            </ul>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -1,10 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Manager</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin — Rajan Gupta Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
-<body></body>
+
+<body class="login-page">
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-icon">🔐</div>
+                <h1>Portfolio Admin</h1>
+                <p>Sign in with your GitHub Personal Access Token</p>
+            </div>
+
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="pat">GitHub Personal Access Token</label>
+                    <input type="password" id="pat" name="pat" placeholder="github_pat_xxxxxxxxxxxx" autocomplete="off"
+                        required>
+                    <p class="form-hint">
+                        Token must have <code>Contents: Read & Write</code> access to
+                        <code>curiowhiz/curiowhiz.github.io</code>.
+                    </p>
+                </div>
+
+                <div id="login-error" class="login-error hidden"></div>
+
+                <button type="submit" id="login-btn" class="btn btn-primary">
+                    Sign In
+                </button>
+
+                <details class="login-help">
+                    <summary>How to create a token</summary>
+                    <ol>
+                        <li>Go to <a href="https://github.com/settings/personal-access-tokens/new" target="_blank"
+                                rel="noopener">github.com/settings/personal-access-tokens/new</a></li>
+                        <li>Name: <code>Portfolio Admin</code></li>
+                        <li>Repository access: <code>curiowhiz/curiowhiz.github.io</code></li>
+                        <li>Permissions → Contents: <strong>Read and write</strong></li>
+                        <li>Generate, copy, paste above</li>
+                    </ol>
+                </details>
+            </form>
+        </div>
+
+        <p class="login-footer">
+            <a href="../">← Back to site</a>
+        </p>
+    </div>
+
+    <script src="js/github-api.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const pat = document.getElementById('pat').value.trim();
+            const errorEl = document.getElementById('login-error');
+            const btn = document.getElementById('login-btn');
+
+            errorEl.classList.add('hidden');
+            btn.disabled = true;
+            btn.textContent = 'Verifying...';
+
+            const result = await Auth.login(pat);
+
+            if (result.success) {
+                window.location.href = 'dashboard.html';
+            } else {
+                errorEl.textContent = result.error;
+                errorEl.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Sign In';
+            }
+        });
+
+        // Auto-redirect if already logged in
+        if (Auth.isLoggedIn()) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+
 </html>

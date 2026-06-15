@@ -1,0 +1,636 @@
+[
+  {
+    "id": "ladder-ai",
+    "title": "Ladder AI: From AI Access to AI Fluency",
+    "description": "Personal AI product initiative — designed a platform helping professionals bridge the gap between basic AI usage and true AI fluency through workflow automation and structured skill-building.",
+    "thumbnail": "images/thumbnails/ladder-ai.png",
+    "link": "projects/ladder-ai.html",
+    "tags": [
+      "AI Product",
+      "User Research",
+      "Product Strategy"
+    ],
+    "featured": true,
+    "category": "AI Product Initiative",
+    "subtitle": "Bridging the gap from AI access to AI fluency — a personal product initiative designed for AI Product Management.",
+    "overview": "Ladder AI is a personal product initiative born from a critical observation: most professionals have AI access but lack AI fluency. Through user research across office workers, college graduates, and Product Managers, I identified three north star problems — the Prompting Gap, the Workflow Gap, and the Learning Gap — and designed a platform to systematically address them.",
+    "objective": "Design an AI fluency platform that moves professionals from basic chat-based usage to advanced AI integration, workflow automation, and continuous skill-building — with a focus on role-specific outcomes for Product Managers.",
+    "sections": [
+      {
+        "title": "The Problem: Access vs. Fluency",
+        "type": "problem-box",
+        "text": "<strong>Problem Statement:</strong><br><br>Most professionals have access to AI tools but remain stuck at basic usage — unable to integrate AI into their workflows, automate tasks, or apply AI fluently in their roles. There is a significant gap between knowing about AI and being able to use it productively and reliably."
+      },
+      {
+        "title": "Research Process",
+        "type": "rich-list",
+        "items": [
+          "<strong>Target Audiences:</strong> Conducted interviews with office workers, recent college graduates, and working professionals across multiple industries",
+          "<strong>Methodology:</strong> Structured user interviews combined with workflow observation and pain-point mapping",
+          "<strong>Sample Size:</strong> Cross-functional research across multiple professional segments to identify overlapping patterns",
+          "<strong>Key Finding:</strong> 50-70% of users reported overlapping pain points, with Product Managers showing the strongest signal for AI integration needs"
+        ]
+      },
+      {
+        "title": "Pain Points Identified",
+        "type": "list",
+        "items": [
+          "<strong>Tool Discovery Friction:</strong> Difficulty discovering and adopting new AI tools amid rapidly evolving landscape",
+          "<strong>Over-Reliance on Single Tools:</strong> Users default to one tool (often ChatGPT) without exploring better alternatives for specific tasks",
+          "<strong>Lack of Contextual Outputs:</strong> Generic AI responses that don't account for role, industry, or specific use case",
+          "<strong>Non-Technical Barriers:</strong> Lack of prompting skills and AI literacy creates a self-reinforcing knowledge gap",
+          "<strong>Low Trust in AI Outputs:</strong> Users revert to traditional tools after experiencing AI mistakes — losing momentum",
+          "<strong>Workflow Disconnect:</strong> AI tools exist in isolation, not integrated into daily task flows",
+          "<strong>Subscription Fatigue:</strong> Cost and complexity of managing multiple AI tool subscriptions"
+        ]
+      },
+      {
+        "title": "North Star Problems",
+        "type": "highlight-blocks",
+        "items": [
+          "<strong>🎯 Prompting Gap:</strong> Users struggle to write effective, role-specific prompts. Without prompting fluency, even powerful AI tools produce mediocre outputs — reinforcing the perception that AI 'doesn't work for my role.'",
+          "<strong>⚙️ Workflow Gap:</strong> Lack of automation and integration into daily tasks. Users treat AI as a separate destination (a chat window) rather than an embedded layer across their work — limiting compounding value.",
+          "<strong>📚 Learning Gap:</strong> No structured way to improve AI skills or share workflows. Learning happens through random tutorials, social media, and trial-and-error — slow, inefficient, and easy to abandon."
+        ]
+      },
+      {
+        "title": "Solution: The Ladder AI Platform",
+        "type": "solution-box",
+        "text": "<strong>✅ Solution Overview:</strong><br><br>A guided, gamified AI fluency platform built on four pillars — personalized onboarding, workflow capture, structured teaching, and progress tracking — designed to move professionals from basic Q&A to building and deploying AI-powered systems in their roles."
+      },
+      {
+        "title": "Core Features",
+        "type": "feature-box",
+        "items": [
+          {
+            "title": "🎯 Personalized Onboarding",
+            "text": "Skill diagnosis quiz to assess current AI fluency level and identify role-specific needs"
+          },
+          {
+            "title": "🗺️ Workflow Capture",
+            "text": "Map daily tasks and identify automation opportunities — turn manual work into AI-augmented workflows"
+          },
+          {
+            "title": "📚 Structured Teaching",
+            "text": "Lessons with active recall and open-source concepts to build durable prompting and workflow skills"
+          },
+          {
+            "title": "🏆 Rewards & Measurement",
+            "text": "Streaks, progress tracking, and peer-led sessions to encourage ongoing learning and prevent drop-off"
+          },
+          {
+            "title": "🤖 Role-Specific Templates",
+            "text": "Pre-built prompt libraries and workflow templates tailored for Product Managers, marketers, and analysts"
+          },
+          {
+            "title": "🔄 Continuous Application",
+            "text": "Guided practice that moves users from basic prompts to building and deploying AI-powered systems"
+          }
+        ]
+      },
+      {
+        "title": "Example: Product Manager Journey",
+        "type": "paragraphs",
+        "texts": [
+          "<strong>Step 1 — Onboarding:</strong> A PM completes an onboarding quiz that assesses their current AI skills, identifies their role's unique workflows (research synthesis, PRD writing, competitive analysis), and benchmarks them against AI-fluent PMs.",
+          "<strong>Step 2 — Workflow Mapping:</strong> The platform helps map daily PM tasks (user interviews, roadmap updates, stakeholder reports) and surfaces the top 3 repetitive workflows ripe for AI augmentation or full automation.",
+          "<strong>Step 3 — Structured Lessons:</strong> The PM follows guided lessons on writing effective prompts (e.g., 'Synthesize 10 user interviews into a 1-page insight report'), building n8n automations, and chaining tools together.",
+          "<strong>Step 4 — Progress Tracking:</strong> Streaks, level-ups, and peer-led sessions keep the PM engaged — moving them from basic AI usage to advanced fluency, with measurable outputs (time saved, workflows automated, prompts refined)."
+        ]
+      },
+      {
+        "title": "Why This Matters for AI Product Management",
+        "type": "highlight",
+        "items": [
+          "Ladder AI demonstrates end-to-end AI product thinking — from user research to north star problem framing to solution design",
+          "It addresses a real, validated market gap (50-70% of professionals share these pain points)",
+          "It applies modern PM frameworks (north star metrics, segmented personas, prioritized roadmaps) to an AI-native product",
+          "It showcases ability to design for AI fluency, not just AI access — the strategic frontier of AI product management"
+        ]
+      },
+      {
+        "title": "Status & Next Steps",
+        "type": "list",
+        "items": [
+          "<strong>Current Status:</strong> Pitch deck complete, research validated, prototype concept defined",
+          "<strong>Next Phase:</strong> Build interactive prototype using Google AI Studio + Figma",
+          "<strong>Validation Plan:</strong> Test with 10 PMs to refine onboarding quiz and workflow capture flow",
+          "<strong>Long-Term Vision:</strong> Platform that becomes the de facto AI fluency layer for knowledge workers"
+        ]
+      },
+      {
+        "title": "Core Competencies Demonstrated",
+        "type": "feature-box",
+        "items": [
+          {
+            "title": "🔍 AI-Native User Research",
+            "text": "Identified overlapping pain points across professional segments through structured interviews"
+          },
+          {
+            "title": "🎯 North Star Problem Framing",
+            "text": "Distilled diverse pain points into three north star problems (Prompting, Workflow, Learning gaps)"
+          },
+          {
+            "title": "🤖 AI Product Strategy",
+            "text": "Designed a platform that addresses AI fluency — not just access — the strategic frontier"
+          },
+          {
+            "title": "📋 PRD & Solution Design",
+            "text": "Built end-to-end product requirements covering onboarding, workflow capture, teaching, and rewards"
+          },
+          {
+            "title": "🎓 Behavior Change Design",
+            "text": "Integrated gamification, streaks, and peer learning to prevent drop-off and drive durable habit formation"
+          },
+          {
+            "title": "💡 Vision Articulation",
+            "text": "Connected micro-features to a macro vision of professional AI fluency as a competitive advantage"
+          }
+        ]
+      },
+      {
+        "title": "Key Learnings",
+        "type": "list",
+        "items": [
+          "<strong>Access ≠ Fluency:</strong> Distributing tools doesn't create capability — structured learning and habit design do",
+          "<strong>Role-Specificity Wins:</strong> Generic AI advice fails; PMs need PM-specific prompts, marketers need marketer-specific workflows",
+          "<strong>Workflow Beats Features:</strong> Users don't need more AI tools — they need fewer tools, better integrated into existing workflows",
+          "<strong>Trust is Earned Through Wins:</strong> Small, reliable AI wins (one good prompt, one automated workflow) build momentum; large, unreliable demos break it",
+          "<strong>Gamification Sustains Learning:</strong> Without streaks, levels, and social accountability, AI skill-building gets abandoned"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "google-calendar",
+    "title": "Google Calendar: Product Thinking",
+    "description": "Explored performance metrics, problem prioritization, and solution design through comprehensive product thinking framework.",
+    "thumbnail": "images/thumbnails/google-calendar.png",
+    "link": "projects/google-calendar.html",
+    "tags": [
+      "Product Thinking",
+      "Wireframes",
+      "Performance Metrics"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "A comprehensive product thinking exercise exploring performance metrics, problem prioritization, and solution design.",
+    "overview": "This case study showcases a deep dive into Google Calendar's product strategy, examining how to enhance user experience through data-driven decision making and user-centric design thinking.",
+    "objective": "Analyze Google Calendar's product landscape and propose strategic improvements through comprehensive product thinking frameworks.",
+    "sections": [
+      {
+        "title": "Key Focus Areas",
+        "type": "rich-list",
+        "items": [
+          "<strong>Performance Metrics:</strong> Understanding key KPIs including user engagement, scheduling frequency, and feature adoption rates",
+          "<strong>Problem Prioritization:</strong> Identifying and ranking user pain points such as scheduling conflicts, notification management, and multi-calendar coordination",
+          "<strong>Product Thinking:</strong> Developing a strategic framework for product improvements",
+          "<strong>Solution Prioritization:</strong> Evaluating solution impact, technical feasibility, and user value",
+          "<strong>Wireframes:</strong> Creating visual mockups for proposed features and UI improvements"
+        ]
+      },
+      {
+        "title": "Methodology",
+        "type": "list",
+        "items": [
+          "Competitive analysis of calendar applications",
+          "User research and pain point identification",
+          "Metrics analysis and KPI tracking",
+          "Solution ideation and prioritization",
+          "Wireframe design and user flow documentation"
+        ]
+      },
+      {
+        "title": "Key Insights",
+        "type": "highlight",
+        "items": [
+          "Users struggle with managing multiple calendar sources efficiently",
+          "Notification fatigue is a key pain point affecting user satisfaction",
+          "Integration with other Google Workspace tools drives adoption",
+          "Mobile scheduling experience needs optimization"
+        ]
+      },
+      {
+        "title": "Proposed Solutions",
+        "type": "list",
+        "items": [
+          "Enhanced multi-calendar management interface",
+          "Intelligent notification system with user preference controls",
+          "Improved mobile scheduling interface with quick-add features",
+          "Smart conflict detection and resolution suggestions"
+        ]
+      },
+      {
+        "title": "View Full Presentation",
+        "type": "cta",
+        "url": "https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing",
+        "label": "📊 View Full Case Study Presentation →",
+        "note": "Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations."
+      }
+    ]
+  },
+  {
+    "id": "google-news",
+    "title": "Google News: User Growth",
+    "description": "Driving user engagement and growth through market research, problem prioritization, and strategic product roadmapping.",
+    "thumbnail": "images/thumbnails/google-news.png",
+    "link": "projects/google-news.html",
+    "tags": [
+      "Product Strategy",
+      "Market Research",
+      "Roadmapping"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Driving user engagement and growth through market research, problem prioritization, and strategic product planning.",
+    "overview": "This strategic initiative focused on boosting user engagement and acquiring new users on Google News platform through data-driven insights and targeted feature development.",
+    "objective": "Identify key growth opportunities and develop a roadmap to increase user acquisition, retention, and engagement on Google News.",
+    "sections": [
+      {
+        "title": "Key Challenges Identified",
+        "type": "list",
+        "items": [
+          "Low retention rates among casual news readers",
+          "Lack of personalization in news feed recommendations",
+          "Competitive pressure from other news aggregation platforms",
+          "Mobile user experience friction points",
+          "Declining trust in news sources among younger demographics"
+        ]
+      },
+      {
+        "title": "Research & Market Analysis",
+        "type": "rich-list",
+        "items": [
+          "<strong>Market Trends:</strong> Growing preference for personalized news feeds and mobile-first experiences",
+          "<strong>User Behavior:</strong> Users spend average 8-12 minutes per session; drop-off occurs after 3 articles",
+          "<strong>Competitor Analysis:</strong> Key competitors focusing on AI-driven recommendations and community features",
+          "<strong>Demographic Insights:</strong> 45% of users are aged 18-34; mobile accounts for 72% of traffic"
+        ]
+      },
+      {
+        "title": "Problem Prioritization Framework",
+        "type": "highlight-blocks",
+        "items": [
+          "<strong>Priority 1 - High Impact:</strong> Improve personalization algorithm to increase session duration and article engagement",
+          "<strong>Priority 2 - High Impact:</strong> Optimize mobile onboarding flow to reduce churn within first week",
+          "<strong>Priority 3 - Medium Impact:</strong> Implement push notification strategy for daily active user growth"
+        ]
+      },
+      {
+        "title": "Strategic Product Roadmap",
+        "type": "rich-list",
+        "items": [
+          "<strong>Q1:</strong> Enhance recommendation algorithm; A/B test personalization features",
+          "<strong>Q2:</strong> Launch topic-based subscriptions; implement save-for-later functionality",
+          "<strong>Q3:</strong> Introduce social sharing features; expand international coverage",
+          "<strong>Q4:</strong> Launch premium features; implement smart digest emails"
+        ]
+      },
+      {
+        "title": "Key Metrics & Success Criteria",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "📈",
+            "title": "User Acquisition",
+            "text": "+25% new user growth YoY"
+          },
+          {
+            "icon": "📱",
+            "title": "Retention",
+            "text": "Improve 30-day retention from 35% to 50%"
+          },
+          {
+            "icon": "⏱️",
+            "title": "Engagement",
+            "text": "Increase average session time from 10 to 15 minutes"
+          },
+          {
+            "icon": "🔄",
+            "title": "Daily Active Users",
+            "text": "+30% DAU growth"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://www.notion.so/Google-News-79a9a81d7da28206bbb8012164760d62?source=copy_link",
+        "label": "📊 View Full Case Study Presentation →",
+        "note": "Note: The full presentation includes competitive benchmarking, user journey maps, and implementation strategy."
+      }
+    ]
+  },
+  {
+    "id": "groww",
+    "title": "Groww: Cut Abandonment Levels",
+    "description": "Reduced user abandonment through competitive research, user research, and hypothesis-driven testing.",
+    "thumbnail": "images/thumbnails/groww.png",
+    "link": "projects/groww.html",
+    "tags": [
+      "User Research",
+      "Competitive Analysis",
+      "Hypothesis Testing"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Reducing user abandonment in the investment app through user research, competitive analysis, and hypothesis-driven testing.",
+    "overview": "This product initiative tackled a critical business challenge: reducing user abandonment in the investment onboarding and account setup flows. The project combined rigorous user research with competitive benchmarking to identify friction points and design solutions.",
+    "objective": "Reduce user abandonment rate by 40% through improved onboarding experience and feature accessibility.",
+    "sections": [
+      {
+        "title": "Problem Statement",
+        "type": "problem-box",
+        "text": "Groww was experiencing high abandonment rates during:<ul><li>Account verification and KYC (Know Your Customer) process - 35% abandonment</li><li>First investment flow - 28% abandonment</li><li>Fund selection and portfolio setup - 22% abandonment</li><li>Payment integration - 18% abandonment</li></ul>"
+      },
+      {
+        "title": "Research Methodology",
+        "type": "paragraphs",
+        "texts": [
+          "<strong>User Research Approach:</strong><ul><li>Conducted 25+ user interviews with abandoned and active users</li><li>Analyzed user behavior through heatmaps and session recordings</li><li>Surveyed 500+ users on friction points and pain areas</li><li>Tracked drop-off patterns across mobile and web platforms</li></ul>",
+          "<strong>Competitive Research:</strong><ul><li>Analyzed onboarding flows of 8 competing fintech platforms</li><li>Benchmarked conversion rates and abandonment metrics</li><li>Identified best practices in KYC and verification</li><li>Evaluated UX patterns for payment integration</li></ul>"
+        ]
+      },
+      {
+        "title": "Key Findings",
+        "type": "finding",
+        "items": [
+          {
+            "title": "KYC Complexity",
+            "text": "Users found the verification process confusing with unclear instructions. Average time: 12 minutes. Users unfamiliar with financial terminology abandoned at 2x rate."
+          },
+          {
+            "title": "Choice Paralysis",
+            "text": "Overwhelming fund options without proper guidance led to decision fatigue. Users with more than 20 fund recommendations abandoned."
+          },
+          {
+            "title": "Trust & Education Gap",
+            "text": "First-time investors needed more education on investment concepts before committing funds."
+          },
+          {
+            "title": "Mobile Friction",
+            "text": "60% of abandonment occurred on mobile due to small form fields and difficult document uploads."
+          }
+        ]
+      },
+      {
+        "title": "Hypotheses & Testing",
+        "type": "highlight-blocks",
+        "items": [
+          "<strong>Hypothesis #1:</strong> Simplifying the KYC flow with step-by-step guidance will increase completion rate by 25%<br><br><strong>Test:</strong> A/B tested streamlined 3-step KYC vs. previous 6-step flow<br><strong>Result:</strong> ✅ 32% improvement in completion rate",
+          "<strong>Hypothesis #2:</strong> Curated fund recommendations (top 5) vs. all funds will reduce abandonment in portfolio selection<br><br><strong>Test:</strong> Tested curated recommendations with AI-based personalization<br><strong>Result:</strong> ✅ 28% reduction in abandonment, 40% increase in conversion",
+          "<strong>Hypothesis #3:</strong> Educational tooltips and micro-learning modules will improve completion in first investment flow<br><br><strong>Test:</strong> Added contextual education features and glossary<br><strong>Result:</strong> ✅ 22% improvement in completion, higher user confidence"
+        ]
+      },
+      {
+        "title": "Solutions Implemented",
+        "type": "list",
+        "items": [
+          "<strong>Simplified KYC:</strong> Redesigned 6-step process into 3 clear steps with progress indicator",
+          "<strong>Smart Fund Recommendations:</strong> AI-powered curation showing top 5 recommended funds based on investment profile",
+          "<strong>In-app Education:</strong> Tooltips, video tutorials, and glossary for financial terms",
+          "<strong>Mobile Optimization:</strong> Larger form fields, improved document upload with camera functionality",
+          "<strong>Progress Saving:</strong> Allow users to save progress and resume later without re-entering data",
+          "<strong>Security Reassurance:</strong> Clear communication of security measures and data privacy"
+        ]
+      },
+      {
+        "title": "Results & Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "",
+            "title": "📉 Overall Abandonment Reduction",
+            "text": "40% decrease in overall abandonment rate"
+          },
+          {
+            "icon": "",
+            "title": "💰 Conversion Increase",
+            "text": "35% increase in completed first investments"
+          },
+          {
+            "icon": "",
+            "title": "⏱️ Time Reduction",
+            "text": "Average onboarding time reduced from 18 to 8 minutes"
+          },
+          {
+            "icon": "",
+            "title": "😊 User Satisfaction",
+            "text": "NPS improved from 32 to 54 points"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://docs.google.com/presentation/d/1jTGkD5FC3_uAH463sOw0_CgOpuVl9IAM7ClsUCOi9V0/edit?usp=sharing",
+        "label": "📊 View Full Case Study Presentation →",
+        "note": "Note: The presentation includes detailed user research transcripts, competitive analysis, A/B test results, and wireframes."
+      },
+      {
+        "title": "Key Learnings",
+        "type": "list",
+        "items": [
+          "Simplicity beats features - removing 50% of steps resulted in better outcomes",
+          "User education is critical for financial products - context matters",
+          "Mobile-first design is essential for fintech apps",
+          "Hypothesis-driven testing validates assumptions before full implementation",
+          "Understanding user psychology (choice paralysis, trust) drives better product decisions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "strava",
+    "title": "Strava: Identify Critical Funnels",
+    "description": "Identified and optimized critical user funnels using product analytics, competitive research, and funnel analysis.",
+    "thumbnail": "images/thumbnails/strava.png",
+    "link": "projects/strava.html",
+    "tags": [
+      "Product Analytics",
+      "Funnels",
+      "Product Strategy"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Analyzing key user funnels to identify growth opportunities for both athletes and business partners on the Strava platform.",
+    "overview": "This analytical deep-dive identified and optimized critical user conversion funnels at Strava, focusing on understanding the customer journey for both individual athletes and business partners (brands, gyms, races). The goal was to identify key value drivers that unlock business and customer success.",
+    "objective": "Identify bottlenecks in critical conversion funnels and develop targeted improvement strategies to increase user engagement, retention, and monetization opportunities.",
+    "sections": [
+      {
+        "title": "Critical Funnels Analyzed",
+        "type": "funnel-stage",
+        "items": [
+          {
+            "title": "Athlete Signup & Activation",
+            "flow": "Landing → App Download → Account Creation → First Activity Upload → Profile Completion",
+            "metric": "Current Conversion: 10% (Landing to Active User)"
+          },
+          {
+            "title": "Activity Engagement & Social Interaction",
+            "flow": "Record Activity → View Activity → Give Kudos → Follow Friends → Join Segment",
+            "metric": "Current Conversion: 22% (Record to Social Engagement)"
+          },
+          {
+            "title": "Premium Subscription Path",
+            "flow": "Free User → Discover Premium → Trial Signup → Paid Conversion → Retention",
+            "metric": "Current Conversion: 8% (Free to Paid)"
+          },
+          {
+            "title": "Business Partner Activation",
+            "flow": "Discover API → API Signup → Integration → Campaign Creation → Active Campaign",
+            "metric": "Current Conversion: 15% (Interest to Active Partner)"
+          }
+        ]
+      },
+      {
+        "title": "Data Analysis Methodology",
+        "type": "list",
+        "items": [
+          "<strong>Funnel Analysis:</strong> Tracked conversion rates and drop-off points across user journeys",
+          "<strong>Cohort Analysis:</strong> Analyzed user behavior by signup date, geography, and device type",
+          "<strong>Segment Analysis:</strong> Compared performance across casual vs. serious athletes",
+          "<strong>Competitive Benchmarking:</strong> Compared metrics against Fitbit, MapMyRun, and other fitness platforms",
+          "<strong>User Behavior Analysis:</strong> Session analytics, feature adoption, and engagement patterns"
+        ]
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "",
+            "title": "📈 Athlete Signup to Active",
+            "text": "Improve from 10% to 18% (80% increase)"
+          },
+          {
+            "icon": "",
+            "title": "💰 Free-to-Paid Conversion",
+            "text": "Improve from 8% to 15% (87% increase)"
+          },
+          {
+            "icon": "",
+            "title": "🤝 Partner Activation",
+            "text": "Improve from 15% to 28% (87% increase)"
+          },
+          {
+            "icon": "",
+            "title": "📊 Overall ARR Impact",
+            "text": "Estimated +$15M-$25M annual revenue opportunity"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1",
+        "label": "📊 View Full Funnel Analysis in Figma →",
+        "note": "Note: The Figma deck includes detailed funnel diagrams, cohort analysis, competitive benchmarking tables, and prioritized roadmap."
+      }
+    ]
+  },
+  {
+    "id": "boostcamp",
+    "title": "Boostcamp: Auto Progression Feature",
+    "description": "Comprehensive product management case study showcasing end-to-end product thinking, research, strategy, and execution.",
+    "thumbnail": "images/thumbnails/boostcamp.png",
+    "link": "projects/boostcamp.html",
+    "tags": [
+      "Product Strategy",
+      "User Research",
+      "Case Study"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Solving a critical P0 problem by designing and prototyping an intelligent progression system to improve user retention and unlock the core user journey.",
+    "overview": "This case study showcases my end-to-end product management approach to solving a critical user retention challenge at Boostcamp. Through user research, strategic PRD writing, and rapid prototyping using Google AI Studio, I identified and solved a fundamental flaw in Boostcamp's progression system that was alienating its most engaged users.",
+    "objective": "Design and build a working prototype of an intelligent auto-progression feature that dynamically adjusts difficulty based on actual performance metrics.",
+    "sections": [
+      {
+        "title": "The Problem: P0 - No Auto Progression",
+        "type": "problem-box",
+        "text": "<strong>Problem Statement:</strong><br><br>By failing to adjust target weights based on actual performance, Boostcamp's rigid, linear progression disrupts the core user journey and alienates its most engaged users."
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "📈",
+            "title": "User Retention",
+            "text": "Improve 30-day retention from 65% to 80% (+23% improvement)"
+          },
+          {
+            "icon": "⏱️",
+            "title": "Session Duration",
+            "text": "Increase average session time from 15 to 19 minutes (+25%)"
+          },
+          {
+            "icon": "🎯",
+            "title": "Course Completion",
+            "text": "Increase learners completing 10+ lessons from 35% to 60% (+71%)"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu",
+        "label": "📖 View Full Case Study on Gamma →",
+        "note": "Note: The full document includes detailed PRD, user research transcripts, prototype demonstrations, performance analysis, and implementation roadmap."
+      }
+    ]
+  },
+  {
+    "id": "spotify",
+    "title": "Spotify: Event Booking Experience",
+    "description": "Identified a broken event booking journey through user research and friction analysis, prioritized solutions using a RICE framework.",
+    "thumbnail": "images/thumbnails/spotify.png",
+    "link": "projects/spotify.html",
+    "tags": [
+      "User Research",
+      "RICE Framework",
+      "Retention Optimization"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Streamlining a broken event discovery and ticketing journey through user research, friction analysis, and RICE-prioritized solutions to improve user retention by 10%.",
+    "overview": "This case study showcases my end-to-end product management approach to solving a critical user engagement challenge at Spotify. Through user research, friction analysis, and strategic prioritization, I identified and addressed key barriers in the event booking journey that were preventing users from discovering and attending live events.",
+    "objective": "Identify friction points through user research, prioritize opportunities using RICE framework, and design a streamlined ticketing experience that reduces abandonment and improves user retention.",
+    "sections": [
+      {
+        "title": "The Problem: Broken Event Booking Journey",
+        "type": "problem-box",
+        "text": "<strong>Problem Statement:</strong><br><br>Spotify's event discovery and booking experience creates unnecessary friction at multiple touchpoints, causing users to abandon the journey and miss opportunities to deepen their engagement with artists and live content."
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "📈",
+            "title": "User Retention",
+            "text": "Improve 12-month retention by 10% through increased event engagement"
+          },
+          {
+            "icon": "🎫",
+            "title": "Booking Conversion",
+            "text": "Reduce abandonment from 42% to 15% (64% improvement)"
+          },
+          {
+            "icon": "⏱️",
+            "title": "Time-to-Complete",
+            "text": "Reduce average booking time from 8 minutes to 2 minutes (75% faster)"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc",
+        "label": "📖 View Full Case Study on Gamma →",
+        "note": "Note: The full document includes detailed user research transcripts, journey maps, wireframes, friction analysis, RICE prioritization matrix, prototype demonstrations, and business impact projections."
+      }
+    ]
+  }
+]
