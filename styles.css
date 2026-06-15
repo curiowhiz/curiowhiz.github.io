@@ -1182,7 +1182,7 @@ section {
 }
 
 /* ============================================================
-   13. CONTACT SECTION
+   13. CONTACT SECTION (v3 — Action-driven)
    ============================================================ */
 .contact {
     background: var(--bg-primary);
@@ -1190,95 +1190,110 @@ section {
 }
 
 .contact .section-subtitle {
-    max-width: 580px;
+    max-width: 600px;
     margin: 0 auto var(--space-2xl);
 }
 
-/* New: Contact action cards */
-.contact-cards {
+/* Two large action buttons side-by-side */
+.contact-actions-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-    max-width: 880px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    max-width: 720px;
     margin: 0 auto var(--space-2xl);
 }
 
-@media (max-width: 768px) {
-    .contact-cards {
+@media (max-width: 640px) {
+    .contact-actions-grid {
         grid-template-columns: 1fr;
-        max-width: 480px;
+        max-width: 420px;
     }
 }
 
-.contact-card {
+.contact-action-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-xl);
     background: var(--bg-card);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: var(--space-xl) var(--space-lg);
-    text-align: left;
     text-decoration: none;
     color: var(--text-primary);
+    text-align: left;
     transition: all 0.25s ease;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
+    box-shadow: var(--shadow-sm);
 }
 
-.contact-card:not(.contact-card-static):hover {
+.contact-action-btn:hover {
     border-color: var(--accent);
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
     color: var(--text-primary);
 }
 
-.contact-card-static {
-    cursor: default;
-    background: var(--bg-secondary);
-    border-style: dashed;
+.contact-action-btn:hover .contact-action-icon {
+    background: var(--accent);
+    color: var(--bg-card);
+    transform: scale(1.05);
 }
 
-.contact-card-icon {
-    font-size: 1.75rem;
-    line-height: 1;
-    margin-bottom: var(--space-sm);
+.contact-action-btn:hover .contact-action-title {
+    color: var(--accent);
 }
 
-.contact-card-label {
-    font-size: 0.6875rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
+.contact-action-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
 }
 
-.contact-card-value {
+.contact-action-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.contact-action-title {
     font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+    transition: color 0.25s ease;
+}
+
+.contact-action-sub {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Subtle location line below */
+.contact-location {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.contact-location strong {
     color: var(--text-primary);
     font-weight: 600;
-    line-height: 1.3;
 }
 
-.contact-card-arrow {
-    position: absolute;
-    top: var(--space-xl);
-    right: var(--space-lg);
-    color: var(--accent);
-    font-size: 1.25rem;
-    font-weight: 600;
-    transition: transform 0.25s ease;
-}
-
-.contact-card:hover .contact-card-arrow {
-    transform: translate(2px, -2px);
-}
-
-/* Bottom action buttons */
-.contact-ctas {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
+.contact-location-icon {
+    font-size: 1rem;
+    line-height: 1;
 }
 
 /* ============================================================
