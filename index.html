@@ -298,56 +298,88 @@
          ============================================================ -->
     <script>
         (function () {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            const navBackdrop = document.getElementById('navBackdrop');
-            const body = document.body;
+            function initNav() {
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('navLinks');
+                const navBackdrop = document.getElementById('navBackdrop');
+                const navbar = document.querySelector('.navbar');
+                const body = document.body;
 
-            if (!hamburger || !navLinks) return;
+                // Debug logging — check console
+                console.log('[Nav] init', { hamburger, navLinks, navBackdrop, navbar });
 
-            const closeMenu = () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                if (navBackdrop) navBackdrop.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-                body.classList.remove('nav-open');
-            };
+                if (!hamburger) {
+                    console.error('[Nav] Hamburger button not found!');
+                    return;
+                }
+                if (!navLinks) {
+                    console.error('[Nav] Nav links menu not found!');
+                    return;
+                }
 
-            const openMenu = () => {
-                hamburger.classList.add('active');
-                navLinks.classList.add('active');
-                if (navBackdrop) navBackdrop.classList.add('active');
-                hamburger.setAttribute('aria-expanded', 'true');
-                body.classList.add('nav-open');
-            };
+                const closeMenu = () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    if (navBackdrop) navBackdrop.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    body.classList.remove('nav-open');
+                    console.log('[Nav] menu closed');
+                };
 
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.contains('active') ? closeMenu() : openMenu();
-            });
+                const openMenu = () => {
+                    hamburger.classList.add('active');
+                    navLinks.classList.add('active');
+                    if (navBackdrop) navBackdrop.classList.add('active');
+                    hamburger.setAttribute('aria-expanded', 'true');
+                    body.classList.add('nav-open');
+                    console.log('[Nav] menu opened');
+                };
 
-            // Close on link click
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
+                hamburger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('[Nav] hamburger clicked');
+                    if (hamburger.classList.contains('active')) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
 
-            // Close on backdrop click
-            if (navBackdrop) {
-                navBackdrop.addEventListener('click', closeMenu);
+                // Close on link click
+                navLinks.querySelectorAll('a').forEach(function (link) {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                // Close on backdrop click
+                if (navBackdrop) {
+                    navBackdrop.addEventListener('click', closeMenu);
+                }
+
+                // Close on Escape
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+
+                // Scrolled state for navbar
+                if (navbar) {
+                    const handleScroll = function () {
+                        navbar.classList.toggle('scrolled', window.scrollY > 8);
+                    };
+                    window.addEventListener('scroll', handleScroll, { passive: true });
+                    handleScroll();
+                }
+
+                console.log('[Nav] ✅ initialized successfully');
             }
 
-            // Close on Escape
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && hamburger.classList.contains('active')) closeMenu();
-            });
-
-            // Scrolled state for navbar
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                const handleScroll = () => {
-                    navbar.classList.toggle('scrolled', window.scrollY > 8);
-                };
-                window.addEventListener('scroll', handleScroll, { passive: true });
-                handleScroll();
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initNav);
+            } else {
+                initNav();
             }
         })();
     </script>
