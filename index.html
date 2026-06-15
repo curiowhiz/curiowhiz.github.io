@@ -69,9 +69,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <!-- Backdrop for mobile menu -->
-        <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
     </nav>
+
+    <!-- Backdrop OUTSIDE navbar (escapes stacking context) -->
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
     <main id="main">
 
