@@ -160,10 +160,8 @@ h3 {
     color: var(--accent);
 }
 
-/* ============================================================
-   4. NAVIGATION  (UPDATED — refined typography + polished mobile menu)
-   ============================================================ */
-.navbar {
+//* ============================================================
+4. NAVIGATION (FIXED — iOS Safari mobile menu rendering)============================================================*/ .navbar {
     position: sticky;
     top: 0;
     background: rgba(250, 250, 247, 0.92);
@@ -186,13 +184,15 @@ h3 {
     align-items: center;
     padding-top: 18px;
     padding-bottom: 18px;
+    position: relative;
+    z-index: 1003;
+    /* keep logo + hamburger above mobile menu */
 }
 
 /* Brand / Logo */
 .logo {
     font-weight: 700;
     font-size: 1.125rem;
-    /* 18px — slightly larger, more presence */
     color: var(--text-primary);
     letter-spacing: -0.015em;
     line-height: 1;
@@ -216,7 +216,6 @@ h3 {
     display: flex;
     list-style: none;
     gap: var(--space-xl);
-    /* 32px */
     align-items: center;
 }
 
@@ -225,13 +224,11 @@ h3 {
     color: var(--text-primary);
     font-weight: 500;
     font-size: 0.9375rem;
-    /* 15px */
     letter-spacing: 0.005em;
     padding: 6px 2px;
     transition: color 0.2s ease;
 }
 
-/* Subtle animated underline on hover — matches accent */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -266,12 +263,12 @@ h3 {
     gap: 5px;
     padding: 10px;
     width: 44px;
-    /* WCAG-compliant tap target */
     height: 44px;
     border-radius: var(--radius-sm);
     transition: background 0.2s ease;
-    z-index: 1002;
-    /* above backdrop */
+    position: relative;
+    z-index: 1005;
+    /* always on top */
 }
 
 .hamburger:hover {
@@ -308,26 +305,28 @@ h3 {
     background: var(--accent);
 }
 
-/* Backdrop (hidden by default; activates on mobile when menu opens) */
+/* Backdrop */
 .nav-backdrop {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(15, 23, 42, 0.35);
-    backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 999;
+    z-index: 998;
+    /* below the menu */
 }
 
-/* Lock body scroll when nav is open */
 body.nav-open {
     overflow: hidden;
 }
 
-/* Mobile Navigation */
+/* ============================================================
+   Mobile Navigation
+   ============================================================ */
 @media (max-width: 768px) {
     .navbar .container {
         padding-top: 14px;
@@ -347,37 +346,50 @@ body.nav-open {
         pointer-events: auto;
     }
 
+    /* Mobile menu panel */
     .nav-links {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        width: 100%;
         background: var(--bg-primary);
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding: 88px var(--space-lg) var(--space-xl);
+        padding: 80px var(--space-lg) var(--space-xl);
         margin: 0;
         transform: translateY(-100%);
         opacity: 0;
+        visibility: hidden;
         pointer-events: none;
         transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-            opacity 0.25s ease;
+            opacity 0.25s ease,
+            visibility 0s linear 0.35s;
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow-lg);
-        z-index: 1001;
+        z-index: 1002;
+        max-height: 100dvh;
+        /* dynamic viewport height for iOS */
         max-height: 100vh;
+        /* fallback */
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.25s ease,
+            visibility 0s linear 0s;
     }
 
     .nav-links li {
         border-bottom: 1px solid var(--border);
+        list-style: none;
     }
 
     .nav-links li:last-child {
@@ -387,13 +399,12 @@ body.nav-open {
     .nav-links a {
         display: block;
         font-size: 1.0625rem;
-        /* 17px — easier to tap and read */
         font-weight: 500;
         padding: 18px 4px;
         color: var(--text-primary);
+        width: 100%;
     }
 
-    /* Disable desktop underline on mobile; use color shift instead */
     .nav-links a::after {
         display: none;
     }
@@ -408,7 +419,6 @@ body.nav-open {
 @media (max-width: 380px) {
     .logo {
         font-size: 1.0625rem;
-        /* 17px on very small screens */
     }
 }
 
