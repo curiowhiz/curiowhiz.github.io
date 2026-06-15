@@ -1182,7 +1182,7 @@ section {
 }
 
 /* ============================================================
-   13. CONTACT SECTION (v4 — Executive Grade)
+   13. CONTACT SECTION
    ============================================================ */
 .contact {
     background: var(--bg-primary);
@@ -1212,46 +1212,48 @@ section {
     margin: 0 auto var(--space-2xl);
 }
 
-/* Primary CTA block */
-.contact-primary-cta {
+/* Three icon+label links in a row */
+.contact-links {
+    display: inline-flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: var(--space-2xl);
 }
 
-.btn-xl {
-    padding: 18px 42px;
-    font-size: 1.0625rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
-    box-shadow: 0 4px 14px rgba(13, 92, 92, 0.18);
-    transition: all 0.25s ease;
-}
-
-.btn-xl:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(13, 92, 92, 0.28);
-}
-
-.contact-secondary {
-    margin-top: var(--space-md);
-    font-size: 0.9375rem;
-    color: var(--text-secondary);
-}
-
-.contact-secondary a {
-    color: var(--accent);
+    color: var(--text-primary);
     font-weight: 600;
+    font-size: 0.9375rem;
     text-decoration: none;
-    border-bottom: 1.5px solid transparent;
-    transition: border-color 0.2s ease;
-    padding-bottom: 2px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
 }
 
-.contact-secondary a:hover {
-    border-bottom-color: var(--accent);
+.contact-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Meta bar at the bottom */
+.contact-link-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover .contact-link-icon {
+    transform: scale(1.1);
+}
+
+/* Status / meta pill */
 .contact-meta {
     display: inline-flex;
     align-items: center;
@@ -1263,6 +1265,8 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     box-shadow: var(--shadow-sm);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
 }
 
 @media (max-width: 640px) {
@@ -1272,42 +1276,25 @@ section {
         padding: var(--space-md) var(--space-lg);
         border-radius: var(--radius-lg);
     }
+
+    .contact-meta-divider {
+        display: none;
+    }
 }
 
 .contact-meta-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-size: 0.875rem;
-    white-space: nowrap;
-}
-
-.contact-meta-label {
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.6875rem;
-    font-weight: 600;
-}
-
-.contact-meta-value {
-    color: var(--text-primary);
-    font-weight: 500;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    white-space: nowrap;
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .contact-meta-divider {
     width: 1px;
     height: 16px;
     background: var(--border);
-}
-
-@media (max-width: 640px) {
-    .contact-meta-divider {
-        display: none;
-    }
 }
 
 /* Animated status dot */
@@ -1343,41 +1330,19 @@ section {
 }
 
 /* ============================================================
-   14. FOOTER
+   14. FOOTER (Minimal)
    ============================================================ */
 .footer {
     padding: var(--space-2xl) 0;
     border-top: 1px solid var(--border);
     background: var(--bg-primary);
-}
-
-.footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-md);
+    text-align: center;
 }
 
 .footer-text {
     color: var(--text-secondary);
     font-size: 0.875rem;
     margin: 0;
-}
-
-.footer-social {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.footer-social a {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
-}
-
-.footer-social a:hover {
-    color: var(--accent);
 }
 
 /* ============================================================
