@@ -1194,40 +1194,86 @@ section {
     margin: 0 auto var(--space-2xl);
 }
 
-.contact-methods {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-2xl);
-    flex-wrap: wrap;
-    margin-bottom: var(--space-2xl);
+/* New: Contact action cards */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    max-width: 880px;
+    margin: 0 auto var(--space-2xl);
 }
 
-.contact-method {
+@media (max-width: 768px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+}
+
+.contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    text-align: left;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.25s ease;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
 }
 
-.contact-method-label {
-    font-size: 0.75rem;
+.contact-card:not(.contact-card-static):hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    color: var(--text-primary);
+}
+
+.contact-card-static {
+    cursor: default;
+    background: var(--bg-secondary);
+    border-style: dashed;
+}
+
+.contact-card-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+}
+
+.contact-card-label {
+    font-size: 0.6875rem;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     font-weight: 600;
 }
 
-.contact-method a,
-.contact-method span {
-    font-size: 1rem;
+.contact-card-value {
+    font-size: 1.0625rem;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
-.contact-method a:hover {
+.contact-card-arrow {
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-lg);
     color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: transform 0.25s ease;
 }
 
+.contact-card:hover .contact-card-arrow {
+    transform: translate(2px, -2px);
+}
+
+/* Bottom action buttons */
 .contact-ctas {
     display: flex;
     gap: var(--space-md);
