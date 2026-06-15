@@ -1,121 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Calendar: Product Thinking - Rajan Gupta</title>
+    <title>Google Calendar: Product Thinking — Rajan Gupta</title>
+
+    <meta name="description"
+        content="Google Calendar product thinking case study by Rajan Gupta — performance metrics, problem prioritization, and solution design.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/google-calendar.html">
+
+    <meta property="og:title" content="Google Calendar: Product Thinking — Rajan Gupta">
+    <meta property="og:description" content="A comprehensive product thinking exercise on Google Calendar.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
-        .case-study-section { margin: 2rem 0; line-height: 1.8; }
-        .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .case-study-section ul { margin-left: 2rem; }
-        .case-study-section li { margin-bottom: 0.8rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
-        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
-        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
-    </style>
+    <link rel="stylesheet" href="project-detail.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="project-detail">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <h1>Google Calendar: Product Thinking</h1>
-        <p class="subtitle">A comprehensive product thinking exercise exploring performance metrics, problem prioritization, and solution design.</p>
+    <main id="main">
 
-        <div class="tags">
-            <span class="tag">Product Thinking</span>
-            <span class="tag">Wireframes</span>
-            <span class="tag">Performance Metrics</span>
-            <span class="tag">Problem Prioritization</span>
-            <span class="tag">Solution Design</span>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Project Overview</h2>
-            <p>This case study showcases a deep dive into Google Calendar's product strategy, examining how to enhance user experience through data-driven decision making and user-centric design thinking.</p>
-            
-            <div class="highlight">
-                <strong>Objective:</strong> Analyze Google Calendar's product landscape and propose strategic improvements through comprehensive product thinking frameworks.
+        <!-- HERO -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#projects" class="back-link">← Back to Work</a>
+                <span class="eyebrow">PRODUCT CASE STUDY</span>
+                <h1>Google Calendar: Product Thinking</h1>
+                <p class="subtitle">A comprehensive product thinking exercise exploring performance metrics, problem
+                    prioritization, and solution design.</p>
+                <div class="hero-ctas">
+                    <a href="https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Key Focus Areas</h2>
-            <ul>
-                <li><strong>Performance Metrics:</strong> Understanding key KPIs including user engagement, scheduling frequency, and feature adoption rates</li>
-                <li><strong>Problem Prioritization:</strong> Identifying and ranking user pain points such as scheduling conflicts, notification management, and multi-calendar coordination</li>
-                <li><strong>Product Thinking:</strong> Developing a strategic framework for product improvements</li>
-                <li><strong>Solution Prioritization:</strong> Evaluating solution impact, technical feasibility, and user value</li>
-                <li><strong>Wireframes:</strong> Creating visual mockups for proposed features and UI improvements</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Methodology</h2>
-            <p>The analysis employed a structured product thinking approach:</p>
-            <ul>
-                <li>Competitive analysis of calendar applications</li>
-                <li>User research and pain point identification</li>
-                <li>Metrics analysis and KPI tracking</li>
-                <li>Solution ideation and prioritization</li>
-                <li>Wireframe design and user flow documentation</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Insights</h2>
-            <div class="highlight">
-                <ul>
-                    <li>Users struggle with managing multiple calendar sources efficiently</li>
-                    <li>Notification fatigue is a key pain point affecting user satisfaction</li>
-                    <li>Integration with other Google Workspace tools drives adoption</li>
-                    <li>Mobile scheduling experience needs optimization</li>
-                </ul>
+        <!-- METADATA -->
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Product Case Study</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">PM Analysis</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Methods</span>
+                        <span class="metadata-value">Product Thinking, Wireframes</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Outcome</span>
+                        <span class="metadata-value highlight">4 Strategic Solutions</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Proposed Solutions</h2>
-            <ul>
-                <li>Enhanced multi-calendar management interface</li>
-                <li>Intelligent notification system with user preference controls</li>
-                <li>Improved mobile scheduling interface with quick-add features</li>
-                <li>Smart conflict detection and resolution suggestions</li>
-            </ul>
-        </div>
+        <!-- SUMMARY CARDS -->
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Google Calendar users struggle with multi-calendar management, notification fatigue, and
+                            mobile scheduling friction. The product needed a structured framework to prioritize
+                            improvements based on user impact and business value.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>Applied a comprehensive product thinking framework: competitive analysis, user research, KPI
+                            mapping, and solution prioritization. Identified key performance metrics (engagement,
+                            scheduling frequency, feature adoption) and ranked user pain points.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">📊</div>
+                        <h3>Key Insights</h3>
+                        <p>Users struggle managing multiple calendar sources. Notification fatigue affects satisfaction.
+                            Google Workspace integration drives adoption. Mobile scheduling needs optimization — all
+                            backed by competitive benchmarking.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>Solution Direction</h3>
+                        <p>Proposed four strategic improvements: enhanced multi-calendar interface, intelligent
+                            notification preferences, mobile quick-add features, and smart conflict detection — each
+                            prioritized by impact, feasibility, and user value.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>View Full Presentation</h2>
-            <p>Explore the complete case study with detailed wireframes, analysis, and recommendations:</p>
-            <a href="https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing" target="_blank" class="cta-link">📊 View Full Case Study Presentation →</a>
-            
-            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
-                <em>Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations.</em>
-            </p>
-        </div>
-    </section>
+        <!-- METRICS BAND -->
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">Strategic Solutions</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">5</div>
+                        <div class="metric-label">Focus Areas Analyzed</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Framework-Driven</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED NOTES -->
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Focus Areas</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Performance Metrics:</strong> Understanding key KPIs including user
+                                        engagement, scheduling frequency, and feature adoption rates</li>
+                                    <li><strong>Problem Prioritization:</strong> Identifying and ranking user pain
+                                        points such as scheduling conflicts, notification management, and multi-calendar
+                                        coordination</li>
+                                    <li><strong>Product Thinking:</strong> Developing a strategic framework for product
+                                        improvements</li>
+                                    <li><strong>Solution Prioritization:</strong> Evaluating solution impact, technical
+                                        feasibility, and user value</li>
+                                    <li><strong>Wireframes:</strong> Creating visual mockups for proposed features and
+                                        UI improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Methodology</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Competitive analysis of calendar applications</li>
+                                    <li>User research and pain point identification</li>
+                                    <li>Metrics analysis and KPI tracking</li>
+                                    <li>Solution ideation and prioritization</li>
+                                    <li>Wireframe design and user flow documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Proposed Solutions Detail</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Enhanced multi-calendar management interface</li>
+                                    <li>Intelligent notification system with user preference controls</li>
+                                    <li>Improved mobile scheduling interface with quick-add features</li>
+                                    <li>Smart conflict detection and resolution suggestions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM CTA -->
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Ready for the Full Case Study?</h2>
+                <p>The complete presentation includes detailed wireframes, competitive analysis, and product strategy
+                    recommendations.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing"
+                        target="_blank" rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RELATED -->
+        <section class="related-projects-section">
+            <div class="container">
+                <span class="eyebrow">OTHER CASE STUDIES</span>
+                <div class="related-projects-grid">
+                    <a href="ladder-ai.html" class="related-project-link"><span class="related-project-name">Ladder
+                            AI</span><span class="related-project-desc">From AI Access to Fluency</span></a>
+                    <a href="google-news.html" class="related-project-link"><span class="related-project-name">Google
+                            News</span><span class="related-project-desc">User Growth Strategy</span></a>
+                    <a href="groww.html" class="related-project-link"><span
+                            class="related-project-name">Groww</span><span class="related-project-desc">Cut Abandonment
+                            Levels</span></a>
+                    <a href="strava.html" class="related-project-link"><span
+                            class="related-project-name">Strava</span><span class="related-project-desc">Funnel
+                            Analysis</span></a>
+                    <a href="boostcamp.html" class="related-project-link"><span
+                            class="related-project-name">Boostcamp</span><span class="related-project-desc">Auto
+                            Progression Feature</span></a>
+                    <a href="spotify.html" class="related-project-link"><span
+                            class="related-project-name">Spotify</span><span class="related-project-desc">Event Booking
+                            Experience</span></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

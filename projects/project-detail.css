@@ -1,0 +1,460 @@
+/* ============================================================
+   PROJECT-DETAIL.CSS — 2026 Structure
+   Ladder AI / All case study pages
+   ============================================================ */
+
+/* ============================================================
+   1. HERO
+   ============================================================ */
+.project-hero {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    background: var(--bg-primary);
+}
+
+.project-hero .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: var(--space-xl);
+    transition: color 0.2s ease;
+}
+
+.project-hero .back-link:hover {
+    color: var(--accent);
+}
+
+.project-hero .eyebrow {
+    color: var(--accent);
+    margin-bottom: var(--space-md);
+}
+
+.project-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.03em;
+}
+
+.project-hero .subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 720px;
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+}
+
+.project-hero .hero-ctas {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   2. METADATA STRIP (At a glance)
+   ============================================================ */
+.project-metadata-strip {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-lg) 0;
+}
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .metadata-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+}
+
+.metadata-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metadata-label {
+    font-size: 0.6875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.metadata-value {
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.metadata-value.highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.metadata-value .status-dot-inline {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--status-active);
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* ============================================================
+   3. SUMMARY CARDS (2x2 grid — 2026 structure)
+   ============================================================ */
+.summary-cards-section {
+    padding: var(--space-3xl) 0;
+    background: var(--bg-primary);
+}
+
+.summary-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .summary-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all 0.2s ease;
+}
+
+.summary-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.summary-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+}
+
+.summary-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+}
+
+.summary-card p {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 0.9375rem;
+}
+
+/* Dark technical summary card (for EVALS & TRADE-OFFS) */
+.summary-card.dark {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.summary-card.dark h3 {
+    color: var(--text-on-dark);
+}
+
+.summary-card.dark p {
+    color: var(--text-muted-dark);
+}
+
+.summary-card.dark .summary-card-icon {
+    background: rgba(94, 234, 212, 0.1);
+}
+
+/* Inline data table in dark card */
+.eval-data-block {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-dark-alt);
+    border-radius: var(--radius-md);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    color: var(--code-text);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto;
+}
+
+.eval-data-block .data-header {
+    color: var(--code-accent);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.eval-data-block .data-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 8px;
+    padding: 2px 0;
+}
+
+.eval-data-block .data-value {
+    color: var(--code-accent);
+    font-weight: 500;
+}
+
+/* ============================================================
+   4. KEY METRICS BAND
+   ============================================================ */
+.metrics-band {
+    background: var(--accent);
+    color: var(--bg-primary);
+    padding: var(--space-3xl) 0;
+}
+
+.metrics-band-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .metrics-band-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+.metrics-band-item .metric-value {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.03em;
+    color: var(--bg-primary);
+}
+
+.metrics-band-item .metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   5. DETAILED NOTES (Accordion)
+   ============================================================ */
+.detailed-notes-section {
+    background: var(--bg-primary);
+    padding: var(--space-3xl) 0;
+}
+
+.detailed-notes-section .section-header h2 {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.notes-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: var(--bg-card);
+    border: none;
+    padding: var(--space-lg) var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+    background: var(--bg-secondary);
+}
+
+.accordion-toggle {
+    font-size: 1.25rem;
+    color: var(--accent);
+    transition: transform 0.2s ease;
+}
+
+.accordion-item.open .accordion-toggle {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.open .accordion-content {
+    max-height: 2000px;
+}
+
+.accordion-body {
+    padding: 0 var(--space-xl) var(--space-xl);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.accordion-body ul {
+    padding-left: var(--space-lg);
+    margin: var(--space-md) 0;
+}
+
+.accordion-body li {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.accordion-body strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ============================================================
+   6. BOTTOM CTA
+   ============================================================ */
+.bottom-cta-section {
+    background: var(--bg-secondary);
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.bottom-cta-section h2 {
+    margin-bottom: var(--space-md);
+}
+
+.bottom-cta-section p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+.bottom-cta-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   7. RELATED PROJECTS (6 small links)
+   ============================================================ */
+.related-projects-section {
+    background: var(--bg-primary);
+    padding: var(--space-3xl) 0;
+    border-top: 1px solid var(--border);
+}
+
+.related-projects-section .eyebrow {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .related-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .related-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.related-project-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.related-project-link:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.related-project-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.related-project-name::after {
+    content: '→';
+    color: var(--accent);
+    transition: transform 0.2s ease;
+}
+
+.related-project-link:hover .related-project-name::after {
+    transform: translateX(2px);
+}
+
+.related-project-desc {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}

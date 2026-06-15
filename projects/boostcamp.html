@@ -1,299 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostcamp: Auto Progression Feature - Rajan Gupta</title>
+    <title>Boostcamp: Auto Progression Feature — Rajan Gupta</title>
+
+    <meta name="description"
+        content="Boostcamp auto-progression case study — PRD writing, user research, and AI-powered prototyping to solve a P0 retention problem.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/boostcamp.html">
+
+    <meta property="og:title" content="Boostcamp: Auto Progression Feature — Rajan Gupta">
+    <meta property="og:description"
+        content="Solving a P0 retention problem with an intelligent auto-progression system.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
-        .case-study-section { margin: 2rem 0; line-height: 1.8; }
-        .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .case-study-section h3 { color: #387dc9; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 1rem; }
-        .case-study-section ul { margin-left: 2rem; }
-        .case-study-section li { margin-bottom: 0.8rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
-        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
-        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
-        .problem-box { background: #fff3cd; border-left: 4px solid #d27b2d; padding: 1.5rem; margin: 1rem 0; border-radius: 4px; }
-        .solution-box { background: #d4edda; border-left: 4px solid #50948e; padding: 1.5rem; margin: 1rem 0; border-radius: 4px; }
-        .feature-box { background: white; border: 1px solid #e0e0e0; padding: 1rem; margin: 0.75rem 0; border-radius: 4px; }
-        .feature-box strong { color: #387dc9; }
-        .metric-box { background: #f5f5f5; padding: 1rem; margin: 0.5rem 0; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="project-detail.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="project-detail">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <h1>Boostcamp: Auto Progression Feature</h1>
-        <p class="subtitle">Solving a critical P0 problem by designing and prototyping an intelligent progression system to improve user retention and unlock the core user journey.</p>
+    <main id="main">
 
-        <div class="tags">
-            <span class="tag">PRD Writing</span>
-            <span class="tag">User Research</span>
-            <span class="tag">Problem Solving</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">AI/ML Integration</span>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Project Overview</h2>
-            <p>This case study showcases my end-to-end product management approach to solving a critical user retention challenge at Boostcamp. Through user research, strategic PRD writing, and rapid prototyping using Google AI Studio, I identified and solved a fundamental flaw in Boostcamp's progression system that was alienating its most engaged users.</p>
-            
-            <div class="highlight">
-                <strong>Challenge:</strong> User retention was declining due to a rigid, linear progression system that didn't adapt to individual user performance levels.
-                <br><br>
-                <strong>Solution:</strong> Design and build a working prototype of an intelligent auto-progression feature that dynamically adjusts difficulty based on actual performance metrics.
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#projects" class="back-link">← Back to Work</a>
+                <span class="eyebrow">PRODUCT CASE STUDY</span>
+                <h1>Boostcamp: Auto Progression Feature</h1>
+                <p class="subtitle">Solving a P0 retention problem by designing and prototyping an intelligent
+                    progression system that adapts difficulty to actual user performance — built with Google AI Studio.
+                </p>
+                <div class="hero-ctas">
+                    <a href="https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu" target="_blank"
+                        rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>The Problem: P0 - No Auto Progression</h2>
-            
-            <div class="problem-box">
-                <strong>Problem Statement:</strong>
-                <br><br>
-                By failing to adjust target weights based on actual performance, Boostcamp's rigid, linear progression disrupts the core user journey and alienates its most engaged users.
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Product Case Study</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">PM + Prototyping</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Methods</span>
+                        <span class="metadata-value">PRD, Google AI Studio</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Outcome</span>
+                        <span class="metadata-value highlight">65→80% Retention Target</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <h3>User Research Findings</h3>
-            <p>Through user interviews and behavior analysis, I identified several critical pain points:</p>
-            
-            <ul>
-                <li><strong>One-Size-Fits-All Progression:</strong> All users follow the same progression path regardless of skill level or prior experience</li>
-                <li><strong>Frustration & Churn:</strong> Advanced users get bored with easy content; beginners get overwhelmed and drop out</li>
-                <li><strong>Wasted Potential:</strong> The system doesn't leverage performance data to optimize learning paths</li>
-                <li><strong>Missed Engagement Signals:</strong> No mechanism to keep users challenged at their optimal difficulty level</li>
-                <li><strong>Core Journey Disruption:</strong> Users abandon when progression doesn't match their ability, breaking the engagement loop</li>
-            </ul>
-
-            <h3>Impact on User Retention</h3>
-            <div class="metric-box">
-                <strong>📉 Churn Rate Impact:</strong> 35% of users abandon within 2 weeks due to progression misalignment
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Boostcamp's rigid, linear progression system disrupted the core user journey — 35% of users
+                            abandoned within 2 weeks. Advanced users got bored, beginners got overwhelmed, and the
+                            platform had no mechanism to keep anyone in their optimal challenge zone.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>Authored a full PRD covering problem, personas, success metrics, technical architecture, and
+                            edge cases. Built a working prototype in Google AI Studio that simulated dynamic difficulty
+                            adjustment, then validated with 5 power users from the Boostcamp community.</p>
+                    </div>
+                    <!-- DARK eval card: Success metrics -->
+                    <div class="summary-card dark">
+                        <div class="summary-card-icon">⚙️</div>
+                        <h3>Success Metrics Defined</h3>
+                        <p>Three measurable targets locked into the PRD before engineering scoped the work — each
+                            tied to a specific behavior the auto-progression system unlocks.</p>
+                        <div class="eval-data-block">
+                            <div class="data-header">metric │ current │ target</div>
+                            <div class="data-row">
+                                <span>retention_30d</span>
+                                <span class="data-value">65%</span>
+                                <span class="data-value">80%</span>
+                            </div>
+                            <div class="data-row">
+                                <span>session_duration</span>
+                                <span class="data-value">15 min</span>
+                                <span class="data-value">19 min</span>
+                            </div>
+                            <div class="data-row">
+                                <span>10_lesson_completion</span>
+                                <span class="data-value">35%</span>
+                                <span class="data-value">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>The Outcome</h3>
+                        <p>Delivered a validated prototype and shipping-ready PRD. Projected impact: +23% retention,
+                            +25% session duration, +71% in users completing 10+ lessons — turning a flat progression
+                            system into a personalized learning path for every user.</p>
+                    </div>
+                </div>
             </div>
-            <div class="metric-box">
-                <strong>😤 User Sentiment:</strong> "The system feels rigid and doesn't understand my learning pace"
+        </section>
+
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+23%</div>
+                        <div class="metric-label">Retention Improvement</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+25%</div>
+                        <div class="metric-label">Session Duration</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+71%</div>
+                        <div class="metric-label">Course Completion</div>
+                    </div>
+                </div>
             </div>
-            <div class="metric-box">
-                <strong>⏱️ Time-to-Value:</strong> Extended onboarding with no personalization leads to low engagement
+        </section>
+
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>PRD Structure</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Problem & Context:</strong> Root-cause analysis of retention decline
+                                    </li>
+                                    <li><strong>User Personas:</strong> Distinct needs across beginner, intermediate,
+                                        advanced learners</li>
+                                    <li><strong>Goals & Success Metrics:</strong> Retention, engagement, time-to-value
+                                        targets</li>
+                                    <li><strong>Feature Specifications:</strong> Detailed requirements per capability
+                                    </li>
+                                    <li><strong>Technical Architecture:</strong> API endpoints, data models, integration
+                                        points</li>
+                                    <li><strong>Implementation Roadmap:</strong> Phased rollout with validation
+                                        milestones</li>
+                                    <li><strong>Edge Cases:</strong> New users, content gaps, system constraints</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>How Auto Progression Works</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Performance Tracking:</strong> Real-time accuracy, completion time,
+                                        attempt count, mastery</li>
+                                    <li><strong>Adaptive Difficulty:</strong> Auto-adjusts challenge based on
+                                        performance thresholds</li>
+                                    <li><strong>Smart Content Routing:</strong> Recommends next topics by demonstrated
+                                        competency</li>
+                                    <li><strong>Progress Acceleration:</strong> Advanced users skip prereqs and move
+                                        faster</li>
+                                    <li><strong>Struggling-User Support:</strong> Extra resources + reduced difficulty
+                                        below mastery threshold</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Prototyping with Google AI Studio</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>AI-Powered Decision Engine:</strong> Google AI models analyze
+                                        performance patterns and recommend adjustments</li>
+                                    <li><strong>Performance Algorithms:</strong> Mastery scoring from raw interaction
+                                        data</li>
+                                    <li><strong>Interactive Simulation:</strong> Demonstrated auto-progression behavior
+                                        across user archetypes</li>
+                                    <li><strong>Analytics Dashboard:</strong> Prototype surfacing performance metrics +
+                                        recommendations</li>
+                                    <li><strong>Validation:</strong> 5 power users tested the concept and confirmed
+                                        engagement lift</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Learnings</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Deep user research uncovers root causes hidden in surface metrics</li>
+                                    <li>Rapid prototyping validates ideas before committing engineering investment</li>
+                                    <li>AI/ML is most valuable when applied to real user problems, not as a feature</li>
+                                    <li>One-size-fits-all is dead — personalization is table stakes for engagement</li>
+                                    <li>P0 problems in the core journey have exponential downstream impact</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Solution: Intelligent Auto Progression</h2>
-            
-            <div class="solution-box">
-                <strong>✅ Solution Overview:</strong>
-                <br><br>
-                A dynamic progression system that continuously monitors user performance metrics and automatically adjusts difficulty, pacing, and content recommendations to keep users in their optimal learning zone.
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Ready for the Full Case Study?</h2>
+                <p>The full deck includes the complete PRD, user research transcripts, prototype demonstrations,
+                    performance analysis, and implementation roadmap.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu" target="_blank"
+                        rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
+        </section>
 
-            <h3>How It Works</h3>
-            <ul>
-                <li><strong>Performance Tracking:</strong> Monitor accuracy, completion time, attempt count, and mastery metrics in real-time</li>
-                <li><strong>Adaptive Difficulty:</strong> Automatically increase/decrease challenge level based on performance thresholds</li>
-                <li><strong>Smart Content Routing:</strong> Recommend next topics based on demonstrated competency and learning patterns</li>
-                <li><strong>Progress Acceleration:</strong> Allow advanced users to skip prerequisites and move through content faster</li>
-                <li><strong>Support for Struggling Users:</strong> Provide additional resources and reduce difficulty for users below mastery threshold</li>
-            </ul>
-
-            <h3>Core Features</h3>
-            
-            <div class="feature-box">
-                <strong>🎯 Performance-Based Leveling:</strong> Target weights adjust dynamically based on user accuracy and completion metrics
+        <section class="related-projects-section">
+            <div class="container">
+                <span class="eyebrow">OTHER CASE STUDIES</span>
+                <div class="related-projects-grid">
+                    <a href="ladder-ai.html" class="related-project-link"><span class="related-project-name">Ladder
+                            AI</span><span class="related-project-desc">From AI Access to Fluency</span></a>
+                    <a href="google-calendar.html" class="related-project-link"><span
+                            class="related-project-name">Google Calendar</span><span
+                            class="related-project-desc">Product Thinking</span></a>
+                    <a href="google-news.html" class="related-project-link"><span class="related-project-name">Google
+                            News</span><span class="related-project-desc">User Growth Strategy</span></a>
+                    <a href="groww.html" class="related-project-link"><span
+                            class="related-project-name">Groww</span><span class="related-project-desc">Cut Abandonment
+                            Levels</span></a>
+                    <a href="strava.html" class="related-project-link"><span
+                            class="related-project-name">Strava</span><span class="related-project-desc">Funnel
+                            Analysis</span></a>
+                    <a href="spotify.html" class="related-project-link"><span
+                            class="related-project-name">Spotify</span><span class="related-project-desc">Event Booking
+                            Experience</span></a>
+                </div>
             </div>
+        </section>
 
-            <div class="feature-box">
-                <strong>📊 Real-Time Analytics:</strong> Dashboard showing mastery levels, performance trends, and progression recommendations
-            </div>
-
-            <div class="feature-box">
-                <strong>🔄 Continuous Optimization:</strong> System learns from user behavior to improve progression recommendations over time
-            </div>
-
-            <div class="feature-box">
-                <strong>⚡ Instant Feedback Loops:</strong> Users see immediate progression adjustments based on performance
-            </div>
-
-            <div class="feature-box">
-                <strong>🎓 Personalized Learning Paths:</strong> Each user gets a unique curriculum optimized for their skill level and learning pace
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>PRD Development Process</h2>
-            
-            <h3>PRD Structure</h3>
-            <p>I developed a comprehensive Product Requirements Document covering:</p>
-            <ul>
-                <li><strong>Problem & Context:</strong> User retention challenges and root cause analysis</li>
-                <li><strong>User Personas:</strong> Differentiated needs of beginners, intermediate, and advanced learners</li>
-                <li><strong>Goals & Success Metrics:</strong> Retention improvement, engagement increase, time-to-value reduction</li>
-                <li><strong>Feature Specifications:</strong> Detailed requirements for each core capability</li>
-                <li><strong>Technical Architecture:</strong> API endpoints, data models, and integration points</li>
-                <li><strong>Implementation Roadmap:</strong> Phased rollout with testing and validation milestones</li>
-                <li><strong>Edge Cases & Constraints:</strong> Handling for new users, content gaps, and system limitations</li>
-            </ul>
-
-            <h3>Key PRD Insights</h3>
-            <div class="highlight">
-                <strong>Success Metric #1:</strong> Improve 30-day retention from 65% to 80%
-            </div>
-            <div class="highlight">
-                <strong>Success Metric #2:</strong> Increase average session time by 25%
-            </div>
-            <div class="highlight">
-                <strong>Success Metric #3:</strong> Achieve 60% of users completing 10+ lessons (vs. current 35%)
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Prototyping with Google AI Studio</h2>
-            
-            <h3>Prototype Development</h3>
-            <p>I built a working prototype using <strong>Google AI Studio</strong> to demonstrate the auto-progression concept and validate feasibility:</p>
-            
-            <div class="feature-box">
-                <strong>🤖 AI-Powered Decision Engine:</strong> Leveraged Google's AI models to analyze performance patterns and recommend progression adjustments
-            </div>
-
-            <div class="feature-box">
-                <strong>📈 Performance Analysis:</strong> Built algorithms to calculate mastery scores from user interaction data
-            </div>
-
-            <div class="feature-box">
-                <strong>🎮 Interactive Simulation:</strong> Created simulations showing how auto-progression works for different user types
-            </div>
-
-            <div class="feature-box">
-                <strong>📊 Analytics Dashboard:</strong> Prototype dashboard displaying performance metrics and progression recommendations
-            </div>
-
-            <h3>Prototype Validation</h3>
-            <ul>
-                <li>Tested concept with 5 power users from Boostcamp community</li>
-                <li>Validated that dynamic difficulty adjustment improved engagement</li>
-                <li>Demonstrated clear ROI on development investment</li>
-                <li>Gathered feedback for production implementation</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Expected Impact</h2>
-            
-            <div class="metric-box">
-                📈 <strong>User Retention:</strong> Improve 30-day retention from 65% to 80% (+23% improvement)
-            </div>
-
-            <div class="metric-box">
-                ⏱️ <strong>Session Duration:</strong> Increase average session time from 15 to 19 minutes (+25%)
-            </div>
-
-            <div class="metric-box">
-                🎯 <strong>Course Completion:</strong> Increase learners completing 10+ lessons from 35% to 60% (+71%)
-            </div>
-
-            <div class="metric-box">
-                😊 <strong>User Satisfaction:</strong> Expected NPS improvement through better pacing and challenge alignment
-            </div>
-
-            <div class="metric-box">
-                💰 <strong>Business Impact:</strong> Reduced churn = increased lifetime value and revenue per user
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Core Competencies Demonstrated</h2>
-            
-            <div class="feature-box">
-                <strong>🔍 User Research:</strong> Conducted qualitative research to identify root cause of retention issues
-            </div>
-
-            <div class="feature-box">
-                <strong>📋 PRD Writing:</strong> Developed comprehensive product requirements document with clear specifications
-            </div>
-
-            <div class="feature-box">
-                <strong>🎯 Problem Definition:</strong> Articulated P0 problem in clear, measurable terms
-            </div>
-
-            <div class="feature-box">
-                <strong>💡 Solution Design:</strong> Created innovative feature addressing core user pain point
-            </div>
-
-            <div class="feature-box">
-                <strong>🤖 AI/ML Understanding:</strong> Leveraged Google AI Studio to build prototype and validate concept
-            </div>
-
-            <div class="feature-box">
-                <strong>🧪 Prototyping & Validation:</strong> Built working prototype and tested with real users
-            </div>
-
-            <div class="feature-box">
-                <strong>📊 Data-Driven Decision Making:</strong> Used performance metrics to inform progression logic
-            </div>
-
-            <div class="feature-box">
-                <strong>🎓 Communication:</strong> Clearly articulated complex problem and solution to stakeholders
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Learnings</h2>
-            <ul>
-                <li><strong>User-Centric Problem Solving:</strong> Deep user research uncovers root causes hidden in surface metrics</li>
-                <li><strong>Rapid Prototyping Value:</strong> Building prototypes quickly helps validate ideas before full development</li>
-                <li><strong>AI as a Tool:</strong> AI/ML can solve product problems when used strategically around user needs</li>
-                <li><strong>Personalization Drives Retention:</strong> One-size-fits-all approaches fail; personalization is table stakes</li>
-                <li><strong>P0 Problems Matter:</strong> Fixing core journey issues has exponential impact on engagement</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>View Full Case Study</h2>
-            <p>Access the complete case study with detailed PRD, user research findings, prototype walkthrough, and implementation strategy:</p>
-            <a href="https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu" target="_blank" class="cta-link">📖 View Full Case Study on Gamma →</a>
-            
-            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
-                <em>Note: The full document includes detailed PRD, user research transcripts, prototype demonstrations, performance analysis, and implementation roadmap.</em>
-            </p>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Why This Project Matters</h2>
-            <p>This Boostcamp case study demonstrates my ability to:</p>
-            <ul>
-                <li>Identify and articulate critical product problems from user research</li>
-                <li>Develop clear, actionable PRDs that guide implementation</li>
-                <li>Build working prototypes to validate complex product concepts</li>
-                <li>Think strategically about retention and user engagement</li>
-                <li>Leverage emerging technologies (AI/ML) to solve product challenges</li>
-                <li>Measure impact and communicate business value</li>
-            </ul>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

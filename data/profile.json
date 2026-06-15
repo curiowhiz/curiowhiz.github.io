@@ -1,0 +1,81 @@
+{
+  "name": "Rajan Gupta",
+  "eyebrowLabel": "AI PRODUCT MANAGER · TORONTO",
+  "tagline": "Building AI products with engineering rigor.",
+  "subtitle": "AI Product Manager specializing in LLM evaluation, system reliability, and cost optimization.",
+  "supportingBody": "15+ years across banking, enterprise SaaS, and public sector — applying performance engineering rigor and evaluation discipline to AI-powered products.",
+  "profilePhoto": "images/profile-pic.jpg",
+  "currentRole": "Performance Test Lead · Bank of Montreal",
+  "metadataChips": [
+    "15+ Years Experience",
+    "AI-Powered PM Stack",
+    "Toronto, Canada"
+  ],
+  "heroMetrics": [
+    {
+      "value": "$1.2M",
+      "label": "Revenue Impact"
+    },
+    {
+      "value": "40%",
+      "label": "Faster Deployments"
+    },
+    {
+      "value": "7%",
+      "label": "Higher Retention"
+    }
+  ],
+  "aboutHeadline": "Engineering rigor meets product judgment.",
+  "aboutParagraphs": [
+    "I lead performance and product initiatives at Bank of Montreal, where I'm migrating on-premise services to AWS Lambda — improving deployment speed by 40% and optimizing latency-cost trade-offs. Previously, I delivered <strong>663% revenue growth</strong> at MTX Group ($157K → $1.2M in 14 months) and led product roadmaps for Bank of America's CashPro Mobile, improving user retention by 7%.",
+    "My 15+ years in <strong>Performance Engineering and Quality Assurance</strong> translates directly into AI Product Management: I've spent my career building evaluation harnesses, designing golden datasets, auditing edge cases, and managing trade-offs between latency, accuracy, and cost — the exact problems LLM-powered products face in 2026.",
+    "I use a modern AI-powered PM stack — <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, <strong>n8n</strong> for workflow automation, and <strong>Python</strong> for evaluation pipelines. I'm currently building <strong>Ladder AI</strong> (a personal AI fluency platform) and an open-source AI Evaluation Harness for PM tasks."
+  ],
+  "capabilities": [
+    {
+      "icon": "🧪",
+      "title": "LLM Evaluation",
+      "description": "Design golden datasets and evaluation harnesses for non-deterministic AI outputs."
+    },
+    {
+      "icon": "🛡️",
+      "title": "System Reliability",
+      "description": "Audit failure modes, edge cases, and prompt injection vulnerabilities."
+    },
+    {
+      "icon": "⚡",
+      "title": "Cost Optimization",
+      "description": "Manage trade-offs between latency, accuracy, and token economics."
+    },
+    {
+      "icon": "🎯",
+      "title": "Product Strategy",
+      "description": "Translate user research into AI-native product roadmaps and measurable outcomes."
+    },
+    {
+      "icon": "📊",
+      "title": "Performance Engineering",
+      "description": "15+ years optimizing systems at enterprise scale across banking and SaaS."
+    },
+    {
+      "icon": "🔍",
+      "title": "User Research",
+      "description": "Cross-functional interviews and behavioral analysis to identify high-signal pain points."
+    },
+    {
+      "icon": "🤝",
+      "title": "Cross-Functional Leadership",
+      "description": "Align engineering, design, and stakeholder teams around shared outcomes."
+    },
+    {
+      "icon": "🔄",
+      "title": "AI-Powered Workflows",
+      "description": "Build automation pipelines using n8n, Claude, and Python to scale research."
+    }
+  ],
+  "location": "Toronto, Ontario, Canada",
+  "linkedin": "https://www.linkedin.com/in/rgdroll",
+  "github": "https://github.com/curiowhiz",
+  "email": "rajangupta28@gmail.com",
+  "phone": "647-965-2818"
+}

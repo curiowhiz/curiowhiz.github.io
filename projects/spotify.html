@@ -1,328 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify: Event Booking Experience - Rajan Gupta</title>
+    <title>Spotify: Event Booking Experience — Rajan Gupta</title>
+
+    <meta name="description"
+        content="Spotify event booking case study — friction analysis, RICE prioritization, and journey mapping to reduce abandonment and lift retention by 10%.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/spotify.html">
+
+    <meta property="og:title" content="Spotify: Event Booking Experience — Rajan Gupta">
+    <meta property="og:description"
+        content="Streamlining a broken event booking journey through RICE-prioritized solutions.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail { max-width: 900px; margin: 0 auto; padding: 3rem 20px; }
-        .back-link { color: #387dc9; text-decoration: none; margin-bottom: 2rem; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        .project-detail h1 { color: #387dc9; margin-bottom: 1rem; }
-        .subtitle { color: #7d7a75; margin-bottom: 2rem; }
-        .case-study-section { margin: 2rem 0; line-height: 1.8; }
-        .case-study-section h2 { color: #387dc9; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .case-study-section h3 { color: #387dc9; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 1rem; }
-        .case-study-section ul { margin-left: 2rem; }
-        .case-study-section li { margin-bottom: 0.8rem; }
-        .cta-link { display: inline-block; background: #387dc9; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; margin-top: 1rem; font-weight: 600; transition: all 0.3s; }
-        .cta-link:hover { background: #50948e; transform: translateY(-2px); }
-        .highlight { background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #387dc9; border-radius: 4px; margin: 1.5rem 0; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: #f5f5f5; color: #387dc9; padding: 0.35rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
-        .problem-box { background: #fff3cd; border-left: 4px solid #d27b2d; padding: 1.5rem; margin: 1rem 0; border-radius: 4px; }
-        .solution-box { background: #d4edda; border-left: 4px solid #50948e; padding: 1.5rem; margin: 1rem 0; border-radius: 4px; }
-        .feature-box { background: white; border: 1px solid #e0e0e0; padding: 1rem; margin: 0.75rem 0; border-radius: 4px; }
-        .feature-box strong { color: #387dc9; }
-        .metric-box { background: #f5f5f5; padding: 1rem; margin: 0.5rem 0; border-radius: 4px; }
-    </style>
+    <link rel="stylesheet" href="project-detail.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#projects">Projects</a></li>
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="project-detail">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <h1>Spotify: Event Booking Experience</h1>
-        <p class="subtitle">Streamlining a broken event discovery and ticketing journey through user research, friction analysis, and RICE-prioritized solutions to improve user retention by 10%.</p>
+    <main id="main">
 
-        <div class="tags">
-            <span class="tag">User Research</span>
-            <span class="tag">RICE Framework</span>
-            <span class="tag">Retention Optimization</span>
-            <span class="tag">Friction Analysis</span>
-            <span class="tag">Journey Mapping</span>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Project Overview</h2>
-            <p>This case study showcases my end-to-end product management approach to solving a critical user engagement challenge at Spotify. Through user research, friction analysis, and strategic prioritization, I identified and addressed key barriers in the event booking journey that were preventing users from discovering and attending live events.</p>
-            
-            <div class="highlight">
-                <strong>Challenge:</strong> Users struggled to discover events, navigate the booking process, and complete purchases, resulting in low conversion rates and missed engagement opportunities.
-                <br><br>
-                <strong>Solution:</strong> Identify friction points through user research, prioritize opportunities using RICE framework, and design a streamlined ticketing experience that reduces abandonment and improves user retention.
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#projects" class="back-link">← Back to Work</a>
+                <span class="eyebrow">PRODUCT CASE STUDY</span>
+                <h1>Spotify: Event Booking Experience</h1>
+                <p class="subtitle">Streamlining a broken event discovery and ticketing journey through user research,
+                    friction analysis, and RICE-prioritized solutions to improve user retention by 10%.</p>
+                <div class="hero-ctas">
+                    <a href="https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc" target="_blank"
+                        rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>The Problem: Broken Event Booking Journey</h2>
-            
-            <div class="problem-box">
-                <strong>Problem Statement:</strong>
-                <br><br>
-                Spotify's event discovery and booking experience creates unnecessary friction at multiple touchpoints, causing users to abandon the journey and miss opportunities to deepen their engagement with artists and live content.
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Product Case Study</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">PM Analysis</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Methods</span>
+                        <span class="metadata-value">RICE, Journey Mapping</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Outcome</span>
+                        <span class="metadata-value highlight">+10% Retention Target</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <h3>User Research Findings</h3>
-            <p>Through user interviews, usability testing, and behavior analysis, I identified several critical pain points:</p>
-            
-            <ul>
-                <li><strong>Poor Event Discoverability:</strong> Users struggle to find events matching their music preferences and location</li>
-                <li><strong>Complex Booking Flow:</strong> Multi-step process with unclear CTAs and redundant information requests</li>
-                <li><strong>Lack of Personalization:</strong> Event recommendations don't align with listening history or favorite artists</li>
-                <li><strong>Payment Friction:</strong> Unexpected fees, unclear pricing breakdown, and multiple payment confirmations</li>
-                <li><strong>Missed Context:</strong> Limited artist information and event details at critical decision moments</li>
-                <li><strong>No Social Proof:</strong> Absence of friend attendance indicators and community engagement signals</li>
-            </ul>
-
-            <h3>Impact on User Engagement</h3>
-            <div class="metric-box">
-                <strong>📉 Booking Abandonment Rate:</strong> 42% of users abandon the booking journey before payment completion
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Spotify's event booking journey suffered from 42% abandonment, 8-minute average completion
+                            time (vs. 3-4 min benchmark), and disconnected discovery — losing ticket revenue and missing
+                            opportunities to deepen user engagement with artists and live content.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>Conducted 12 user interviews and tested wireframes with 25 users across three segments
+                            (Concert Enthusiasts, Casual Listeners, Explorers). Mapped journeys, identified friction
+                            points, and applied the RICE framework to prioritize highest-impact solutions.</p>
+                    </div>
+                    <!-- DARK eval card: RICE matrix -->
+                    <div class="summary-card dark">
+                        <div class="summary-card-icon">⚙️</div>
+                        <h3>RICE Prioritization Matrix</h3>
+                        <p>Evaluated four candidate features against Reach × Impact × Confidence ÷ Effort to focus
+                            engineering on highest-leverage opportunities first.</p>
+                        <div class="eval-data-block">
+                            <div class="data-header">feature │ rice_score │ priority</div>
+                            <div class="data-row">
+                                <span>transparent_pricing</span>
+                                <span class="data-value">191.25</span>
+                                <span class="data-value">quick_win</span>
+                            </div>
+                            <div class="data-row">
+                                <span>one_click_booking</span>
+                                <span class="data-value">72.00</span>
+                                <span class="data-value">p0</span>
+                            </div>
+                            <div class="data-row">
+                                <span>personalized_feed</span>
+                                <span class="data-value">48.00</span>
+                                <span class="data-value">p1</span>
+                            </div>
+                            <div class="data-row">
+                                <span>friend_signals</span>
+                                <span class="data-value">33.75</span>
+                                <span class="data-value">p2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>The Outcome</h3>
+                        <p>Projected 64% reduction in booking abandonment (42% → 15%), 75% faster checkout (8 min → 2
+                            min), 3x more events discovered per session, and an estimated 25% lift in ticket sales — all
+                            driving a 10% improvement in 12-month retention.</p>
+                    </div>
+                </div>
             </div>
-            <div class="metric-box">
-                <strong>😤 User Frustration:</strong> "Finding and booking events feels disconnected from my music experience"
+        </section>
+
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">42→15%</div>
+                        <div class="metric-label">Abandonment Reduction</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">75%</div>
+                        <div class="metric-label">Faster Checkout</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">+10%</div>
+                        <div class="metric-label">Retention Lift</div>
+                    </div>
+                </div>
             </div>
-            <div class="metric-box">
-                <strong>💰 Revenue Impact:</strong> Missed ticket sales and lost opportunity to deepen user lifetime value
+        </section>
+
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Research Methodology</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>User Research:</strong></p>
+                                <ul>
+                                    <li>12 user interviews across Concert Enthusiasts, Casual Listeners, and Explorers
+                                    </li>
+                                    <li>Wireframe testing with 25 users to validate friction-reduction hypotheses</li>
+                                    <li>Task completion rate measurement before/after design changes</li>
+                                    <li>Qualitative feedback synthesis on pain points and proposed solutions</li>
+                                </ul>
+                                <p><strong>Journey Mapping:</strong></p>
+                                <ul>
+                                    <li>End-to-end maps across all three segments with friction overlays</li>
+                                    <li>Ranked top 5 friction points by % of users affected</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Top 5 Friction Points</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Unclear event discovery path</strong> — affects 45% of users</li>
+                                    <li><strong>Multi-step checkout process</strong> — affects 38% of users</li>
+                                    <li><strong>Unexpected fee surprises</strong> — affects 35% of users</li>
+                                    <li><strong>No social context about attendees</strong> — affects 28% of users</li>
+                                    <li><strong>Limited artist info at decision point</strong> — affects 22% of users
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Core Solutions Designed</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Personalized Event Discovery:</strong> ML-driven recommendations from
+                                        listening history and attendance patterns</li>
+                                    <li><strong>One-Click Checkout:</strong> Saved payment + preferences, 8 min → 2 min
+                                    </li>
+                                    <li><strong>Social Integration:</strong> Friend attendance signals for group
+                                        planning</li>
+                                    <li><strong>Transparent Pricing:</strong> Full fee breakdown surfaced before payment
+                                    </li>
+                                    <li><strong>Mobile-Optimized Flow:</strong> Touch-friendly UI for on-the-go booking
+                                    </li>
+                                    <li><strong>Smart Notifications:</strong> Tied to listening habits and artist
+                                        activity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Learnings</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Friction compounds — small frictions create exponential abandonment</li>
+                                    <li>Personalization meaningfully drives engagement and conversion</li>
+                                    <li>Transparency builds trust and reduces decision paralysis</li>
+                                    <li>RICE prevents waste by focusing effort on highest-impact opportunities</li>
+                                    <li>Social context dramatically increases event adoption</li>
+                                    <li>Mobile-first is non-negotiable for event discovery and booking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="metric-box">
-                <strong>⏱️ Time-to-Complete:</strong> Average 8-minute booking flow (industry benchmark is 3-4 minutes)
+        </section>
+
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Ready for the Full Case Study?</h2>
+                <p>The complete deck includes user research transcripts, journey maps, wireframes, the full RICE matrix,
+                    and prototype demonstrations.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc" target="_blank"
+                        rel="noopener" class="btn btn-primary">
+                        📊 View Full Case Study →
+                    </a>
+                    <a href="../#projects" class="btn btn-outline">← Back to Work</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="case-study-section">
-            <h2>Solution: Streamlined Event Booking Experience</h2>
-            
-            <div class="solution-box">
-                <strong>✅ Solution Overview:</strong>
-                <br><br>
-                A redesigned event discovery and booking journey that personalizes recommendations, reduces friction at key touchpoints, and leverages social signals to increase conversion rates and user retention.
+        <section class="related-projects-section">
+            <div class="container">
+                <span class="eyebrow">OTHER CASE STUDIES</span>
+                <div class="related-projects-grid">
+                    <a href="ladder-ai.html" class="related-project-link"><span class="related-project-name">Ladder
+                            AI</span><span class="related-project-desc">From AI Access to Fluency</span></a>
+                    <a href="google-calendar.html" class="related-project-link"><span
+                            class="related-project-name">Google Calendar</span><span
+                            class="related-project-desc">Product Thinking</span></a>
+                    <a href="google-news.html" class="related-project-link"><span class="related-project-name">Google
+                            News</span><span class="related-project-desc">User Growth Strategy</span></a>
+                    <a href="groww.html" class="related-project-link"><span
+                            class="related-project-name">Groww</span><span class="related-project-desc">Cut Abandonment
+                            Levels</span></a>
+                    <a href="strava.html" class="related-project-link"><span
+                            class="related-project-name">Strava</span><span class="related-project-desc">Funnel
+                            Analysis</span></a>
+                    <a href="boostcamp.html" class="related-project-link"><span
+                            class="related-project-name">Boostcamp</span><span class="related-project-desc">Auto
+                            Progression Feature</span></a>
+                </div>
             </div>
+        </section>
 
-            <h3>RICE Framework Prioritization</h3>
-            <p>I applied the RICE framework (Reach, Impact, Confidence, Effort) to evaluate and prioritize opportunities:</p>
-            
-            <div class="feature-box">
-                <strong>🎯 Personalized Event Feed:</strong> Reach: 60%, Impact: High (4x), Confidence: 80%, Effort: 4 weeks = RICE Score: 48
-            </div>
-
-            <div class="feature-box">
-                <strong>⚡ One-Click Booking:</strong> Reach: 80%, Impact: High (3x), Confidence: 90%, Effort: 3 weeks = RICE Score: 72 (HIGHEST PRIORITY)
-            </div>
-
-            <div class="feature-box">
-                <strong>👥 Friend Attendance Signals:</strong> Reach: 45%, Impact: High (2x), Confidence: 75%, Effort: 2 weeks = RICE Score: 33.75
-            </div>
-
-            <div class="feature-box">
-                <strong>🎫 Transparent Pricing:</strong> Reach: 75%, Impact: High (3x), Confidence: 85%, Effort: 1 week = RICE Score: 191.25 (QUICK WIN)
-            </div>
-
-            <h3>Core Features Designed</h3>
-            
-            <div class="feature-box">
-                <strong>🎵 Personalized Event Discovery:</strong> Machine-learning-driven event recommendations based on favorite artists, genres, and attendance history
-            </div>
-
-            <div class="feature-box">
-                <strong>⚡ One-Click Checkout:</strong> Streamlined payment flow with saved preferences, reducing booking time from 8 minutes to 2 minutes
-            </div>
-
-            <div class="feature-box">
-                <strong>💬 Social Integration:</strong> Display which friends are attending, enabling group planning and social motivation
-            </div>
-
-            <div class="feature-box">
-                <strong>💰 Transparent Pricing Display:</strong> Clear breakdown of ticket price, service fees, and taxes upfront before payment
-            </div>
-
-            <div class="feature-box">
-                <strong>📱 Mobile-Optimized Experience:</strong> Touch-friendly interface optimized for on-the-go event discovery and booking
-            </div>
-
-            <div class="feature-box">
-                <strong>🔔 Smart Notifications:</strong> Timely reminders for upcoming events and artist announcements tied to user's listening habits
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Friction Analysis Process</h2>
-            
-            <h3>Journey Mapping</h3>
-            <p>I conducted detailed journey mapping across three user segments:</p>
-            <ul>
-                <li><strong>Concert Enthusiasts:</strong> Frequent attendees seeking new experiences (priority: discovery)</li>
-                <li><strong>Casual Listeners:</strong> Occasional attendees discovering through artist recommendations (priority: frictionless checkout)</li>
-                <li><strong>Explorers:</strong> New to events, seeking social validation and clear information (priority: social proof and transparency)</li>
-            </ul>
-
-            <h3>Friction Point Identification</h3>
-            <div class="highlight">
-                <strong>Top 5 Friction Points (Ranked by Impact):</strong>
-                <br><br>
-                1. Unclear event discovery path (45% of users)<br>
-                2. Multi-step checkout process (38% of users)<br>
-                3. Unexpected fee surprises (35% of users)<br>
-                4. No social context about attendees (28% of users)<br>
-                5. Limited artist information at decision point (22% of users)
-            </div>
-
-            <h3>User Testing Validation</h3>
-            <ul>
-                <li>Conducted 12 user interviews across different segments</li>
-                <li>Tested wireframes with 25 users to validate usability improvements</li>
-                <li>Measured task completion rates before and after design changes</li>
-                <li>Gathered qualitative feedback on pain points and solutions</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Design & Prototyping</h2>
-            
-            <h3>Wireframe Development</h3>
-            <p>I created detailed wireframes for each stage of the booking journey, focusing on reducing cognitive load and decision friction:</p>
-            
-            <div class="feature-box">
-                <strong>📍 Discovery Screen:</strong> Personalized event grid with artist photos, venue info, and friend attendance indicators
-            </div>
-
-            <div class="feature-box">
-                <strong>ℹ️ Event Detail Screen:</strong> Complete event information, artist bio, venue details, seating map, and transparent pricing
-            </div>
-
-            <div class="feature-box">
-                <strong>🛒 Checkout Screen:</strong> One-page checkout with saved payment methods, clear fee breakdown, and social sharing prompts
-            </div>
-
-            <div class="feature-box">
-                <strong>✅ Confirmation Screen:</strong> Immediate booking confirmation with ticket delivery options and calendar integration
-            </div>
-
-            <h3>Interactive Prototype</h3>
-            <p>Built a high-fidelity prototype demonstrating the end-to-end user experience, including:</p>
-            <ul>
-                <li>Dynamic event recommendations based on listening history</li>
-                <li>Smooth transitions between discovery, detail, and checkout flows</li>
-                <li>Real-time fee calculations with transparent breakdown</li>
-                <li>Social features showing friend attendance in real-time</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Expected Impact</h2>
-            
-            <div class="metric-box">
-                📈 <strong>User Retention:</strong> Improve 12-month retention by 10% through increased event engagement and community connection
-            </div>
-
-            <div class="metric-box">
-                🎫 <strong>Booking Conversion:</strong> Reduce abandonment from 42% to 15% through streamlined checkout (64% improvement)
-            </div>
-
-            <div class="metric-box">
-                ⏱️ <strong>Time-to-Complete:</strong> Reduce average booking time from 8 minutes to 2 minutes (75% faster)
-            </div>
-
-            <div class="metric-box">
-                🎵 <strong>Event Discoverability:</strong> Increase events discovered per user session by 3x through personalization
-            </div>
-
-            <div class="metric-box">
-                💰 <strong>Revenue Impact:</strong> Estimated 25% increase in ticket sales through improved conversion rates
-            </div>
-
-            <div class="metric-box">
-                👥 <strong>Social Engagement:</strong> 60% of bookings expected to include social sharing or friend invitations
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Core Competencies Demonstrated</h2>
-            
-            <div class="feature-box">
-                <strong>🔍 User Research:</strong> Conducted qualitative research and usability testing to identify friction points
-            </div>
-
-            <div class="feature-box">
-                <strong>🗺️ Journey Mapping:</strong> Created detailed user journey maps across multiple personas and touchpoints
-            </div>
-
-            <div class="feature-box">
-                <strong>📊 Friction Analysis:</strong> Systematically identified, prioritized, and validated pain points in the booking experience
-            </div>
-
-            <div class="feature-box">
-                <strong>🎯 RICE Prioritization:</strong> Used RICE framework to evaluate opportunities and focus on highest-impact solutions
-            </div>
-
-            <div class="feature-box">
-                <strong>🎨 Solution Design:</strong> Created comprehensive design solutions addressing multiple friction points
-            </div>
-
-            <div class="feature-box">
-                <strong>📱 UX/UI Thinking:</strong> Designed mobile-first experience optimized for quick decision-making and conversion
-            </div>
-
-            <div class="feature-box">
-                <strong>📈 Metrics and Impact:</strong> Quantified potential impact of proposed solutions using data-driven projections
-            </div>
-
-            <div class="feature-box">
-                <strong>🤝 Cross-Functional Communication:</strong> Clearly articulated user insights and business value to stakeholders
-            </div>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Key Learnings</h2>
-            <ul>
-                <li><strong>Friction Compounds:</strong> Multiple small friction points create exponential abandonment. Focus on cumulative reduction.</li>
-                <li><strong>Personalization Drives Engagement:</strong> Tailored experiences significantly increase user motivation and conversion</li>
-                <li><strong>Transparency Builds Trust:</strong> Clear pricing and information reduces anxiety and decision paralysis</li>
-                <li><strong>RICE Prevents Waste:</strong> Structured prioritization ensures effort focuses on highest-impact opportunities</li>
-                <li><strong>Social Context Matters:</strong> Community and friend engagement signals dramatically increase event adoption</li>
-                <li><strong>Mobile-First is Essential:</strong> Event discovery and booking happens primarily on mobile, so design accordingly</li>
-            </ul>
-        </div>
-
-        <div class="case-study-section">
-            <h2>View Full Case Study</h2>
-            <p>Access the complete case study with detailed user research findings, journey maps, wireframes, prototype walkthrough, and implementation roadmap:</p>
-            <a href="https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc" target="_blank" class="cta-link">📖 View Full Case Study on Gamma →</a>
-            
-            <p style="margin-top: 1.5rem; color: #7d7a75; font-size: 0.95rem;">
-                <em>Note: The full document includes detailed user research transcripts, journey maps, wireframes, friction analysis, RICE prioritization matrix, prototype demonstrations, and business impact projections.</em>
-            </p>
-        </div>
-
-        <div class="case-study-section">
-            <h2>Why This Project Matters</h2>
-            <p>This Spotify case study demonstrates my ability to:</p>
-            <ul>
-                <li>Conduct deep user research to uncover hidden friction points</li>
-                <li>Map complex user journeys across multiple touchpoints</li>
-                <li>Prioritize opportunities systematically using frameworks like RICE</li>
-                <li>Design solutions that meaningfully improve user engagement and retention</li>
-                <li>Quantify business impact through data-driven metrics</li>
-                <li>Think strategically about personalization and user experience</li>
-                <li>Communicate complex insights clearly to cross-functional stakeholders</li>
-            </ul>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

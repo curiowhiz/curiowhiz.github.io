@@ -1,197 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajan Gupta - Product Manager</title>
+    <title>Rajan Gupta — AI Product Manager</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Rajan Gupta — AI Product Manager specializing in LLM evaluation, system reliability, and cost optimization. 15+ years across banking, enterprise SaaS, and public sector.">
+    <meta name="keywords"
+        content="Rajan Gupta, AI Product Manager, LLM Evaluation, System Reliability, Performance Engineering, Bank of Montreal, Toronto, AI PM">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rajan Gupta — AI Product Manager">
+    <meta property="og:description"
+        content="Bringing engineering discipline to AI product management. Product Manager applying 15+ years of system reliability and performance engineering rigor to AI-powered products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rajangupta.ca/">
+    <meta property="og:image" content="https://rajangupta.ca/images/profile-pic.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rajan Gupta — AI Product Manager">
+    <meta name="twitter:description" content="Bringing engineering discipline to AI product management.">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    <!-- Google Fonts: Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- Skip nav for accessibility -->
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">Rajan Gupta</div>
-            <ul class="nav-links">
+            <a href="#" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Rajan Gupta" class="profile-photo">
-            </div>
-            <div class="hero-content">
-                <h1>Hi, I'm Rajan! 👋</h1>
-                <p class="tagline">Product Manager | User-Focused Problem Solver | AI-Powered PM</p>
-                <p class="subtitle">I build products that solve real user problems and drive measurable business impact.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="cta-button cta-primary">Get in Touch</a>
-                    <a href="https://www.linkedin.com/in/rgdroll" target="_blank" class="cta-button cta-secondary">View LinkedIn</a>
+    <main id="main">
+
+        <!-- ============================================================
+             HERO SECTION
+             ============================================================ -->
+        <section class="hero" aria-label="Introduction">
+            <div class="container">
+                <div class="hero-grid">
+
+                    <!-- LEFT: Editorial content -->
+                    <div class="hero-left">
+                        <span id="hero-eyebrow" class="eyebrow">AI PRODUCT MANAGER · TORONTO</span>
+                        <h1 id="hero-tagline" class="hero-tagline">Bringing engineering discipline to AI product
+                            management.</h1>
+                        <p id="hero-subtitle" class="hero-subtitle">AI Product Manager specializing in LLM evaluation,
+                            system reliability, and cost optimization.</p>
+                        <p id="hero-body" class="hero-body">15+ years across banking, enterprise SaaS, and public sector
+                            — applying performance engineering rigor and evaluation discipline to AI-powered products.
+                        </p>
+
+                        <div class="hero-specialty-chips">
+                            <span class="specialty-chip">LLM Evaluation</span>
+                            <span class="specialty-chip">System Reliability</span>
+                            <span class="specialty-chip">Cost Optimization</span>
+                        </div>
+
+                        <div class="hero-ctas">
+                            <a href="#projects" class="btn btn-primary">View Selected Work →</a>
+                            <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener"
+                                class="btn btn-outline">Connect on LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Profile card -->
+                    <div class="hero-right">
+                        <div class="profile-card">
+                            <img id="profile-photo" class="profile-photo" src="images/profile-pic.jpg"
+                                alt="Rajan Gupta — AI Product Manager">
+                            <p id="profile-name" class="profile-name">Rajan Gupta</p>
+                            <p id="profile-role" class="profile-role">Performance Test Lead · Bank of Montreal</p>
+
+                            <div id="profile-chips" class="profile-chips">
+                                <!-- Populated by loader.js -->
+                            </div>
+
+                            <div id="profile-metrics" class="profile-metrics">
+                                <!-- Populated by loader.js -->
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I'm a data-driven Product Manager with a passion for solving complex user problems and building products that drive measurable business impact. Through deep-dive product case studies across Google, Strava, Groww, and Spotify, I've developed expertise in translating user insights into scalable product strategy, rapid iteration, and retention-focused growth initiatives. I specialize in leveraging <strong>AI-powered tools like Claude AI, Google AI Studio, and n8n automation</strong> to accelerate research, scale user discovery, validate hypotheses, and bring ideas to market faster than traditional approaches.</p>
-                
-                <p>My expertise spans <strong>Product Strategy Development</strong>, <strong>User Research and Discovery</strong>, <strong>Data-Driven Analytics</strong>, <strong>Roadmapping and Prioritization</strong>, <strong>Cross-Functional Leadership</strong>, and <strong>Agile Methodologies</strong>. I'm skilled in identifying critical friction points through journey mapping, prioritizing opportunities using frameworks like RICE, designing intuitive wireframes, and leveraging metrics to validate hypotheses, all while maintaining a relentless focus on user outcomes and business KPIs. I'm proficient with a modern PM tech stack including <strong>Claude AI for research synthesis, problem framing and insight generation</strong>, <strong>Google AI Studio for rapid prototyping, AI-powered pattern recognition and hypothesis validation</strong>, <strong>Figma for collaborative design and interactive prototyping</strong>, and <strong>n8n for automating research workflows, scaling data collection and eliminating manual research bottlenecks</strong>. This enables me to execute research at enterprise scale and validate ideas 3x faster than traditional approaches.</p>
-                
-                <p>Through detailed case studies, I've improved user retention by 10% at Spotify through AI-assisted friction analysis and streamlined UX design, accelerated user growth at Google News via strategic market research and prioritization, and optimized critical conversion funnels at Strava by identifying key value drivers. I'm comfortable working with engineering teams, design partners, and stakeholders to ship products on time and iterate based on user feedback. I'm equally comfortable prototyping low-fidelity concepts, running AI-powered user research synthesis with Claude, automating repetitive research processes with n8n, or building rapid interactive prototypes in Figma to uncover deeper insights and validate product direction faster.</p>
-                
-                <blockquote class="quote">
-                    "The best products emerge from a marriage of empathy and data, where deep user understanding meets analytical rigor, augmented by intelligent AI tools that scale human insight and compress research timelines."
-                </blockquote>
-            </div>
+        <!-- ============================================================
+             ABOUT SECTION
+             ============================================================ -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
 
-            <div class="info-cards">
-                <div class="card">
-                    <h3>📍 Location</h3>
-                    <p>Toronto, Ontario, Canada</p>
-                </div>
-                <div class="card">
-                    <h3>💼 Core Skills</h3>
-                    <p>Product Strategy, User Research, Analytics, Roadmapping, RICE Framework</p>
-                </div>
-                <div class="card">
-                    <h3>🤖 AI-Powered PM Stack</h3>
-                    <p>Claude AI, Google AI Studio, n8n Automation, Figma, Data Analysis</p>
+                    <div class="about-left">
+                        <span class="eyebrow">ABOUT</span>
+                        <h2 id="about-headline" class="about-headline">Engineering rigor meets product judgment.</h2>
+                    </div>
+
+                    <div class="about-right">
+                        <div id="about-paragraphs" class="about-paragraphs">
+                            <!-- Populated by loader.js -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <a href="projects/google-calendar.html" class="project-card">
-                    <div class="project-thumbnail google-calendar">📅</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Google Calendar: Product Thinking</h3>
-                        </div>
-                        <p class="project-desc">Explored performance metrics, problem prioritization, and solution design through comprehensive product thinking framework.</p>
-                        <div class="project-tags">
-                            <span class="tag">Product Thinking</span>
-                            <span class="tag">Wireframes</span>
-                            <span class="tag">Performance Metrics</span>
-                        </div>
-                    </div>
-                </a>
+        <!-- ============================================================
+             CAPABILITIES SECTION
+             ============================================================ -->
+        <section class="capabilities" aria-label="Capabilities">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow section-eyebrow">WHAT I DO</span>
+                    <h2 class="section-title">Capabilities</h2>
+                    <p class="section-subtitle">From LLM evaluation to product strategy — the toolkit for shipping AI
+                        products that actually work.</p>
+                </div>
 
-                <!-- Project 2 -->
-                <a href="projects/google-news.html" class="project-card">
-                    <div class="project-thumbnail google-news">📰</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Google News: User Growth</h3>
-                        </div>
-                        <p class="project-desc">Driving user engagement and growth through market research, problem prioritization, and strategic product roadmapping.</p>
-                        <div class="project-tags">
-                            <span class="tag">Product Strategy</span>
-                            <span class="tag">Market Research</span>
-                            <span class="tag">Roadmapping</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 3 -->
-                <a href="projects/groww.html" class="project-card">
-                    <div class="project-thumbnail groww">📈</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Groww: Cut Abandonment Levels</h3>
-                        </div>
-                        <p class="project-desc">Reduced user abandonment through competitive research, user research, and hypothesis-driven testing.</p>
-                        <div class="project-tags">
-                            <span class="tag">User Research</span>
-                            <span class="tag">Competitive Analysis</span>
-                            <span class="tag">Hypothesis Testing</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 4 -->
-                <a href="projects/strava.html" class="project-card">
-                    <div class="project-thumbnail strava">🏃</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Strava: Identify Critical Funnels</h3>
-                        </div>
-                        <p class="project-desc">Identified and optimized critical user funnels using product analytics, competitive research, and funnel analysis.</p>
-                        <div class="project-tags">
-                            <span class="tag">Product Analytics</span>
-                            <span class="tag">Funnels</span>
-                            <span class="tag">Product Strategy</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 5 - BOOSTCAMP -->
-                <a href="projects/boostcamp.html" class="project-card">
-                    <div class="project-thumbnail boostcamp">🚀</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Boostcamp: Product Case Study</h3>
-                        </div>
-                        <p class="project-desc">Comprehensive product management case study showcasing end-to-end product thinking, research, strategy, and execution.</p>
-                        <div class="project-tags">
-                            <span class="tag">Product Strategy</span>
-                            <span class="tag">User Research</span>
-                            <span class="tag">Case Study</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 6 - SPOTIFY -->
-                <a href="projects/spotify.html" class="project-card">
-                    <div class="project-thumbnail spotify">🎵</div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Spotify: Event Booking Experience</h3>
-                        </div>
-                        <p class="project-desc">Identified a broken event booking journey through user research and friction analysis, prioritized solutions using a RICE framework.</p>
-                        <div class="project-tags">
-                            <span class="tag">User Research</span>
-                            <span class="tag">RICE Framework</span>
-                            <span class="tag">Retention Optimization</span>
-                        </div>
-                    </div>
-                </a>
+                <div id="capabilities-grid" class="capabilities-grid">
+                    <!-- Populated by loader.js -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" class="contact-btn">LinkedIn</a>
-                <a href="https://medium.com/@rajangupta28/about" target="_blank" class="contact-btn">Medium</a>
-                <a href="mailto:rajangupta28@gmail.com" class="contact-btn">Email</a>
-                <a href="tel:647-965-2818" class="contact-btn">Call</a>
+        <!-- ============================================================
+             SELECTED WORK
+             ============================================================ -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow section-eyebrow">SELECTED WORK</span>
+                    <h2 class="section-title">Case Studies & Initiatives</h2>
+                    <p class="section-subtitle">From product strategy to LLM evaluation — case studies grounded in
+                        measurable outcomes.</p>
+                </div>
+
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Populated by loader.js -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- ============================================================
+             TOOLS & PRODUCTS
+             ============================================================ -->
+        <section id="tools" class="tools">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow section-eyebrow">TOOLS & SYSTEMS</span>
+                    <h2 class="section-title">Tools & Products</h2>
+                    <p class="section-subtitle">Open-source tools and AI workflows I've built to scale research,
+                        evaluation, and prototyping.</p>
+                </div>
+
+                <div id="tools-grid" class="tools-grid">
+                    <!-- Populated by loader.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PROFESSIONAL EXPERIENCE
+             ============================================================ -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow section-eyebrow">EXPERIENCE</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">15+ years across banking, enterprise SaaS, and public sector.</p>
+                </div>
+
+                <div id="experience-timeline" class="experience-timeline">
+                    <!-- Populated by loader.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CONTACT SECTION
+             ============================================================ -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow section-eyebrow">GET IN TOUCH</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Open to senior Product Manager and AI Product Manager roles. Always
+                        happy to discuss AI evaluation, system reliability, or product strategy.</p>
+                </div>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <span class="contact-method-label">Email</span>
+                        <a id="contact-email" href="mailto:rajangupta28@gmail.com">rajangupta28@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-method-label">LinkedIn</span>
+                        <a id="contact-linkedin" href="https://www.linkedin.com/in/rgdroll" target="_blank"
+                            rel="noopener">linkedin.com/in/rgdroll</a>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-method-label">Location</span>
+                        <span id="contact-location">Toronto, Ontario, Canada</span>
+                    </div>
+                </div>
+
+                <div class="contact-ctas">
+                    <a href="mailto:rajangupta28@gmail.com" class="btn btn-primary">Email Rajan</a>
+                    <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener"
+                        class="btn btn-outline">View LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Rajan Gupta. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a id="footer-github" href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Loader Script -->
+    <script src="js/loader.js"></script>
+
 </body>
+
 </html>
