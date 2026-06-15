@@ -1182,42 +1182,164 @@ section {
 }
 
 /* ============================================================
-   13. CONTACT SECTION
+   13. CONTACT SECTION (v4 — Executive Grade)
    ============================================================ */
 .contact {
     background: var(--bg-primary);
+    padding: var(--space-5xl) 0;
+}
+
+.contact-inner {
+    max-width: 720px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.contact .section-subtitle {
-    max-width: 600px;
+.contact-headline {
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.contact-intro {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 580px;
     margin: 0 auto var(--space-2xl);
 }
 
-.contact-buttons {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: var(--space-xl);
+/* Primary CTA block */
+.contact-primary-cta {
+    margin-bottom: var(--space-2xl);
 }
 
-.btn-lg {
-    padding: 16px 36px;
-    font-size: 1rem;
-    min-width: 160px;
-    justify-content: center;
+.btn-xl {
+    padding: 18px 42px;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 14px rgba(13, 92, 92, 0.18);
+    transition: all 0.25s ease;
 }
 
-.contact-location {
+.btn-xl:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13, 92, 92, 0.28);
+}
+
+.contact-secondary {
+    margin-top: var(--space-md);
     font-size: 0.9375rem;
     color: var(--text-secondary);
-    margin: 0;
 }
 
-.contact-location strong {
-    color: var(--text-primary);
+.contact-secondary a {
+    color: var(--accent);
     font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s ease;
+    padding-bottom: 2px;
+}
+
+.contact-secondary a:hover {
+    border-bottom-color: var(--accent);
+}
+
+/* Meta bar at the bottom */
+.contact-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-md) var(--space-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 640px) {
+    .contact-meta {
+        flex-direction: column;
+        gap: var(--space-sm);
+        padding: var(--space-md) var(--space-lg);
+        border-radius: var(--radius-lg);
+    }
+}
+
+.contact-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.contact-meta-label {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+.contact-meta-value {
+    color: var(--text-primary);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-meta-divider {
+    width: 1px;
+    height: 16px;
+    background: var(--border);
+}
+
+@media (max-width: 640px) {
+    .contact-meta-divider {
+        display: none;
+    }
+}
+
+/* Animated status dot */
+.status-dot-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--status-active);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.status-dot-pulse::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: var(--status-active);
+    opacity: 0.4;
+    animation: status-pulse 2s ease-out infinite;
+}
+
+@keyframes status-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 /* ============================================================
