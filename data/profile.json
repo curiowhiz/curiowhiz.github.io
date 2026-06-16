@@ -3,7 +3,7 @@
   "eyebrowLabel": "AI PRODUCT MANAGER · TORONTO",
   "tagline": "Building AI products with engineering rigor.",
   "subtitle": "AI Product Manager specializing in LLM evaluation, system reliability, and cost optimization.",
-  "supportingBody": "15+ years across banking, enterprise SaaS, and public sector — applying performance engineering rigor and evaluation discipline to AI-powered products.",
+  "supportingBody": "15+ years across banking, enterprise SaaS, and public sector — applying performance engineering rigor to AI-powered products.",
   "profilePhoto": "images/profile-pic.jpg",
   "currentRole": "Performance Test Lead · Bank of Montreal",
   "metadataChips": [
@@ -28,15 +28,10 @@
   "aboutHeadline": "Engineering rigor meets product judgment.",
   "aboutParagraphs": [
     "I lead performance and product initiatives at Bank of Montreal, where I'm migrating on-premise services to AWS Lambda — improving deployment speed by 40% and optimizing latency-cost trade-offs. Previously, I delivered <strong>663% revenue growth</strong> at MTX Group ($157K → $1.2M in 14 months) and led product roadmaps for Bank of America's CashPro Mobile, improving user retention by 7%.",
-    "My 15+ years in <strong>Performance Engineering and Quality Assurance</strong> translates directly into AI Product Management: I've spent my career building evaluation harnesses, designing golden datasets, auditing edge cases, and managing trade-offs between latency, accuracy, and cost — the exact problems LLM-powered products face in 2026.",
-    "I use a modern AI-powered PM stack — <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, <strong>n8n</strong> for workflow automation, and <strong>Python</strong> for evaluation pipelines. I'm currently building <strong>Ladder AI</strong> (a personal AI fluency platform) and an open-source AI Evaluation Harness for PM tasks."
+    "My 15+ years in <strong>Performance Engineering and Quality Assurance</strong> translates directly into AI Product Management: I've spent my career testing & engineering applications, finding bottlenecks, auditing edge cases, and managing trade-offs between latency, accuracy, and cost — the exact problems LLM-powered products face in 2026.",
+    "I use a modern AI-powered PM stack — <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, <strong>n8n</strong> for workflow automation"
   ],
   "capabilities": [
-    {
-      "icon": "🧪",
-      "title": "LLM Evaluation",
-      "description": "Design golden datasets and evaluation harnesses for non-deterministic AI outputs."
-    },
     {
       "icon": "🛡️",
       "title": "System Reliability",
