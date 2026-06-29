@@ -4,7 +4,7 @@
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('🚀 Loader v3 initialized');
+    console.log('Loader v3 initialized');
 
     loadProfile();
     loadProjects();
@@ -109,9 +109,9 @@ async function loadProfile() {
         const footerGithub = document.getElementById('footer-github');
         if (footerGithub) footerGithub.href = profile.github;
 
-        console.log('✅ Profile loaded');
+        console.log('Profile loaded');
     } catch (error) {
-        console.error('❌ Error loading profile:', error);
+        console.error('Error loading profile:', error);
         showFallback();
     }
 }
@@ -141,7 +141,7 @@ async function loadProjects() {
                 : '';
 
             const featuredFlag = project.featured
-                ? '<span class="featured-flag">⭐ FEATURED</span>'
+                ? '<span class="featured-flag">FEATURED</span>'
                 : '';
 
             return `
@@ -164,9 +164,9 @@ async function loadProjects() {
             `;
         }).join('');
 
-        console.log(`✅ Projects loaded (${projects.length} total)`);
+        console.log(`Projects loaded (${projects.length} total)`);
     } catch (error) {
-        console.error('❌ Error loading projects:', error);
+        console.error('Error loading projects:', error);
     }
 }
 
@@ -175,7 +175,7 @@ function getProjectThumbnail(project) {
     if (project.id === 'ladder-ai') {
         return `
             <div class="project-emoji-placeholder ladder-ai-gradient">
-                <span class="placeholder-emoji">🤖</span>
+                <span class="placeholder-emoji"></span>
                 <span class="placeholder-label">Ladder AI</span>
             </div>
         `;
@@ -244,9 +244,9 @@ async function loadTools() {
             `;
         }).join('');
 
-        console.log(`✅ Tools loaded (${tools.length} total)`);
+        console.log(`Tools loaded (${tools.length} total)`);
     } catch (error) {
-        console.error('❌ Error loading tools:', error);
+        console.error('Error loading tools:', error);
     }
 }
 
@@ -288,9 +288,9 @@ async function loadExperience() {
             </div>
         `).join('');
 
-        console.log(`✅ Experience loaded (${experience.length} roles)`);
+        console.log(`Experience loaded (${experience.length} roles)`);
     } catch (error) {
-        console.error('❌ Error loading experience:', error);
+        console.error('Error loading experience:', error);
     }
 }
 
@@ -398,7 +398,7 @@ function setupNavigation() {
         handleScroll();
     }
 
-    console.log('✅ Navigation initialized (v2 with scroll fix)');
+    console.log('Navigation initialized (v2 with scroll fix)');
 }
 
 // ============================================================
