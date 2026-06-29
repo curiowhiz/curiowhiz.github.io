@@ -38,7 +38,7 @@
       "description": "Audit failure modes, edge cases, and prompt injection vulnerabilities."
     },
     {
-      "icon": "⚡",
+      "icon": "",
       "title": "Cost Optimization",
       "description": "Manage trade-offs between latency, accuracy, and token economics."
     },
