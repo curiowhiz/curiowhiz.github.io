@@ -2,7 +2,7 @@
     {
         "id": "rag-simulator",
         "name": "RAG Simulator",
-        "icon": "🧪",
+        "icon": "",
         "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems — built to help PMs and engineers visualize AI retrieval flows.",
         "technologies": [
             "AI/LLM",
@@ -19,7 +19,7 @@
     {
         "id": "n8n-research-automation",
         "name": "N8n User Research Automation",
-        "icon": "🔄",
+        "icon": "",
         "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes — eliminating manual research bottlenecks.",
         "technologies": [
             "n8n",
@@ -37,7 +37,7 @@
     {
         "id": "ai-pm-stack",
         "name": "AI-Powered PM Workflow",
-        "icon": "🤖",
+        "icon": "",
         "description": "Personal framework integrating Claude AI, Google AI Studio, n8n, and Figma for accelerated product discovery, research synthesis, and prototyping.",
         "technologies": [
             "Claude AI",
@@ -56,7 +56,7 @@
     {
         "id": "ai-eval-harness",
         "name": "AI Evaluation Harness",
-        "icon": "⚙️",
+        "icon": "",
         "description": "Open-source evaluation pipeline for PM task LLM outputs — using LLM-as-a-Judge methodology to benchmark Claude, GPT-4, and Gemini on latency, cost, and accuracy.",
         "technologies": [
             "Python",

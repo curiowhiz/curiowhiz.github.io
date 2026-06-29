@@ -48,42 +48,42 @@
         "title": "North Star Problems",
         "type": "highlight-blocks",
         "items": [
-          "<strong>🎯 Prompting Gap:</strong> Users struggle to write effective, role-specific prompts. Without prompting fluency, even powerful AI tools produce mediocre outputs — reinforcing the perception that AI 'doesn't work for my role.'",
-          "<strong>⚙️ Workflow Gap:</strong> Lack of automation and integration into daily tasks. Users treat AI as a separate destination (a chat window) rather than an embedded layer across their work — limiting compounding value.",
-          "<strong>📚 Learning Gap:</strong> No structured way to improve AI skills or share workflows. Learning happens through random tutorials, social media, and trial-and-error — slow, inefficient, and easy to abandon."
+          "<strong> Prompting Gap:</strong> Users struggle to write effective, role-specific prompts. Without prompting fluency, even powerful AI tools produce mediocre outputs — reinforcing the perception that AI 'doesn't work for my role.'",
+          "<strong> Workflow Gap:</strong> Lack of automation and integration into daily tasks. Users treat AI as a separate destination (a chat window) rather than an embedded layer across their work — limiting compounding value.",
+          "<strong> Learning Gap:</strong> No structured way to improve AI skills or share workflows. Learning happens through random tutorials, social media, and trial-and-error — slow, inefficient, and easy to abandon."
         ]
       },
       {
         "title": "Solution: The Ladder AI Platform",
         "type": "solution-box",
-        "text": "<strong>✅ Solution Overview:</strong><br><br>A guided, gamified AI fluency platform built on four pillars — personalized onboarding, workflow capture, structured teaching, and progress tracking — designed to move professionals from basic Q&A to building and deploying AI-powered systems in their roles."
+        "text": "<strong> Solution Overview:</strong><br><br>A guided, gamified AI fluency platform built on four pillars — personalized onboarding, workflow capture, structured teaching, and progress tracking — designed to move professionals from basic Q&A to building and deploying AI-powered systems in their roles."
       },
       {
         "title": "Core Features",
         "type": "feature-box",
         "items": [
           {
-            "title": "🎯 Personalized Onboarding",
+            "title": "Personalized Onboarding",
             "text": "Skill diagnosis quiz to assess current AI fluency level and identify role-specific needs"
           },
           {
-            "title": "🗺️ Workflow Capture",
+            "title": "Workflow Capture",
             "text": "Map daily tasks and identify automation opportunities — turn manual work into AI-augmented workflows"
           },
           {
-            "title": "📚 Structured Teaching",
+            "title": "Structured Teaching",
             "text": "Lessons with active recall and open-source concepts to build durable prompting and workflow skills"
           },
           {
-            "title": "🏆 Rewards & Measurement",
+            "title": "Rewards & Measurement",
             "text": "Streaks, progress tracking, and peer-led sessions to encourage ongoing learning and prevent drop-off"
           },
           {
-            "title": "🤖 Role-Specific Templates",
+            "title": "Role-Specific Templates",
             "text": "Pre-built prompt libraries and workflow templates tailored for Product Managers, marketers, and analysts"
           },
           {
-            "title": "🔄 Continuous Application",
+            "title": "Continuous Application",
             "text": "Guided practice that moves users from basic prompts to building and deploying AI-powered systems"
           }
         ]
