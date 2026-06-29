@@ -123,27 +123,27 @@
         "type": "feature-box",
         "items": [
           {
-            "title": "🔍 AI-Native User Research",
+            "title": "AI-Native User Research",
             "text": "Identified overlapping pain points across professional segments through structured interviews"
           },
           {
-            "title": "🎯 North Star Problem Framing",
+            "title": "North Star Problem Framing",
             "text": "Distilled diverse pain points into three north star problems (Prompting, Workflow, Learning gaps)"
           },
           {
-            "title": "🤖 AI Product Strategy",
+            "title": "AI Product Strategy",
             "text": "Designed a platform that addresses AI fluency — not just access — the strategic frontier"
           },
           {
-            "title": "📋 PRD & Solution Design",
+            "title": "PRD & Solution Design",
             "text": "Built end-to-end product requirements covering onboarding, workflow capture, teaching, and rewards"
           },
           {
-            "title": "🎓 Behavior Change Design",
+            "title": "Behavior Change Design",
             "text": "Integrated gamification, streaks, and peer learning to prevent drop-off and drive durable habit formation"
           },
           {
-            "title": "💡 Vision Articulation",
+            "title": "Vision Articulation",
             "text": "Connected micro-features to a macro vision of professional AI fluency as a competitive advantage"
           }
         ]
@@ -224,7 +224,7 @@
         "title": "View Full Presentation",
         "type": "cta",
         "url": "https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing",
-        "label": "📊 View Full Case Study Presentation →",
+        "label": "View Full Case Study Presentation →",
         "note": "Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations."
       }
     ]
@@ -291,22 +291,22 @@
         "type": "metric-box",
         "items": [
           {
-            "icon": "📈",
+            "icon": "",
             "title": "User Acquisition",
             "text": "+25% new user growth YoY"
           },
           {
-            "icon": "📱",
+            "icon": "",
             "title": "Retention",
             "text": "Improve 30-day retention from 35% to 50%"
           },
           {
-            "icon": "⏱️",
+            "icon": "",
             "title": "Engagement",
             "text": "Increase average session time from 10 to 15 minutes"
           },
           {
-            "icon": "🔄",
+            "icon": "",
             "title": "Daily Active Users",
             "text": "+30% DAU growth"
           }
@@ -316,7 +316,7 @@
         "title": "View Full Case Study",
         "type": "cta",
         "url": "https://www.notion.so/Google-News-79a9a81d7da28206bbb8012164760d62?source=copy_link",
-        "label": "📊 View Full Case Study Presentation →",
+        "label": "View Full Case Study Presentation →",
         "note": "Note: The full presentation includes competitive benchmarking, user journey maps, and implementation strategy."
       }
     ]
@@ -400,22 +400,22 @@
         "items": [
           {
             "icon": "",
-            "title": "📉 Overall Abandonment Reduction",
+            "title": "Overall Abandonment Reduction",
             "text": "40% decrease in overall abandonment rate"
           },
           {
             "icon": "",
-            "title": "💰 Conversion Increase",
+            "title": "Conversion Increase",
             "text": "35% increase in completed first investments"
           },
           {
             "icon": "",
-            "title": "⏱️ Time Reduction",
+            "title": "Time Reduction",
             "text": "Average onboarding time reduced from 18 to 8 minutes"
           },
           {
             "icon": "",
-            "title": "😊 User Satisfaction",
+            "title": "User Satisfaction",
             "text": "NPS improved from 32 to 54 points"
           }
         ]
@@ -424,7 +424,7 @@
         "title": "View Full Case Study",
         "type": "cta",
         "url": "https://docs.google.com/presentation/d/1jTGkD5FC3_uAH463sOw0_CgOpuVl9IAM7ClsUCOi9V0/edit?usp=sharing",
-        "label": "📊 View Full Case Study Presentation →",
+        "label": "View Full Case Study Presentation →",
         "note": "Note: The presentation includes detailed user research transcripts, competitive analysis, A/B test results, and wireframes."
       },
       {
@@ -500,22 +500,22 @@
         "items": [
           {
             "icon": "",
-            "title": "📈 Athlete Signup to Active",
+            "title": "Athlete Signup to Active",
             "text": "Improve from 10% to 18% (80% increase)"
           },
           {
             "icon": "",
-            "title": "💰 Free-to-Paid Conversion",
+            "title": "Free-to-Paid Conversion",
             "text": "Improve from 8% to 15% (87% increase)"
           },
           {
             "icon": "",
-            "title": "🤝 Partner Activation",
+            "title": "Partner Activation",
             "text": "Improve from 15% to 28% (87% increase)"
           },
           {
             "icon": "",
-            "title": "📊 Overall ARR Impact",
+            "title": "Overall ARR Impact",
             "text": "Estimated +$15M-$25M annual revenue opportunity"
           }
         ]
@@ -524,7 +524,7 @@
         "title": "View Full Case Study",
         "type": "cta",
         "url": "https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1",
-        "label": "📊 View Full Funnel Analysis in Figma →",
+        "label": "View Full Funnel Analysis in Figma →",
         "note": "Note: The Figma deck includes detailed funnel diagrams, cohort analysis, competitive benchmarking tables, and prioritized roadmap."
       }
     ]
@@ -556,17 +556,17 @@
         "type": "metric-box",
         "items": [
           {
-            "icon": "📈",
+            "icon": "",
             "title": "User Retention",
             "text": "Improve 30-day retention from 65% to 80% (+23% improvement)"
           },
           {
-            "icon": "⏱️",
+            "icon": "",
             "title": "Session Duration",
             "text": "Increase average session time from 15 to 19 minutes (+25%)"
           },
           {
-            "icon": "🎯",
+            "icon": "",
             "title": "Course Completion",
             "text": "Increase learners completing 10+ lessons from 35% to 60% (+71%)"
           }
@@ -576,7 +576,7 @@
         "title": "View Full Case Study",
         "type": "cta",
         "url": "https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu",
-        "label": "📖 View Full Case Study on Gamma →",
+        "label": "View Full Case Study on Gamma →",
         "note": "Note: The full document includes detailed PRD, user research transcripts, prototype demonstrations, performance analysis, and implementation roadmap."
       }
     ]
@@ -608,17 +608,17 @@
         "type": "metric-box",
         "items": [
           {
-            "icon": "📈",
+            "icon": "",
             "title": "User Retention",
             "text": "Improve 12-month retention by 10% through increased event engagement"
           },
           {
-            "icon": "🎫",
+            "icon": "",
             "title": "Booking Conversion",
             "text": "Reduce abandonment from 42% to 15% (64% improvement)"
           },
           {
-            "icon": "⏱️",
+            "icon": "",
             "title": "Time-to-Complete",
             "text": "Reduce average booking time from 8 minutes to 2 minutes (75% faster)"
           }
@@ -628,7 +628,7 @@
         "title": "View Full Case Study",
         "type": "cta",
         "url": "https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc",
-        "label": "📖 View Full Case Study on Gamma →",
+        "label": "View Full Case Study on Gamma →",
         "note": "Note: The full document includes detailed user research transcripts, journey maps, wireframes, friction analysis, RICE prioritization matrix, prototype demonstrations, and business impact projections."
       }
     ]
