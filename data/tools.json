@@ -47,7 +47,7 @@
         ],
         "status": "active",
         "githubUrl": null,
-        "demoUrl": "https://vendor-itc-recovery-agent.vercel.app",
+        "demoUrl": "projects/vendor-itc-recovery-agent.html",
         "featured": false,
         "darkCard": false,
         "order": 3

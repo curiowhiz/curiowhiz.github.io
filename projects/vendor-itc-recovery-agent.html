@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor ITC Recovery Agent - Rajan Gupta</title>
+
+    <meta name="description"
+        content="Vendor ITC Recovery Agent - a live GST reconciliation tool that matches purchase registers against GSTR-2B, flags blocked Input Tax Credit, and drafts vendor follow-up emails for human approval.">
+    <meta name="author" content="Rajan Gupta">
+    <link rel="canonical" href="https://rajangupta.ca/projects/vendor-itc-recovery-agent.html">
+
+    <meta property="og:title" content="Vendor ITC Recovery Agent - Rajan Gupta">
+    <meta property="og:description"
+        content="A GST reconciliation tool that catches blocked Input Tax Credit before it becomes a cash loss, and automates the vendor follow-up to recover it.">
+    <meta property="og:type" content="article">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+
+<body>
+
+    <a href="#main" class="skip-nav">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container">
+            <a href="../" class="logo">Rajan Gupta</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#projects">Work</a></li>
+                <li><a href="../#tools">Tools</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <section class="project-hero">
+            <div class="container">
+                <a href="../#tools" class="back-link">← Back to Tools</a>
+                <span class="eyebrow">LIVE PRODUCT</span>
+                <h1>Vendor ITC Recovery Agent</h1>
+                <p class="subtitle">Under India's GST regime, a business can only claim back the tax it paid a vendor
+                    if that vendor files the matching invoice correctly - a vendor filing late silently blocks real
+                    money. This tool catches that gap automatically and automates the vendor follow-up needed to
+                    recover it, with a human confirming every email before it sends.</p>
+                <div class="hero-ctas">
+                    <a href="https://vendor-itc-recovery-agent.vercel.app" target="_blank" rel="noopener"
+                        class="btn btn-primary">
+                        🚀 Open the Live App →
+                    </a>
+                    <a href="../#tools" class="btn btn-outline">← Back to Tools</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-metadata-strip">
+            <div class="container">
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <span class="metadata-label">Type</span>
+                        <span class="metadata-value">Live AI Product</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Role</span>
+                        <span class="metadata-value">Solo Builder - Product, Prompts & Code</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Stack</span>
+                        <span class="metadata-value">Next.js · Supabase · Claude AI</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Status</span>
+                        <span class="metadata-value highlight">Live Prototype</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary-cards-section">
+            <div class="container">
+                <div class="summary-cards-grid">
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🎯</div>
+                        <h3>The Problem</h3>
+                        <p>Input Tax Credit (ITC) is the GST a business pays a vendor, claimable back against the GST
+                            it collects from its own customers. It can only be claimed if the invoice shows up
+                            correctly in GSTR-2B, the government's monthly statement of what vendors reported
+                            selling. A late filing, an omitted invoice, or a wrong amount silently blocks credit the
+                            business already earned - and most SMEs have no easy way to catch it every filing cycle.
+                        </p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">🔍</div>
+                        <h3>The Approach</h3>
+                        <p>A Next.js app on Vercel handles upload and the dashboard; Supabase (Postgres, Auth,
+                            Storage, pgvector) is the system of record; Claude is called in only for the judgment
+                            calls a deterministic check can't resolve - fuzzy-match arbitration, bucket
+                            classification, and email drafting; Brevo delivers the vendor email once a human
+                            approves it.</p>
+                    </div>
+                    <div class="summary-card dark">
+                        <div class="summary-card-icon">⚙️</div>
+                        <h3>Guardrails Built Into the Code</h3>
+                        <p>Four rules the product enforces mechanically, not just by prompting the model to behave.
+                        </p>
+                        <div class="eval-data-block">
+                            <div class="data-header">rule │ enforced by</div>
+                            <div class="data-row">
+                                <span>No invented numbers</span>
+                                <span class="data-value">template + code substitution</span>
+                            </div>
+                            <div class="data-row">
+                                <span>Every vendor email</span>
+                                <span class="data-value">human clicks Confirm &amp; Send</span>
+                            </div>
+                            <div class="data-row">
+                                <span>AI only when ambiguous</span>
+                                <span class="data-value">deterministic match runs first</span>
+                            </div>
+                            <div class="data-row">
+                                <span>Reverse-charge invoices</span>
+                                <span class="data-value">checked before any bucketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-icon">✨</div>
+                        <h3>Explainability</h3>
+                        <p>Every dashboard card has a "Why this bucket?" panel that retrieves from a small, curated
+                            GST-rules knowledge base and explains the classification grounded strictly in what it
+                            finds. If the knowledge base doesn't cover a situation, it says so plainly instead of
+                            guessing at tax law.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="metrics-band">
+            <div class="container">
+                <div class="metrics-band-grid">
+                    <div class="metrics-band-item">
+                        <div class="metric-value">9</div>
+                        <div class="metric-label">Database Tables, RLS-Scoped per Business</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">Discrepancy Buckets, Incl. RCM Protection</div>
+                    </div>
+                    <div class="metrics-band-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Vendor Emails Human-Approved Before Sending</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-notes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Want to dive deeper?</h2>
+                </div>
+                <div class="notes-accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>How an Invoice Gets Reconciled</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Ingest:</strong> A CSV/XLSX purchase register or GSTR-2B file lands in
+                                        Storage; columns get auto-matched to standard fields before anything is
+                                        written</li>
+                                    <li><strong>Deterministic match, first:</strong> The system tries an exact key
+                                        match (GSTIN + invoice number + amount) before it ever asks the AI anything
+                                    </li>
+                                    <li><strong>AI arbitrates only what's genuinely unclear:</strong> Near-duplicates
+                                        go to Claude, which always returns a confidence score and a plain-language
+                                        reason - never a bare yes or no</li>
+                                    <li><strong>Bucket, with the RCM check first:</strong> Reverse-charge invoices are
+                                        pulled out before any mismatch logic runs, so a compliant vendor is never
+                                        mislabeled</li>
+                                    <li><strong>The human is the last gate:</strong> An email exists only as a draft,
+                                        with real numbers substituted in by code, until someone clicks Confirm &amp;
+                                        Send</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Inside the Data Model</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Setup:</strong> <code>businesses</code>, <code>consent_log</code></li>
+                                    <li><strong>Ingestion:</strong> <code>uploads</code>,
+                                        <code>invoices_purchase_register</code>, <code>invoices_gstr2b</code></li>
+                                    <li><strong>Reconciliation:</strong> <code>matches</code>, <code>buckets</code>
+                                    </li>
+                                    <li><strong>Record &amp; follow-up:</strong> <code>audit_log</code>,
+                                        <code>messages_sent</code></li>
+                                    <li><strong><code>audit_log</code> is the one table almost everything writes to,
+                                            and nothing overwrites:</strong> the paper trail a CA could review before
+                                        filing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Why This Bucket? Grounded, Not Guessed</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Retrieval before explanation:</strong> the panel searches a curated
+                                        GST-rules library (CGST Act, GST IMS FAQs, a GSTN advisory) before Claude
+                                        writes anything</li>
+                                    <li><strong>Grounded strictly in what's retrieved:</strong> Claude explains using
+                                        only the retrieved passage, never its general knowledge of tax law</li>
+                                    <li><strong>Says "not covered" rather than guessing:</strong> if the library
+                                        doesn't address a situation, the panel says so plainly - verified in practice,
+                                        not just instructed in the prompt</li>
+                                    <li><strong>RCM explanations are explicit:</strong> they state outright that
+                                        nothing is wrong with the vendor's filing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Key Decisions</span>
+                            <span class="accordion-toggle">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Deterministic-first matching keeps the AI in the minority of cases - cheaper,
+                                        faster, and easier to audit than routing every invoice through a model</li>
+                                    <li>Structured output (never a bare yes/no) on every AI call makes "why this
+                                        match?" a mechanical guarantee rather than a hope</li>
+                                    <li>RCM/excluded invoices are checked before any other classification logic,
+                                        because falsely flagging a compliant vendor is a real reputational risk, not
+                                        just a bug</li>
+                                    <li>Every match and bucket decision is written to an append-only audit log with
+                                        its rationale - the feature that makes "why this bucket?" and any future
+                                        compliance review possible at all</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-cta-section">
+            <div class="container">
+                <h2>Try It Yourself</h2>
+                <p>Load a synthetic sample business in a couple of clicks, run the matching engine, and see the
+                    bucketed dashboard, confidence scores, and explainability panel live - no real data required.</p>
+                <div class="bottom-cta-buttons">
+                    <a href="https://vendor-itc-recovery-agent.vercel.app" target="_blank" rel="noopener"
+                        class="btn btn-primary">
+                        🚀 Open the Live App →
+                    </a>
+                    <a href="../#tools" class="btn btn-outline">← Back to Tools</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
+            <div class="footer-social">
+                <a href="https://github.com/curiowhiz" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:rajangupta28@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
