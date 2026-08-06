@@ -2,7 +2,7 @@
   {
     "id": "ladder-ai",
     "title": "Ladder AI: From AI Access to AI Fluency",
-    "description": "Personal AI product initiative — designed a platform helping professionals bridge the gap between basic AI usage and true AI fluency through workflow automation and structured skill-building.",
+    "description": "Personal AI product initiative - designed a platform helping professionals bridge the gap between basic AI usage and true AI fluency through workflow automation and structured skill-building.",
     "thumbnail": "images/thumbnails/ladder-ai.png",
     "link": "projects/ladder-ai.html",
     "tags": [
@@ -12,14 +12,14 @@
     ],
     "featured": true,
     "category": "AI Product Initiative",
-    "subtitle": "Bridging the gap from AI access to AI fluency — a personal product initiative designed for AI Product Management.",
-    "overview": "Ladder AI is a personal product initiative born from a critical observation: most professionals have AI access but lack AI fluency. Through user research across office workers, college graduates, and Product Managers, I identified three north star problems — the Prompting Gap, the Workflow Gap, and the Learning Gap — and designed a platform to systematically address them.",
-    "objective": "Design an AI fluency platform that moves professionals from basic chat-based usage to advanced AI integration, workflow automation, and continuous skill-building — with a focus on role-specific outcomes for Product Managers.",
+    "subtitle": "Bridging the gap from AI access to AI fluency - a personal product initiative designed for AI Product Management.",
+    "overview": "Ladder AI is a personal product initiative born from a critical observation: most professionals have AI access but lack AI fluency. Through user research across office workers, college graduates, and Product Managers, I identified three north star problems - the Prompting Gap, the Workflow Gap, and the Learning Gap - and designed a platform to systematically address them.",
+    "objective": "Design an AI fluency platform that moves professionals from basic chat-based usage to advanced AI integration, workflow automation, and continuous skill-building - with a focus on role-specific outcomes for Product Managers.",
     "sections": [
       {
         "title": "The Problem: Access vs. Fluency",
         "type": "problem-box",
-        "text": "<strong>Problem Statement:</strong><br><br>Most professionals have access to AI tools but remain stuck at basic usage — unable to integrate AI into their workflows, automate tasks, or apply AI fluently in their roles. There is a significant gap between knowing about AI and being able to use it productively and reliably."
+        "text": "<strong>Problem Statement:</strong><br><br>Most professionals have access to AI tools but remain stuck at basic usage - unable to integrate AI into their workflows, automate tasks, or apply AI fluently in their roles. There is a significant gap between knowing about AI and being able to use it productively and reliably."
       },
       {
         "title": "Research Process",
@@ -39,7 +39,7 @@
           "<strong>Over-Reliance on Single Tools:</strong> Users default to one tool (often ChatGPT) without exploring better alternatives for specific tasks",
           "<strong>Lack of Contextual Outputs:</strong> Generic AI responses that don't account for role, industry, or specific use case",
           "<strong>Non-Technical Barriers:</strong> Lack of prompting skills and AI literacy creates a self-reinforcing knowledge gap",
-          "<strong>Low Trust in AI Outputs:</strong> Users revert to traditional tools after experiencing AI mistakes — losing momentum",
+          "<strong>Low Trust in AI Outputs:</strong> Users revert to traditional tools after experiencing AI mistakes - losing momentum",
           "<strong>Workflow Disconnect:</strong> AI tools exist in isolation, not integrated into daily task flows",
           "<strong>Subscription Fatigue:</strong> Cost and complexity of managing multiple AI tool subscriptions"
         ]
@@ -48,15 +48,15 @@
         "title": "North Star Problems",
         "type": "highlight-blocks",
         "items": [
-          "<strong> Prompting Gap:</strong> Users struggle to write effective, role-specific prompts. Without prompting fluency, even powerful AI tools produce mediocre outputs — reinforcing the perception that AI 'doesn't work for my role.'",
-          "<strong> Workflow Gap:</strong> Lack of automation and integration into daily tasks. Users treat AI as a separate destination (a chat window) rather than an embedded layer across their work — limiting compounding value.",
-          "<strong> Learning Gap:</strong> No structured way to improve AI skills or share workflows. Learning happens through random tutorials, social media, and trial-and-error — slow, inefficient, and easy to abandon."
+          "<strong> Prompting Gap:</strong> Users struggle to write effective, role-specific prompts. Without prompting fluency, even powerful AI tools produce mediocre outputs - reinforcing the perception that AI 'doesn't work for my role.'",
+          "<strong> Workflow Gap:</strong> Lack of automation and integration into daily tasks. Users treat AI as a separate destination (a chat window) rather than an embedded layer across their work - limiting compounding value.",
+          "<strong> Learning Gap:</strong> No structured way to improve AI skills or share workflows. Learning happens through random tutorials, social media, and trial-and-error - slow, inefficient, and easy to abandon."
         ]
       },
       {
         "title": "Solution: The Ladder AI Platform",
         "type": "solution-box",
-        "text": "<strong> Solution Overview:</strong><br><br>A guided, gamified AI fluency platform built on four pillars — personalized onboarding, workflow capture, structured teaching, and progress tracking — designed to move professionals from basic Q&A to building and deploying AI-powered systems in their roles."
+        "text": "<strong> Solution Overview:</strong><br><br>A guided, gamified AI fluency platform built on four pillars - personalized onboarding, workflow capture, structured teaching, and progress tracking - designed to move professionals from basic Q&A to building and deploying AI-powered systems in their roles."
       },
       {
         "title": "Core Features",
@@ -68,7 +68,7 @@
           },
           {
             "title": "Workflow Capture",
-            "text": "Map daily tasks and identify automation opportunities — turn manual work into AI-augmented workflows"
+            "text": "Map daily tasks and identify automation opportunities - turn manual work into AI-augmented workflows"
           },
           {
             "title": "Structured Teaching",
@@ -92,20 +92,20 @@
         "title": "Example: Product Manager Journey",
         "type": "paragraphs",
         "texts": [
-          "<strong>Step 1 — Onboarding:</strong> A PM completes an onboarding quiz that assesses their current AI skills, identifies their role's unique workflows (research synthesis, PRD writing, competitive analysis), and benchmarks them against AI-fluent PMs.",
-          "<strong>Step 2 — Workflow Mapping:</strong> The platform helps map daily PM tasks (user interviews, roadmap updates, stakeholder reports) and surfaces the top 3 repetitive workflows ripe for AI augmentation or full automation.",
-          "<strong>Step 3 — Structured Lessons:</strong> The PM follows guided lessons on writing effective prompts (e.g., 'Synthesize 10 user interviews into a 1-page insight report'), building n8n automations, and chaining tools together.",
-          "<strong>Step 4 — Progress Tracking:</strong> Streaks, level-ups, and peer-led sessions keep the PM engaged — moving them from basic AI usage to advanced fluency, with measurable outputs (time saved, workflows automated, prompts refined)."
+          "<strong>Step 1 - Onboarding:</strong> A PM completes an onboarding quiz that assesses their current AI skills, identifies their role's unique workflows (research synthesis, PRD writing, competitive analysis), and benchmarks them against AI-fluent PMs.",
+          "<strong>Step 2 - Workflow Mapping:</strong> The platform helps map daily PM tasks (user interviews, roadmap updates, stakeholder reports) and surfaces the top 3 repetitive workflows ripe for AI augmentation or full automation.",
+          "<strong>Step 3 - Structured Lessons:</strong> The PM follows guided lessons on writing effective prompts (e.g., 'Synthesize 10 user interviews into a 1-page insight report'), building n8n automations, and chaining tools together.",
+          "<strong>Step 4 - Progress Tracking:</strong> Streaks, level-ups, and peer-led sessions keep the PM engaged - moving them from basic AI usage to advanced fluency, with measurable outputs (time saved, workflows automated, prompts refined)."
         ]
       },
       {
         "title": "Why This Matters for AI Product Management",
         "type": "highlight",
         "items": [
-          "Ladder AI demonstrates end-to-end AI product thinking — from user research to north star problem framing to solution design",
+          "Ladder AI demonstrates end-to-end AI product thinking - from user research to north star problem framing to solution design",
           "It addresses a real, validated market gap (50-70% of professionals share these pain points)",
           "It applies modern PM frameworks (north star metrics, segmented personas, prioritized roadmaps) to an AI-native product",
-          "It showcases ability to design for AI fluency, not just AI access — the strategic frontier of AI product management"
+          "It showcases ability to design for AI fluency, not just AI access - the strategic frontier of AI product management"
         ]
       },
       {
@@ -132,7 +132,7 @@
           },
           {
             "title": "AI Product Strategy",
-            "text": "Designed a platform that addresses AI fluency — not just access — the strategic frontier"
+            "text": "Designed a platform that addresses AI fluency - not just access - the strategic frontier"
           },
           {
             "title": "PRD & Solution Design",
@@ -152,9 +152,9 @@
         "title": "Key Learnings",
         "type": "list",
         "items": [
-          "<strong>Access ≠ Fluency:</strong> Distributing tools doesn't create capability — structured learning and habit design do",
+          "<strong>Access ≠ Fluency:</strong> Distributing tools doesn't create capability - structured learning and habit design do",
           "<strong>Role-Specificity Wins:</strong> Generic AI advice fails; PMs need PM-specific prompts, marketers need marketer-specific workflows",
-          "<strong>Workflow Beats Features:</strong> Users don't need more AI tools — they need fewer tools, better integrated into existing workflows",
+          "<strong>Workflow Beats Features:</strong> Users don't need more AI tools - they need fewer tools, better integrated into existing workflows",
           "<strong>Trust is Earned Through Wins:</strong> Small, reliable AI wins (one good prompt, one automated workflow) build momentum; large, unreliable demos break it",
           "<strong>Gamification Sustains Learning:</strong> Without streaks, levels, and social accountability, AI skill-building gets abandoned"
         ]

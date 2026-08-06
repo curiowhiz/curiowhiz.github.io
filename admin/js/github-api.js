@@ -61,7 +61,7 @@ const GitHubAPI = (function () {
         }
     }
 
-    // GET file contents — returns { content, sha }
+    // GET file contents - returns { content, sha }
     async function getFile(path) {
         const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`;
         const res = await fetch(url, { headers: getHeaders() });
@@ -111,7 +111,7 @@ const GitHubAPI = (function () {
         return await putFile(path, content, sha, message);
     }
 
-    // Upload binary file (image) — content is base64 string (no data: prefix)
+    // Upload binary file (image) - content is base64 string (no data: prefix)
     async function putBinary(path, base64Content, sha, message) {
         const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
         const body = {

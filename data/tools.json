@@ -3,7 +3,7 @@
         "id": "rag-simulator",
         "name": "RAG Simulator",
         "icon": "",
-        "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems — built to help PMs and engineers visualize AI retrieval flows.",
+        "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems - built to help PMs and engineers visualize AI retrieval flows.",
         "technologies": [
             "AI/LLM",
             "RAG",
@@ -20,7 +20,7 @@
         "id": "n8n-research-automation",
         "name": "N8n User Research Automation",
         "icon": "",
-        "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes — eliminating manual research bottlenecks.",
+        "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes - eliminating manual research bottlenecks.",
         "technologies": [
             "n8n",
             "Automation",
@@ -35,29 +35,28 @@
         "order": 2
     },
     {
-        "id": "ai-pm-stack",
-        "name": "AI-Powered PM Workflow",
+        "id": "vendor-itc-recovery-agent",
+        "name": "Vendor ITC Recovery Agent",
         "icon": "",
-        "description": "Personal framework integrating Claude AI, Google AI Studio, n8n, and Figma for accelerated product discovery, research synthesis, and prototyping.",
+        "description": "GST reconciliation tool that matches purchase registers against GSTR-2B, flags blocked Input Tax Credit, and drafts vendor follow-up emails for human approval - deterministic matching first, AI arbitration only when genuinely ambiguous.",
         "technologies": [
+            "Next.js",
+            "Supabase",
             "Claude AI",
-            "Google AI Studio",
-            "n8n",
-            "Figma"
+            "GST"
         ],
         "status": "active",
         "githubUrl": null,
-        "demoUrl": null,
+        "demoUrl": "https://vendor-itc-recovery-agent.vercel.app",
         "featured": false,
         "darkCard": false,
-        "internalNote": "Personal workflow system",
         "order": 3
     },
     {
         "id": "ai-eval-harness",
         "name": "AI Evaluation Harness",
         "icon": "",
-        "description": "Open-source evaluation pipeline for PM task LLM outputs — using LLM-as-a-Judge methodology to benchmark Claude, GPT-4, and Gemini on latency, cost, and accuracy.",
+        "description": "Open-source evaluation pipeline for PM task LLM outputs - using LLM-as-a-Judge methodology to benchmark Claude, GPT-4, and Gemini on latency, cost, and accuracy.",
         "technologies": [
             "Python",
             "LLM-as-Judge",
@@ -65,7 +64,7 @@
             "Open Source"
         ],
         "status": "building",
-        "statusLabel": "Building — Coming Q2 2025",
+        "statusLabel": "Building - Coming Q2 2025",
         "githubUrl": null,
         "demoUrl": null,
         "featured": false,

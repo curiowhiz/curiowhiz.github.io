@@ -1,5 +1,5 @@
 // ============================================================
-// APP — Main dashboard controller
+// APP - Main dashboard controller
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {

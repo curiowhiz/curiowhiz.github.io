@@ -1,5 +1,5 @@
 // ============================================================
-// LOADER.JS — Portfolio Brain (v3 — Stitch redesign)
+// LOADER.JS - Portfolio Brain (v3 - Stitch redesign)
 // Reads JSON files and dynamically builds homepage sections
 // ============================================================
 
@@ -13,17 +13,25 @@ document.addEventListener('DOMContentLoaded', function () {
     setupNavigation();
 });
 
+// Escapes text before it is inserted via innerHTML, so data/*.json content
+// is always rendered as text and can never be interpreted as markup.
+function esc(s) {
+    return String(s ?? '').replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+}
+
 
 // ============================================================
-// PROFILE LOADER — Hero, Profile Card, About, Capabilities, Contact
+// PROFILE LOADER - Hero, Profile Card, About, Capabilities, Contact
 // ============================================================
 async function loadProfile() {
     try {
         const response = await fetch('data/profile.json');
         const profile = await response.json();
 
-        // PAGE TITLE
-        document.title = `${profile.name} — ${profile.subtitle.split(',')[0]}`;
+        // PAGE TITLE (plain text, not HTML - no escaping needed here)
+        document.title = `${profile.name} - ${profile.subtitle.split(',')[0]}`;
 
         // HERO LEFT
         const heroEyebrow = document.getElementById('hero-eyebrow');
@@ -42,7 +50,7 @@ async function loadProfile() {
         const profilePhoto = document.getElementById('profile-photo');
         if (profilePhoto) {
             profilePhoto.src = profile.profilePhoto;
-            profilePhoto.alt = `${profile.name} — ${profile.subtitle.split(',')[0]}`;
+            profilePhoto.alt = `${profile.name} - ${profile.subtitle.split(',')[0]}`;
         }
 
         const profileName = document.getElementById('profile-name');
@@ -55,7 +63,7 @@ async function loadProfile() {
         const profileChips = document.getElementById('profile-chips');
         if (profileChips && profile.metadataChips) {
             profileChips.innerHTML = profile.metadataChips
-                .map(chip => `<span class="profile-chip">${chip}</span>`)
+                .map(chip => `<span class="profile-chip">${esc(chip)}</span>`)
                 .join('');
         }
 
@@ -64,8 +72,8 @@ async function loadProfile() {
         if (profileMetrics && profile.heroMetrics) {
             profileMetrics.innerHTML = profile.heroMetrics.map(metric => `
                 <div class="profile-metric">
-                    <span class="profile-metric-value">${metric.value}</span>
-                    <span class="profile-metric-label">${metric.label}</span>
+                    <span class="profile-metric-value">${esc(metric.value)}</span>
+                    <span class="profile-metric-label">${esc(metric.label)}</span>
                 </div>
             `).join('');
         }
@@ -76,6 +84,8 @@ async function loadProfile() {
 
         const aboutParagraphs = document.getElementById('about-paragraphs');
         if (aboutParagraphs && profile.aboutParagraphs) {
+            // Intentionally not escaped: these paragraphs carry inline <strong>
+            // markup by design (edited only via the admin panel).
             aboutParagraphs.innerHTML = profile.aboutParagraphs
                 .map(p => `<p>${p}</p>`)
                 .join('');
@@ -86,9 +96,9 @@ async function loadProfile() {
         if (capabilitiesGrid && profile.capabilities) {
             capabilitiesGrid.innerHTML = profile.capabilities.map(cap => `
                 <div class="capability-card">
-                    <div class="capability-icon">${cap.icon}</div>
-                    <h3 class="capability-title">${cap.title}</h3>
-                    <p class="capability-description">${cap.description}</p>
+                    <div class="capability-icon">${esc(cap.icon)}</div>
+                    <h3 class="capability-title">${esc(cap.title)}</h3>
+                    <p class="capability-description">${esc(cap.description)}</p>
                 </div>
             `).join('');
         }
@@ -118,7 +128,7 @@ async function loadProfile() {
 
 
 // ============================================================
-// PROJECTS LOADER — Asymmetric grid with Ladder AI featured
+// PROJECTS LOADER - Asymmetric grid with Ladder AI featured
 // ============================================================
 async function loadProjects() {
     try {
@@ -137,7 +147,7 @@ async function loadProjects() {
 
         projectsGrid.innerHTML = sortedProjects.map(project => {
             const metricLine = project.keyMetric
-                ? `<div class="project-metric">${project.keyMetric}</div>`
+                ? `<div class="project-metric">${esc(project.keyMetric)}</div>`
                 : '';
 
             const featuredFlag = project.featured
@@ -145,17 +155,17 @@ async function loadProjects() {
                 : '';
 
             return `
-                <a href="${project.link}" class="project-card ${project.featured ? 'featured' : ''}">
+                <a href="${esc(project.link)}" class="project-card ${project.featured ? 'featured' : ''}">
                     ${featuredFlag}
                     <div class="project-thumbnail">
                         ${getProjectThumbnail(project)}
                     </div>
                     <div class="project-content">
-                        ${project.category ? `<span class="project-category">${project.category}</span>` : ''}
-                        <h3 class="project-title">${project.title}</h3>
-                        <p class="project-description">${project.description}</p>
+                        ${project.category ? `<span class="project-category">${esc(project.category)}</span>` : ''}
+                        <h3 class="project-title">${esc(project.title)}</h3>
+                        <p class="project-description">${esc(project.description)}</p>
                         <div class="project-tags">
-                            ${project.tags.slice(0, 3).map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                            ${project.tags.slice(0, 3).map(tag => `<span class="project-tag">${esc(tag)}</span>`).join('')}
                         </div>
                         ${metricLine}
                         <span class="project-cta">View Case Study →</span>
@@ -180,12 +190,12 @@ function getProjectThumbnail(project) {
             </div>
         `;
     }
-    return `<img src="${project.thumbnail}" alt="${project.title}" loading="lazy">`;
+    return `<img src="${esc(project.thumbnail)}" alt="${esc(project.title)}" loading="lazy">`;
 }
 
 
 // ============================================================
-// TOOLS LOADER — Includes dark technical card
+// TOOLS LOADER - Includes dark technical card
 // ============================================================
 async function loadTools() {
     try {
@@ -213,30 +223,30 @@ async function loadTools() {
             if (tool.githubUrl || tool.demoUrl) {
                 actionsHtml = `
                     <div class="tool-actions">
-                        ${tool.githubUrl ? `<a href="${tool.githubUrl}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>` : ''}
-                        ${tool.demoUrl ? `<a href="${tool.demoUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>` : ''}
+                        ${tool.githubUrl ? `<a href="${esc(tool.githubUrl)}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>` : ''}
+                        ${tool.demoUrl ? `<a href="${esc(tool.demoUrl)}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>` : ''}
                     </div>
                 `;
             } else if (tool.internalNote) {
-                actionsHtml = `<p class="tool-internal-note">${tool.internalNote}</p>`;
+                actionsHtml = `<p class="tool-internal-note">${esc(tool.internalNote)}</p>`;
             }
 
             // Code preview for dark cards
             const codePreviewHtml = tool.codePreview
-                ? `<pre class="tool-code-preview">${tool.codePreview}</pre>`
+                ? `<pre class="tool-code-preview">${esc(tool.codePreview)}</pre>`
                 : '';
 
             return `
                 <div class="tool-card ${isDark ? 'dark' : ''}">
-                    <div class="tool-icon">${tool.icon}</div>
-                    <h3 class="tool-name">${tool.name}</h3>
-                    <p class="tool-description">${tool.description}</p>
+                    <div class="tool-icon">${esc(tool.icon)}</div>
+                    <h3 class="tool-name">${esc(tool.name)}</h3>
+                    <p class="tool-description">${esc(tool.description)}</p>
                     <div class="tool-tags">
-                        ${tool.technologies.map(tech => `<span class="tool-tag">${tech}</span>`).join('')}
+                        ${tool.technologies.map(tech => `<span class="tool-tag">${esc(tech)}</span>`).join('')}
                     </div>
                     <div class="tool-status">
                         <span class="${statusDotClass}" style="background-color: ${statusColors[tool.status] || statusColors.archived}"></span>
-                        <span class="status-label">${statusLabel}</span>
+                        <span class="status-label">${esc(statusLabel)}</span>
                     </div>
                     ${actionsHtml}
                     ${codePreviewHtml}
@@ -252,7 +262,7 @@ async function loadTools() {
 
 
 // ============================================================
-// EXPERIENCE LOADER — Timeline with current-role pulse
+// EXPERIENCE LOADER - Timeline with current-role pulse
 // ============================================================
 async function loadExperience() {
     try {
@@ -271,18 +281,18 @@ async function loadExperience() {
                     <div class="timeline-header">
                         <h3 class="timeline-title">
                             ${role.current ? '<span class="current-badge">CURRENT</span>' : ''}
-                            ${role.title}
+                            ${esc(role.title)}
                         </h3>
-                        <span class="timeline-date">${role.startDate} — ${role.endDate}</span>
+                        <span class="timeline-date">${esc(role.startDate)} - ${esc(role.endDate)}</span>
                     </div>
                     <div class="timeline-company">
-                        <strong>${role.company}</strong> · ${role.location}
+                        <strong>${esc(role.company)}</strong> · ${esc(role.location)}
                     </div>
                     <ul class="timeline-achievements">
-                        ${role.achievements.map(a => `<li>${a}</li>`).join('')}
+                        ${role.achievements.map(a => `<li>${esc(a)}</li>`).join('')}
                     </ul>
                     <div class="timeline-tags">
-                        ${role.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+                        ${role.tags.map(tag => `<span class="timeline-tag">${esc(tag)}</span>`).join('')}
                     </div>
                 </div>
             </div>
@@ -296,7 +306,7 @@ async function loadExperience() {
 
 
 // ============================================================
-// NAVIGATION — Sticky shadow + mobile hamburger
+// NAVIGATION - Sticky shadow + mobile hamburger
 // ============================================================
 function setupNavigation() {
     const hamburger = document.getElementById('hamburger');
@@ -336,7 +346,7 @@ function setupNavigation() {
         }
     });
 
-    // Handle nav link clicks — close menu, then smoothly scroll to section
+    // Handle nav link clicks - close menu, then smoothly scroll to section
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -371,7 +381,7 @@ function setupNavigation() {
                     history.pushState(null, '', href);
                 }, 400);
             } else {
-                // External link — just close the menu
+                // External link - just close the menu
                 closeMenu();
             }
         });

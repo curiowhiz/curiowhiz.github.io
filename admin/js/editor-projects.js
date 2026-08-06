@@ -1,5 +1,5 @@
 // ============================================================
-// EDITOR — PROJECTS
+// EDITOR - PROJECTS
 // ============================================================
 
 const EditorProjects = (function () {
@@ -98,7 +98,7 @@ const EditorProjects = (function () {
                     <div class="field-group">
                         <label>Replace Thumbnail</label>
                         <div class="image-preview">
-                            <img class="proj-thumb-preview" src="../${esc(project.thumbnail || '')}" alt="" onerror="this.style.display='none'">
+                            <img class="proj-thumb-preview" src="../${esc(project.thumbnail || '')}" alt="">
                             <div class="upload-controls">
                                 <input type="file" class="proj-thumb-file" accept="image/*" data-proj-idx="${idx}">
                                 <p class="field-hint">Upload to replace; auto-saved to <code>images/thumbnails/${esc(project.id || 'slug')}.[ext]</code></p>
@@ -122,6 +122,13 @@ const EditorProjects = (function () {
 
     function attachHandlers() {
         const container = document.getElementById('projects-editor');
+
+        // Hide broken thumbnail previews instead of showing a broken-image icon
+        container.querySelectorAll('.proj-thumb-preview').forEach(img => {
+            img.addEventListener('error', function () {
+                this.style.display = 'none';
+            });
+        });
 
         container.addEventListener('click', (e) => {
             const t = e.target;

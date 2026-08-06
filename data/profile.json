@@ -27,9 +27,9 @@
   ],
   "aboutHeadline": "Engineering rigor meets product judgment.",
   "aboutParagraphs": [
-    "I lead performance and product initiatives at Bank of Montreal, where I'm migrating on-premise services to AWS Lambda — improving deployment speed by 40% and optimizing latency-cost trade-offs. Previously, I delivered <strong>663% revenue growth</strong> at MTX Group ($157K → $1.2M in 14 months) and led product roadmaps for Bank of America's CashPro Mobile, improving user retention by 7%.",
+    "I lead performance and product initiatives at Bank of Montreal, where I'm migrating on-premise services to AWS Lambda - improving deployment speed by 40% and optimizing latency-cost trade-offs. Previously, I delivered <strong>663% revenue growth</strong> at MTX Group ($157K → $1.2M in 14 months) and led product roadmaps for Bank of America's CashPro Mobile, improving user retention by 7%.",
     "My 15+ years in <strong>Performance Engineering and Quality Assurance</strong> translates directly into AI Product Management: I've spent my career testing & engineering applications, finding bottlenecks, auditing edge cases, and managing trade-offs between latency, accuracy, and cost - the exact problems LLM-powered products face in 2026.",
-    "I use a modern AI-powered PM stack — <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, <strong>n8n</strong> for workflow automation"
+    "I use a modern AI-powered PM stack - <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, <strong>n8n</strong> for workflow automation"
   ],
   "capabilities": [
     {

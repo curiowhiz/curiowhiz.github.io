@@ -1,5 +1,5 @@
 // ============================================================
-// EDITOR — EXPERIENCE (Timeline)
+// EDITOR - EXPERIENCE (Timeline)
 // ============================================================
 
 const EditorExperience = (function () {

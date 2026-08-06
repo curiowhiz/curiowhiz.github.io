@@ -1,13 +1,13 @@
 /* ============================================================
-   STYLES.CSS — Executive Calm + Technical Depth (v3)
-   Rajan Gupta — AI Product Manager Portfolio
+   STYLES.CSS - Executive Calm + Technical Depth (v3)
+   Rajan Gupta - AI Product Manager Portfolio
    ============================================================ */
 
 /* ============================================================
    1. DESIGN TOKENS
    ============================================================ */
 :root {
-    /* Light theme — dominant */
+    /* Light theme - dominant */
     --bg-primary: #FAFAF7;
     --bg-secondary: #F1EFEA;
     --bg-card: #FFFFFF;
@@ -161,7 +161,7 @@ h3 {
 }
 
 /* ============================================================
-4. NAVIGATION (FIXED — iOS Safari mobile menu rendering)
+4. NAVIGATION (FIXED - iOS Safari mobile menu rendering)
 ============================================================*/
 .navbar {
     position: sticky;
@@ -213,7 +213,7 @@ h3 {
     font-weight: 700;
 }
 
-/* Nav Links — Desktop */
+/* Nav Links - Desktop */
 .nav-links {
     display: flex;
     list-style: none;
@@ -307,7 +307,7 @@ h3 {
     background: var(--accent);
 }
 
-/* Backdrop — sits between page content and menu */
+/* Backdrop - sits between page content and menu */
 .nav-backdrop {
     display: none;
     position: fixed;
@@ -460,7 +460,7 @@ section {
 }
 
 /* ============================================================
-   6. HERO SECTION (Option 1 — No name in hero)
+   6. HERO SECTION (Option 1 - No name in hero)
    ============================================================ */
 .hero {
     padding: var(--space-4xl) 0 var(--space-5xl);
@@ -532,7 +532,7 @@ section {
     flex-wrap: wrap;
 }
 
-/* Hero Right — Profile Card */
+/* Hero Right - Profile Card */
 .hero-right {
     display: flex;
     justify-content: center;
@@ -776,7 +776,7 @@ section {
 }
 
 /* ============================================================
-   10. SELECTED WORK — Asymmetric Grid
+   10. SELECTED WORK - Asymmetric Grid
    ============================================================ */
 .projects {
     background: var(--bg-primary);
@@ -788,12 +788,12 @@ section {
     gap: var(--space-lg);
 }
 
-/* Ladder AI — Featured (7/12 cols) */
+/* Ladder AI - Featured (7/12 cols) */
 .project-card.featured {
     grid-column: span 7;
 }
 
-/* Other projects — 5/12 cols on row 1, then 4/12 on row 2-3 */
+/* Other projects - 5/12 cols on row 1, then 4/12 on row 2-3 */
 .project-card:nth-child(2) {
     grid-column: span 5;
 }
@@ -1528,7 +1528,7 @@ section {
 }
 
 /* ============================================================
-   MOBILE NAV FIX — Z-index hardening + escape stacking context
+   MOBILE NAV FIX - Z-index hardening + escape stacking context
    ============================================================ */
 @media (max-width: 768px) {
 

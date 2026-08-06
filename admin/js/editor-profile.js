@@ -1,5 +1,5 @@
 // ============================================================
-// EDITOR — PROFILE (Hero, About, Capabilities, Contact)
+// EDITOR - PROFILE (Hero, About, Capabilities, Contact)
 // ============================================================
 
 const EditorProfile = (function () {
@@ -64,7 +64,7 @@ const EditorProfile = (function () {
                 <div class="field-group">
                     <label>Profile Photo</label>
                     <div class="image-preview">
-                        <img id="p-photo-preview" src="../${esc(data.profilePhoto || '')}" alt="" onerror="this.style.display='none'">
+                        <img id="p-photo-preview" src="../${esc(data.profilePhoto || '')}" alt="">
                         <div class="upload-controls">
                             <input type="text" id="p-photo-path" value="${esc(data.profilePhoto || '')}" placeholder="images/profile-pic.jpg">
                             <input type="file" id="p-photo-file" accept="image/*">
@@ -75,7 +75,7 @@ const EditorProfile = (function () {
                 <div class="field-group">
                     <label>Metadata Chips (one per line)</label>
                     <textarea id="p-chips">${(data.metadataChips || []).join('\n')}</textarea>
-                    <p class="field-hint">e.g. "Toronto, Canada" — one chip per line</p>
+                    <p class="field-hint">e.g. "Toronto, Canada" - one chip per line</p>
                 </div>
                 <div class="field-group">
                     <label>Hero Metrics (3 stats)</label>
@@ -202,6 +202,11 @@ const EditorProfile = (function () {
     }
 
     function attachHandlers() {
+        // Hide broken photo preview instead of showing a broken-image icon
+        document.getElementById('p-photo-preview').addEventListener('error', function () {
+            this.style.display = 'none';
+        });
+
         // Photo file upload preview
         document.getElementById('p-photo-file').addEventListener('change', (e) => {
             const file = e.target.files[0];
@@ -331,7 +336,7 @@ const EditorProfile = (function () {
             };
 
             // Need fresh sha (since photo upload may have changed things, but profile.json wasn't touched)
-            // We already have the latest sha for profile.json — reuse it
+            // We already have the latest sha for profile.json - reuse it
             const result = await GitHubAPI.putJSON(
                 FILE_PATH,
                 updated,
