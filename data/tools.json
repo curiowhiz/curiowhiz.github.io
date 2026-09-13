@@ -58,7 +58,7 @@
     {
         "id": "kwalifier",
         "name": "Kwalifier",
-        "icon": "🏦",
+        "icon": "",
         "description": "AI-powered bank offer eligibility assistant - tells customers exactly which offers, benefits, and products they qualify for based on their own account data and the bank's official offer catalogue. Grounded in RAG, never speculates.",
         "technologies": [
             "RAG",
@@ -71,8 +71,7 @@
         "demoUrl": "https://kwalifierrag.vercel.app/",
         "detailUrl": "projects/kwalifier.html",
         "featured": false,
-        "darkCard": true,
-        "codePreview": "// Account context + offer catalogue retrieval\n// Eligibility reasoning over retrieved docs\n// Grounded verdicts — no hallucination, no speculation",
+        "darkCard": false,
         "order": 4
     }
 ]
