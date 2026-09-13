@@ -1033,11 +1033,33 @@ section {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+a.tool-card {
+    cursor: pointer;
 }
 
 .tool-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+    color: var(--text-primary);
+}
+
+a.tool-card:hover {
+    border-color: var(--accent-border);
+}
+
+.tool-cta {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    margin-top: var(--space-md);
+}
+
+.tool-card.dark .tool-cta {
+    color: var(--code-accent);
 }
 
 /* Dark technical card */

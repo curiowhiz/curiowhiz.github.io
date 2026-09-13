@@ -218,26 +218,22 @@ async function loadTools() {
             const statusLabel = tool.statusLabel || (tool.status.charAt(0).toUpperCase() + tool.status.slice(1));
             const statusDotClass = tool.status === 'building' ? 'status-dot building' : 'status-dot';
 
-            // Action buttons OR internal note
-            let actionsHtml = '';
-            if (tool.githubUrl || tool.demoUrl) {
-                actionsHtml = `
-                    <div class="tool-actions">
-                        ${tool.githubUrl ? `<a href="${esc(tool.githubUrl)}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub</a>` : ''}
-                        ${tool.demoUrl ? `<a href="${esc(tool.demoUrl)}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>` : ''}
-                    </div>
-                `;
-            } else if (tool.internalNote) {
-                actionsHtml = `<p class="tool-internal-note">${esc(tool.internalNote)}</p>`;
-            }
+            // internal note (tools without a public link still show this)
+            const internalNoteHtml = tool.internalNote
+                ? `<p class="tool-internal-note">${esc(tool.internalNote)}</p>`
+                : '';
 
             // Code preview for dark cards
             const codePreviewHtml = tool.codePreview
                 ? `<pre class="tool-code-preview">${esc(tool.codePreview)}</pre>`
                 : '';
 
+            const cardTag = tool.detailUrl ? 'a' : 'div';
+            const hrefAttr = tool.detailUrl ? `href="${esc(tool.detailUrl)}"` : '';
+            const ctaHtml = tool.detailUrl ? '<span class="tool-cta">View Details →</span>' : '';
+
             return `
-                <div class="tool-card ${isDark ? 'dark' : ''}">
+                <${cardTag} ${hrefAttr} class="tool-card ${isDark ? 'dark' : ''}">
                     <div class="tool-icon">${esc(tool.icon)}</div>
                     <h3 class="tool-name">${esc(tool.name)}</h3>
                     <p class="tool-description">${esc(tool.description)}</p>
@@ -248,9 +244,10 @@ async function loadTools() {
                         <span class="${statusDotClass}" style="background-color: ${statusColors[tool.status] || statusColors.archived}"></span>
                         <span class="status-label">${esc(statusLabel)}</span>
                     </div>
-                    ${actionsHtml}
+                    ${internalNoteHtml}
                     ${codePreviewHtml}
-                </div>
+                    ${ctaHtml}
+                </${cardTag}>
             `;
         }).join('');
 
