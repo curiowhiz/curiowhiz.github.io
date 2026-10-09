@@ -21,6 +21,51 @@ function esc(s) {
     }[c]));
 }
 
+// Experience data is needed twice: to build the timeline, and to link each
+// hero metric to the bullet where that figure appears. One request, shared.
+const experienceRequest = fetch('data/experience.json').then(response => response.json());
+
+function slugify(text) {
+    return String(text ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// Stable anchor for one achievement bullet: company slug plus its position.
+function evidenceId(role, index) {
+    return `${slugify(role.company)}-${index}`;
+}
+
+// Marks the bullet named in the URL hash and, on first load, scrolls to it.
+// The bullets are inserted after the page loads, so the browser's own
+// :target handling would miss a link that is already in the address bar.
+function syncEvidenceTarget(scrollIntoView) {
+    document.querySelectorAll('.timeline-achievements li.is-target')
+        .forEach(item => item.classList.remove('is-target'));
+
+    const id = decodeURIComponent(location.hash.slice(1));
+    const item = id ? document.getElementById(id) : null;
+    if (!item || !item.matches('.timeline-achievements li')) return;
+
+    item.classList.add('is-target');
+    if (scrollIntoView) item.scrollIntoView();
+}
+
+window.addEventListener('hashchange', () => syncEvidenceTarget(false));
+
+// Finds the first bullet (most recent role first) that contains the metric's
+// figure as a whole number, so "7%" never matches "17%". Returns an anchor id,
+// or null when nothing matches, in which case the metric simply is not a link.
+function findEvidence(value, experience) {
+    const figure = String(value ?? '').trim();
+    if (!figure) return null;
+    const escaped = figure.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = new RegExp('(^|[^\\d.])' + escaped + '(?!\\d)');
+    for (const role of experience) {
+        const index = role.achievements.findIndex(text => pattern.test(text));
+        if (index !== -1) return evidenceId(role, index);
+    }
+    return null;
+}
+
 
 // ============================================================
 // PROFILE LOADER - Hero, Profile Card, About, Capabilities, Contact
@@ -70,12 +115,20 @@ async function loadProfile() {
         // Profile metrics (3 stats below chips)
         const profileMetrics = document.getElementById('profile-metrics');
         if (profileMetrics && profile.heroMetrics) {
-            profileMetrics.innerHTML = profile.heroMetrics.map(metric => `
-                <div class="profile-metric">
-                    <span class="profile-metric-value">${esc(metric.value)}</span>
-                    <span class="profile-metric-label">${esc(metric.label)}</span>
-                </div>
-            `).join('');
+            // Each metric links to the experience bullet it came from. If the
+            // experience data cannot be loaded, the metrics still render, unlinked.
+            experienceRequest.catch(() => []).then(experience => {
+                profileMetrics.innerHTML = profile.heroMetrics.map(metric => {
+                    const inner = `
+                        <span class="profile-metric-value">${esc(metric.value)}</span>
+                        <span class="profile-metric-label">${esc(metric.label)}</span>
+                    `;
+                    const target = findEvidence(metric.value, experience);
+                    return target
+                        ? `<a class="profile-metric" href="#${esc(target)}">${inner}</a>`
+                        : `<div class="profile-metric">${inner}</div>`;
+                }).join('');
+            });
         }
 
         // ABOUT SECTION
@@ -263,8 +316,7 @@ async function loadTools() {
 // ============================================================
 async function loadExperience() {
     try {
-        const response = await fetch('data/experience.json');
-        const experience = await response.json();
+        const experience = await experienceRequest;
 
         const timelineContainer = document.getElementById('experience-timeline');
         if (!timelineContainer) return;
@@ -286,7 +338,7 @@ async function loadExperience() {
                         <strong>${esc(role.company)}</strong> · ${esc(role.location)}
                     </div>
                     <ul class="timeline-achievements">
-                        ${role.achievements.map(a => `<li>${esc(a)}</li>`).join('')}
+                        ${role.achievements.map((a, i) => `<li id="${esc(evidenceId(role, i))}">${esc(a)}</li>`).join('')}
                     </ul>
                     <div class="timeline-tags">
                         ${role.tags.map(tag => `<span class="timeline-tag">${esc(tag)}</span>`).join('')}
@@ -294,6 +346,8 @@ async function loadExperience() {
                 </div>
             </div>
         `).join('');
+
+        syncEvidenceTarget(true);
 
         console.log(`Experience loaded (${experience.length} roles)`);
     } catch (error) {
