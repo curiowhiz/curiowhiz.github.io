@@ -106,7 +106,9 @@
     }
 
     function start() {
-        if (reduceMotion.matches) {
+        // Reduced motion, or a page opened in a background tab (where frames
+        // never fire): show the finished curve instead of an unfinished one.
+        if (reduceMotion.matches || document.hidden) {
             progress = 1;
             draw();
             return;
