@@ -12,9 +12,40 @@
    ============================================================ */
 
 /* ============================================================
+   0. FONTS (self-hosted, latin subset, variable where available)
+   ============================================================ */
+@font-face {
+    font-family: 'Literata';
+    src: url('fonts/literata-var.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/plex-sans-var.woff2') format('woff2');
+    font-weight: 400 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/jetbrains-mono-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============================================================
    1. DESIGN TOKENS
+   Light is the default. Dark is designed as its own palette (a deep
+   teal-ink ground with a lifted teal), not an inversion.
    ============================================================ */
 :root {
+    color-scheme: light dark;
+
     /* Ground and ink */
     --paper: #F3F6F6;
     --paper-deep: #E8EEEE;
@@ -22,12 +53,15 @@
     --ink: #14212B;
     --quiet: #586872;
     --rule: #C7D2D5;
+    --nav-bg: rgba(243, 246, 246, 0.94);
+    --nav-bg-solid: rgba(243, 246, 246, 0.99);
 
     /* Single accent */
     --accent: #0D5C5C;
     --accent-hover: #09474A;
     --accent-tint: #E3EEEE;
     --accent-border: #BFD6D6;
+    --on-accent: #FFFFFF;
 
     /* Dark technical block */
     --dark: #14212B;
@@ -63,6 +97,29 @@
     /* Layout */
     --max-width: 1160px;
     --measure: 62ch;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #0F1A20;
+        --paper-deep: #0B1418;
+        --surface: #15242B;
+        --ink: #E7EEEE;
+        --quiet: #9DB0B7;
+        --rule: #2A3B43;
+        --nav-bg: rgba(15, 26, 32, 0.92);
+        --nav-bg-solid: rgba(15, 26, 32, 0.99);
+
+        --accent: #5FB8B0;
+        --accent-hover: #86D1CA;
+        --accent-tint: #173238;
+        --accent-border: #24505A;
+        --on-accent: #062321;
+
+        --dark: #0A1317;
+        --dark-alt: #060D10;
+        --status-active: #5FB07A;
+    }
 }
 
 /* ============================================================
@@ -175,7 +232,7 @@ h3 {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(243, 246, 246, 0.94);
+    background: var(--nav-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--rule);
@@ -690,14 +747,14 @@ section + section {
 
 .btn-primary {
     background: var(--accent);
-    color: #FFFFFF;
+    color: var(--on-accent);
     border-color: var(--accent);
 }
 
 .btn-primary:hover {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
-    color: #FFFFFF;
+    color: var(--on-accent);
 }
 
 .btn-outline {
@@ -708,7 +765,7 @@ section + section {
 
 .btn-outline:hover {
     background: var(--accent);
-    color: #FFFFFF;
+    color: var(--on-accent);
 }
 
 .btn-sm {
@@ -922,7 +979,12 @@ section + section {
     z-index: 2;
 }
 
+/* One treatment for every thumbnail: the screenshots come from different
+   sources, so at rest they are greyscale with a teal colour blend (a
+   duotone), which makes them read as one family. Hover or keyboard focus
+   returns the original colour. */
 .project-thumbnail {
+    position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: var(--paper-deep);
@@ -937,6 +999,29 @@ section + section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(1) contrast(1.05);
+    transition: filter 0.3s ease;
+}
+
+.project-thumbnail:has(img)::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    mix-blend-mode: color;
+    opacity: 0.75;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-thumbnail img,
+.project-card:focus-visible .project-thumbnail img {
+    filter: none;
+}
+
+.project-card:hover .project-thumbnail:has(img)::after,
+.project-card:focus-visible .project-thumbnail:has(img)::after {
+    opacity: 0;
 }
 
 /* Ladder AI placeholder: flat accent field, no gradient */
@@ -948,7 +1033,7 @@ section + section {
     align-items: flex-start;
     justify-content: flex-end;
     padding: var(--space-lg);
-    color: #FFFFFF;
+    color: var(--on-accent);
 }
 
 .ladder-ai-gradient {
@@ -1487,7 +1572,7 @@ a.tool-card.dark:hover {
     top: -100px;
     left: 0;
     background: var(--accent);
-    color: #FFFFFF;
+    color: var(--on-accent);
     padding: 8px 16px;
     z-index: 9999;
     border-radius: 0 0 4px 0;
@@ -1504,7 +1589,7 @@ a.tool-card.dark:hover {
     .navbar {
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
-        background: rgba(243, 246, 246, 0.99) !important;
+        background: var(--nav-bg-solid) !important;
     }
 
     .navbar .container {
@@ -1521,5 +1606,162 @@ a.tool-card.dark:hover {
 
     .nav-backdrop {
         z-index: 9998 !important;
+    }
+}
+
+/* ============================================================
+   16. SCROLL PROGRESS (CSS only, where scroll-driven animation exists)
+   A hairline under the navbar that fills as the page is read.
+   ============================================================ */
+@supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .navbar::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left center;
+            animation: read-progress linear both;
+            animation-timeline: scroll(root block);
+            pointer-events: none;
+        }
+
+        @keyframes read-progress {
+            to {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+/* ============================================================
+   17. HERO TRACE
+   A response curve that draws once on load and settles onto the
+   ledger rules. Decorative: it carries no text and no data.
+   ============================================================ */
+.hero-trace {
+    display: block;
+    width: 100%;
+    height: 96px;
+    margin-top: var(--space-2xl);
+}
+
+.hero-trace + .profile-metrics {
+    margin-top: 0;
+}
+
+@media (max-width: 560px) {
+    .hero-trace {
+        height: 64px;
+        margin-top: var(--space-xl);
+    }
+}
+
+/* ============================================================
+   18. PRINT
+   "Print to PDF" gives a clean, ink-friendly one-column résumé.
+   ============================================================ */
+@page {
+    margin: 14mm;
+}
+
+@media print {
+    :root {
+        --paper: #FFFFFF;
+        --paper-deep: #FFFFFF;
+        --surface: #FFFFFF;
+        --ink: #000000;
+        --quiet: #333333;
+        --rule: #BBBBBB;
+        --accent: #0D5C5C;
+    }
+
+    body {
+        font-size: 10pt;
+        line-height: 1.45;
+        background: #FFFFFF;
+        color: #000000;
+    }
+
+    .navbar,
+    .nav-backdrop,
+    .skip-nav,
+    .hero-trace,
+    .hero-ctas,
+    .contact-links,
+    .footer-social,
+    .tool-cta,
+    .project-cta,
+    .project-thumbnail,
+    .related-projects-section,
+    .bottom-cta-section,
+    .projects,
+    .tools {
+        display: none !important;
+    }
+
+    section {
+        padding: 14pt 0;
+        break-inside: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 120pt;
+        gap: 24pt;
+    }
+
+    .profile-photo {
+        aspect-ratio: 1 / 1;
+    }
+
+    .profile-metric::before {
+        animation: none;
+    }
+
+    .project-card,
+    .tool-card,
+    .timeline-item,
+    .capability-card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    .tool-card.dark {
+        background: #FFFFFF;
+        color: #000000;
+        border-color: var(--rule);
+    }
+
+    .tool-card.dark .tool-name,
+    .tool-card.dark .tool-description,
+    .tool-card.dark .status-label,
+    .tool-card.dark .tool-internal-note {
+        color: #000000;
+    }
+
+    .tool-code-preview {
+        background: #FFFFFF;
+        color: #000000;
+        border-color: var(--rule);
+    }
+
+    h1 {
+        font-size: 28pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+    }
+
+    .about-paragraphs p {
+        font-size: 10pt;
+    }
+
+    a {
+        color: #000000;
     }
 }

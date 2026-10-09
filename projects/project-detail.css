@@ -1,6 +1,7 @@
 /* ============================================================
-   PROJECT-DETAIL.CSS - 2026 Structure
-   Ladder AI / All case study pages
+   PROJECT-DETAIL.CSS - Results Ledger (v4)
+   Case-study and tool detail pages. Uses the tokens from ../styles.css
+   (paper, ink, quiet, rule, accent) so light and dark both apply.
    ============================================================ */
 
 /* ============================================================
@@ -8,18 +9,16 @@
    ============================================================ */
 .project-hero {
     padding: var(--space-3xl) 0 var(--space-2xl);
-    background: var(--bg-primary);
 }
 
 .project-hero .back-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--text-secondary);
-    font-size: 0.875rem;
+    color: var(--quiet);
+    font-size: 0.9375rem;
     font-weight: 500;
     margin-bottom: var(--space-xl);
-    transition: color 0.2s ease;
 }
 
 .project-hero .back-link:hover {
@@ -32,17 +31,16 @@
 }
 
 .project-hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    margin-bottom: var(--space-md);
-    letter-spacing: -0.03em;
+    margin-bottom: var(--space-lg);
+    max-width: 20ch;
 }
 
 .project-hero .subtitle {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    max-width: 720px;
-    line-height: 1.6;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--ink);
+    max-width: 52ch;
+    line-height: 1.55;
     margin-bottom: var(--space-xl);
 }
 
@@ -53,26 +51,23 @@
 }
 
 /* ============================================================
-   2. METADATA STRIP (At a glance)
+   2. METADATA STRIP (at a glance)
    ============================================================ */
 .project-metadata-strip {
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     padding: var(--space-lg) 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
 
 .metadata-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-lg);
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .metadata-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--space-md);
     }
 }
@@ -80,20 +75,18 @@
 .metadata-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 }
 
 .metadata-label {
-    font-size: 0.6875rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--quiet);
+    font-weight: 500;
 }
 
 .metadata-value {
-    font-size: 0.9375rem;
-    color: var(--text-primary);
+    font-size: 1rem;
+    color: var(--ink);
     font-weight: 500;
 }
 
@@ -113,19 +106,16 @@
 }
 
 /* ============================================================
-   3. SUMMARY CARDS (2x2 grid - 2026 structure)
+   3. SUMMARY CARDS (problem, approach, evidence, outcome)
    ============================================================ */
 .summary-cards-section {
     padding: var(--space-3xl) 0;
-    background: var(--bg-primary);
 }
 
 .summary-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-lg);
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -135,78 +125,64 @@
 }
 
 .summary-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-object);
     padding: var(--space-xl);
-    transition: all 0.2s ease;
-}
-
-.summary-card:hover {
-    box-shadow: var(--shadow-md);
 }
 
 .summary-card-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-md);
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.25rem;
+    line-height: 1;
     margin-bottom: var(--space-md);
 }
 
 .summary-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-md);
+    font-size: 1.3125rem;
+    margin-bottom: var(--space-sm);
     line-height: 1.3;
 }
 
 .summary-card p {
-    color: var(--text-secondary);
+    color: var(--quiet);
     line-height: 1.65;
-    font-size: 0.9375rem;
+    font-size: 0.9688rem;
+    max-width: 60ch;
 }
 
-/* Dark technical summary card (for EVALS & TRADE-OFFS) */
+/* Dark evidence card */
 .summary-card.dark {
-    background: var(--bg-dark);
-    color: var(--text-on-dark);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--dark);
+    color: var(--on-dark);
+    border-color: var(--dark);
 }
 
 .summary-card.dark h3 {
-    color: var(--text-on-dark);
+    color: var(--on-dark);
 }
 
 .summary-card.dark p {
-    color: var(--text-muted-dark);
+    color: var(--on-dark-quiet);
 }
 
-.summary-card.dark .summary-card-icon {
-    background: rgba(94, 234, 212, 0.1);
-}
-
-/* Inline data table in dark card */
 .eval-data-block {
     margin-top: var(--space-md);
     padding: var(--space-md);
-    background: var(--bg-dark-alt);
-    border-radius: var(--radius-md);
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: var(--dark-alt);
+    border-radius: var(--radius-control);
+    font-family: var(--font-code);
     font-size: 0.75rem;
     line-height: 1.7;
-    color: var(--code-text);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--on-dark);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     overflow-x: auto;
+    font-variant-numeric: tabular-nums;
 }
 
 .eval-data-block .data-header {
     color: var(--code-accent);
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     padding-bottom: 4px;
     margin-bottom: 6px;
 }
@@ -225,20 +201,18 @@
 
 /* ============================================================
    4. KEY METRICS BAND
+   The same ruled-ledger treatment used on the homepage: ink rule
+   above each reading, serif tabular numerals in the accent.
    ============================================================ */
 .metrics-band {
-    background: var(--accent);
-    color: var(--bg-primary);
     padding: var(--space-3xl) 0;
 }
 
 .metrics-band-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-2xl);
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xl);
+    text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -248,72 +222,79 @@
     }
 }
 
+.metrics-band-item {
+    border-top: 2px solid var(--ink);
+    padding-top: var(--space-md);
+}
+
 .metrics-band-item .metric-value {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: var(--space-sm);
-    letter-spacing: -0.03em;
-    color: var(--bg-primary);
+    font-family: var(--font-serif);
+    font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums lining-nums;
+    color: var(--accent);
+    margin-bottom: var(--space-xs);
 }
 
 .metrics-band-item .metric-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 600;
-    opacity: 0.9;
+    font-size: 0.9375rem;
+    color: var(--quiet);
 }
 
 /* ============================================================
-   5. DETAILED NOTES (Accordion)
+   5. DETAILED NOTES (accordion)
+   A ruled list. The toggle is the only control, so it carries
+   the accent.
    ============================================================ */
 .detailed-notes-section {
-    background: var(--bg-primary);
     padding: var(--space-3xl) 0;
 }
 
+.detailed-notes-section .section-header {
+    display: block;
+    margin-bottom: var(--space-xl);
+}
+
 .detailed-notes-section .section-header h2 {
-    text-align: center;
-    margin-bottom: var(--space-2xl);
+    text-align: left;
 }
 
 .notes-accordion {
     max-width: 800px;
-    margin: 0 auto;
+    border-bottom: 1px solid var(--rule);
 }
 
 .accordion-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--space-md);
-    overflow: hidden;
+    border-top: 1px solid var(--rule);
 }
 
 .accordion-header {
     width: 100%;
-    background: var(--bg-card);
+    background: transparent;
     border: none;
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-lg) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--space-md);
     cursor: pointer;
-    font-size: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.1875rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--ink);
     text-align: left;
-    font-family: inherit;
-    transition: background 0.2s ease;
 }
 
 .accordion-header:hover {
-    background: var(--bg-secondary);
+    color: var(--accent);
 }
 
 .accordion-toggle {
-    font-size: 1.25rem;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    line-height: 1;
     color: var(--accent);
     transition: transform 0.2s ease;
 }
@@ -333,9 +314,10 @@
 }
 
 .accordion-body {
-    padding: 0 var(--space-xl) var(--space-xl);
-    color: var(--text-primary);
+    padding: 0 0 var(--space-xl);
+    color: var(--ink);
     line-height: 1.7;
+    max-width: var(--measure);
 }
 
 .accordion-body ul {
@@ -345,11 +327,9 @@
 
 .accordion-body li {
     margin-bottom: var(--space-sm);
-    color: var(--text-primary);
 }
 
 .accordion-body strong {
-    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -357,19 +337,20 @@
    6. BOTTOM CTA
    ============================================================ */
 .bottom-cta-section {
-    background: var(--bg-secondary);
+    background: var(--paper-deep);
     padding: var(--space-3xl) 0;
-    text-align: center;
+    text-align: left;
 }
 
 .bottom-cta-section h2 {
     margin-bottom: var(--space-md);
+    max-width: 24ch;
 }
 
 .bottom-cta-section p {
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto var(--space-xl);
+    color: var(--quiet);
+    max-width: 56ch;
+    margin: 0 0 var(--space-xl);
     font-size: 1.0625rem;
     line-height: 1.6;
 }
@@ -377,36 +358,31 @@
 .bottom-cta-buttons {
     display: flex;
     gap: var(--space-md);
-    justify-content: center;
     flex-wrap: wrap;
 }
 
 /* ============================================================
-   7. RELATED PROJECTS (6 small links)
+   7. RELATED PROJECTS
    ============================================================ */
 .related-projects-section {
-    background: var(--bg-primary);
     padding: var(--space-3xl) 0;
-    border-top: 1px solid var(--border);
 }
 
 .related-projects-section .eyebrow {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-xl);
+    text-align: left;
+    color: var(--quiet);
+    margin-bottom: var(--space-lg);
 }
 
 .related-projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-md);
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .related-projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -421,23 +397,22 @@
     flex-direction: column;
     gap: 4px;
     padding: var(--space-md);
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    transition: all 0.2s ease;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-control);
     text-decoration: none;
+    transition: border-color 0.15s ease;
 }
 
 .related-project-link:hover {
-    border-color: var(--accent-border);
-    background: var(--accent-light);
-    transform: translateY(-2px);
+    border-color: var(--accent);
 }
 
 .related-project-name {
-    font-size: 0.9375rem;
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--ink);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -445,16 +420,20 @@
 
 .related-project-name::after {
     content: '→';
+    font-family: var(--font-sans);
     color: var(--accent);
-    transition: transform 0.2s ease;
-}
-
-.related-project-link:hover .related-project-name::after {
-    transform: translateX(2px);
 }
 
 .related-project-desc {
-    font-size: 0.8125rem;
-    color: var(--text-secondary);
+    font-size: 0.875rem;
+    color: var(--quiet);
     line-height: 1.4;
+}
+
+/* Footer links on detail pages */
+.footer-social {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-sm);
+    font-size: 0.875rem;
 }
