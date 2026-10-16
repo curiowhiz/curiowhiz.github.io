@@ -51,6 +51,9 @@
     --on-ink-quiet: #A9BBD0;
     --focus: var(--ink);
 
+    /* The one warm colour: reserved for primary actions so they are easy to find */
+    --action: #FF6A1A;
+
     /* Status (squares, never the only signal: each has a text label) */
     --status-active: #2E7D32;
     --status-building: #F5C400;
@@ -249,7 +252,7 @@ h3 {
 }
 
 .nav-links .nav-contact a {
-    background: var(--field);
+    background: var(--action);
     color: var(--ink);
     padding: 11px 18px;
     font-weight: 700;
@@ -818,13 +821,13 @@ a.profile-metric:focus-visible {
 }
 
 .btn-primary {
-    background: var(--ink);
-    color: var(--field);
+    background: var(--action);
+    color: var(--ink);
 }
 
 .btn-primary:hover {
-    background: var(--on-ink);
-    color: var(--ink);
+    background: var(--ink);
+    color: var(--action);
 }
 
 .btn-outline {
@@ -1624,13 +1627,13 @@ a.tool-card:hover .tool-description {
 }
 
 .contact-link-primary {
-    background: var(--ink);
-    color: var(--field);
+    background: var(--action);
+    color: var(--ink);
 }
 
 .contact-link-primary:hover {
-    background: var(--on-ink);
-    color: var(--ink);
+    background: var(--ink);
+    color: var(--action);
 }
 
 .contact-link-icon {
