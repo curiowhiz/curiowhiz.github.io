@@ -38,7 +38,7 @@ const EditorProjects = (function () {
     }
 
     function renderProjectCard(project, idx) {
-        const featuredBadge = project.featured ? '<span class="item-card-badge">⭐ Featured</span>' : '';
+        const featuredBadge = project.featured ? '<span class="item-card-badge">Featured</span>' : '';
         return `
             <div class="item-card" data-project-idx="${idx}" data-project-id="${esc(project.id || '')}">
                 <div class="item-card-header" data-toggle>
@@ -49,7 +49,7 @@ const EditorProjects = (function () {
                     <div class="item-card-actions">
                         <button type="button" class="btn-icon up" data-proj-up="${idx}" title="Move up">↑</button>
                         <button type="button" class="btn-icon down" data-proj-down="${idx}" title="Move down">↓</button>
-                        <button type="button" class="btn-icon" data-proj-remove="${idx}" title="Remove">✕</button>
+                        <button type="button" class="btn-icon" data-proj-remove="${idx}" title="Remove"></button>
                         <span class="toggle-icon">▼</span>
                     </div>
                 </div>
@@ -260,12 +260,12 @@ const EditorProjects = (function () {
                 `Admin: update projects (${new Date().toISOString()})`
             );
             sha = result.content.sha;
-            Status.show('✅ Projects saved successfully', 'success');
+            Status.show('Projects saved successfully', 'success');
         } catch (err) {
-            Status.show(`❌ Save failed: ${err.message}`, 'error', 0);
+            Status.show(`Save failed: ${err.message}`, 'error', 0);
         } finally {
             btn.disabled = false;
-            btn.textContent = '💾 Save All';
+            btn.textContent = 'Save All';
         }
     }
 

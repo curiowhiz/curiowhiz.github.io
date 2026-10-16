@@ -367,7 +367,7 @@ function setupNavigation() {
     const body = document.body;
 
     if (!hamburger || !navLinks) {
-        console.warn('⚠️ Navigation elements missing');
+        console.warn('Navigation elements missing');
         return;
     }
 

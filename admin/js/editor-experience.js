@@ -40,7 +40,7 @@ const EditorExperience = (function () {
         const achievements = (role.achievements || []).map((a, ai) => `
             <div class="list-item-row" data-ach-idx="${ai}">
                 <textarea class="exp-achievement">${esc(a)}</textarea>
-                <button type="button" class="btn-icon" data-ach-remove="${ai}">✕</button>
+                <button type="button" class="btn-icon" data-ach-remove="${ai}"></button>
             </div>
         `).join('');
 
@@ -55,7 +55,7 @@ const EditorExperience = (function () {
                     <div class="item-card-actions">
                         <button type="button" class="btn-icon up" data-exp-up="${idx}" title="Move up">↑</button>
                         <button type="button" class="btn-icon down" data-exp-down="${idx}" title="Move down">↓</button>
-                        <button type="button" class="btn-icon" data-exp-remove="${idx}" title="Remove">✕</button>
+                        <button type="button" class="btn-icon" data-exp-remove="${idx}" title="Remove"></button>
                         <span class="toggle-icon">▼</span>
                     </div>
                 </div>
@@ -201,12 +201,12 @@ const EditorExperience = (function () {
                 `Admin: update experience (${new Date().toISOString()})`
             );
             sha = result.content.sha;
-            Status.show('✅ Experience saved successfully', 'success');
+            Status.show('Experience saved successfully', 'success');
         } catch (err) {
-            Status.show(`❌ Save failed: ${err.message}`, 'error', 0);
+            Status.show(`Save failed: ${err.message}`, 'error', 0);
         } finally {
             btn.disabled = false;
-            btn.textContent = '💾 Save All';
+            btn.textContent = 'Save All';
         }
     }
 

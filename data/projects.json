@@ -502,9 +502,9 @@
         "title": "Hypotheses & Testing",
         "type": "highlight-blocks",
         "items": [
-          "<strong>Hypothesis #1:</strong> Simplifying the KYC flow with step-by-step guidance will increase completion rate by 25%<br><br><strong>Test:</strong> A/B tested streamlined 3-step KYC vs. previous 6-step flow<br><strong>Result:</strong> ✅ 32% improvement in completion rate",
-          "<strong>Hypothesis #2:</strong> Curated fund recommendations (top 5) vs. all funds will reduce abandonment in portfolio selection<br><br><strong>Test:</strong> Tested curated recommendations with AI-based personalization<br><strong>Result:</strong> ✅ 28% reduction in abandonment, 40% increase in conversion",
-          "<strong>Hypothesis #3:</strong> Educational tooltips and micro-learning modules will improve completion in first investment flow<br><br><strong>Test:</strong> Added contextual education features and glossary<br><strong>Result:</strong> ✅ 22% improvement in completion, higher user confidence"
+          "<strong>Hypothesis #1:</strong> Simplifying the KYC flow with step-by-step guidance will increase completion rate by 25%<br><br><strong>Test:</strong> A/B tested streamlined 3-step KYC vs. previous 6-step flow<br><strong>Result:</strong> 32% improvement in completion rate",
+          "<strong>Hypothesis #2:</strong> Curated fund recommendations (top 5) vs. all funds will reduce abandonment in portfolio selection<br><br><strong>Test:</strong> Tested curated recommendations with AI-based personalization<br><strong>Result:</strong> 28% reduction in abandonment, 40% increase in conversion",
+          "<strong>Hypothesis #3:</strong> Educational tooltips and micro-learning modules will improve completion in first investment flow<br><br><strong>Test:</strong> Added contextual education features and glossary<br><strong>Result:</strong> 22% improvement in completion, higher user confidence"
         ]
       },
       {

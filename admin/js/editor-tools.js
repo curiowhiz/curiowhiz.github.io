@@ -36,7 +36,7 @@ const EditorTools = (function () {
     }
 
     function renderToolCard(tool, idx) {
-        const darkBadge = tool.darkCard ? '<span class="item-card-badge">🌙 Dark</span>' : '';
+        const darkBadge = tool.darkCard ? '<span class="item-card-badge">Dark</span>' : '';
         return `
             <div class="item-card" data-tool-idx="${idx}">
                 <div class="item-card-header" data-toggle>
@@ -48,7 +48,7 @@ const EditorTools = (function () {
                     <div class="item-card-actions">
                         <button type="button" class="btn-icon up" data-tool-up="${idx}" title="Move up">↑</button>
                         <button type="button" class="btn-icon down" data-tool-down="${idx}" title="Move down">↓</button>
-                        <button type="button" class="btn-icon" data-tool-remove="${idx}" title="Remove">✕</button>
+                        <button type="button" class="btn-icon" data-tool-remove="${idx}" title="Remove"></button>
                         <span class="toggle-icon">▼</span>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ const EditorTools = (function () {
     function addTool() {
         collectAll();
         data.unshift({
-            icon: '🔧',
+            icon: '',
             name: 'New Tool',
             description: '',
             technologies: [],
@@ -209,12 +209,12 @@ const EditorTools = (function () {
                 `Admin: update tools (${new Date().toISOString()})`
             );
             sha = result.content.sha;
-            Status.show('✅ Tools saved successfully', 'success');
+            Status.show('Tools saved successfully', 'success');
         } catch (err) {
-            Status.show(`❌ Save failed: ${err.message}`, 'error', 0);
+            Status.show(`Save failed: ${err.message}`, 'error', 0);
         } finally {
             btn.disabled = false;
-            btn.textContent = '💾 Save All';
+            btn.textContent = 'Save All';
         }
     }
 

@@ -161,7 +161,7 @@ const EditorProfile = (function () {
         return paragraphs.map((p, i) => `
             <div class="list-item-row" data-para-idx="${i}">
                 <textarea class="p-paragraph">${esc(p)}</textarea>
-                <button type="button" class="btn-icon" data-remove-para="${i}">✕</button>
+                <button type="button" class="btn-icon" data-remove-para="${i}"></button>
             </div>
         `).join('');
     }
@@ -177,7 +177,7 @@ const EditorProfile = (function () {
                     <div class="item-card-actions">
                         <button type="button" class="btn-icon up" data-cap-up="${i}" title="Move up">↑</button>
                         <button type="button" class="btn-icon down" data-cap-down="${i}" title="Move down">↓</button>
-                        <button type="button" class="btn-icon" data-cap-remove="${i}" title="Remove">✕</button>
+                        <button type="button" class="btn-icon" data-cap-remove="${i}" title="Remove"></button>
                         <span class="toggle-icon">▼</span>
                     </div>
                 </div>
@@ -239,7 +239,7 @@ const EditorProfile = (function () {
         // Add capability
         document.getElementById('p-add-capability').addEventListener('click', () => {
             data.capabilities = collectCapabilities();
-            data.capabilities.push({ icon: '✨', title: 'New Capability', description: '' });
+            data.capabilities.push({ icon: '', title: 'New Capability', description: '' });
             render();
         });
 
@@ -346,12 +346,12 @@ const EditorProfile = (function () {
 
             data = updated;
             sha = result.content.sha;
-            Status.show('✅ Profile saved successfully', 'success');
+            Status.show('Profile saved successfully', 'success');
         } catch (err) {
-            Status.show(`❌ Save failed: ${err.message}`, 'error', 0);
+            Status.show(`Save failed: ${err.message}`, 'error', 0);
         } finally {
             btn.disabled = false;
-            btn.textContent = '💾 Save Changes';
+            btn.textContent = 'Save Changes';
         }
     }
 

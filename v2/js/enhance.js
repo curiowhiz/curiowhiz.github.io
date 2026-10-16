@@ -6,8 +6,8 @@
 // ============================================================
 
 (function () {
-    // A pictograph or emoji, optionally followed by a space (for example the
-    // chart emoji at the start of a button label).
+    // A pictograph or emoji, optionally followed by a space (for example a
+    // chart symbol at the start of a button label).
     const LEADING_EMOJI = /^([←-⇿⌀-⏿☀-➿⬀-⯿\u{1F000}-\u{1FAFF}][️‍]*\s*)/u;
     const ONLY_EMOJI = /^[\s←-⇿⌀-⏿☀-➿⬀-⯿\u{1F000}-\u{1FAFF}️‍]+$/u;
 
@@ -21,7 +21,7 @@
         if (!first || first.nodeType !== Node.TEXT_NODE) return;
         const match = first.textContent.trimStart().match(LEADING_EMOJI);
         if (!match || !/[^\u0000-ÿ]/.test(match[1].trim())) return;
-        // "📊 View Full Analysis" becomes <span aria-hidden>📊</span> View Full Analysis
+        // a leading symbol is wrapped in <span aria-hidden> so it is not read aloud
         const lead = first.textContent.length - first.textContent.trimStart().length;
         const rest = first.textContent.slice(lead + match[1].length);
         const span = document.createElement('span');
