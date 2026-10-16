@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ============================================================
-   1. HERO: the yellow field, with the page's own title on it
+   1. HERO: the sky field, with the page's own title on it
    The category label sits on the back-link row at the right, as a plate,
    not above the title.
    ============================================================ */
@@ -412,7 +412,7 @@
 }
 
 /* ============================================================
-   6. BOTTOM CTA: the close, in yellow
+   6. BOTTOM CTA: the close, in sky
    ============================================================ */
 .bottom-cta-section {
     background: var(--field);

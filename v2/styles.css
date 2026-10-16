@@ -2,7 +2,7 @@
    STYLES.CSS - Version 2: inspection record
    Rajan Gupta - AI Product Manager Portfolio
 
-   World: industrial inspection and wayfinding. Signal yellow is a committed
+   World: industrial inspection and wayfinding. Signal sky is a committed
    field (the opening and the close), concrete grey sits between, ink is a
    blue-black, corners are square, rules are heavy. League Gothic
    carries headlines; Libre Franklin carries reading and interface.
@@ -82,7 +82,7 @@
     --measure: 62ch;
     --rule-heavy: 8px;
     --hang: 96px;
-    /* how far the hanging tags drop below the yellow field */
+    /* how far the hanging tags drop below the sky field */
 }
 
 /* ============================================================
@@ -486,7 +486,7 @@ section {
 }
 
 /* ============================================================
-   6. HERO: the yellow field
+   6. HERO: the sky field
    ============================================================ */
 .hero {
     background: var(--field);
@@ -496,7 +496,7 @@ section {
 }
 
 /* flow-root keeps the tags' negative bottom margin inside the hero, so the
-   yellow ends part-way down them instead of at their bottom edge */
+   sky ends part-way down them instead of at their bottom edge */
 .hero > .container {
     display: flow-root;
 }
@@ -635,7 +635,7 @@ section {
 
 /* ------------------------------------------------------------
    THE TAGS (the one bold move)
-   A black rail runs along the foot of the yellow field; three tags hang
+   A black rail runs along the foot of the sky field; three tags hang
    from it, straddling the edge. They swing once on load, then rest.
    ------------------------------------------------------------ */
 .profile-metrics {
@@ -1138,7 +1138,7 @@ a.profile-metric:focus-visible {
     margin-bottom: var(--space-md);
 }
 
-/* Ladder AI placeholder: a plain yellow plate */
+/* Ladder AI placeholder: a plain sky plate */
 .project-emoji-placeholder {
     width: 100%;
     height: 100%;
@@ -1554,7 +1554,7 @@ a.tool-card:hover .tool-description {
 }
 
 /* ============================================================
-   13. CONTACT: the close, in yellow
+   13. CONTACT: the close, in sky
    ============================================================ */
 .contact {
     background: var(--field);
