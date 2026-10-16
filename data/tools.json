@@ -1,77 +1,77 @@
 [
-    {
-        "id": "rag-simulator",
-        "name": "RAG Simulator",
-        "icon": "",
-        "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems - built to help PMs and engineers visualize AI retrieval flows.",
-        "technologies": [
-            "AI/LLM",
-            "RAG",
-            "Web"
-        ],
-        "status": "active",
-        "githubUrl": "https://github.com/curiowhiz/rag_simulation",
-        "demoUrl": "https://rajangupta.ca/rag_simulation/",
-        "detailUrl": "projects/rag-simulator.html",
-        "featured": true,
-        "darkCard": false,
-        "order": 1
-    },
-    {
-        "id": "n8n-research-automation",
-        "name": "N8n User Research Automation",
-        "icon": "",
-        "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes - eliminating manual research bottlenecks.",
-        "technologies": [
-            "n8n",
-            "Automation",
-            "User Research"
-        ],
-        "status": "active",
-        "githubUrl": null,
-        "demoUrl": null,
-        "detailUrl": "projects/n8n-research-automation.html",
-        "featured": false,
-        "darkCard": false,
-        "internalNote": "Internal workflow",
-        "order": 2
-    },
-    {
-        "id": "vendor-itc-recovery-agent",
-        "name": "Vendor ITC Recovery Agent",
-        "icon": "",
-        "description": "GST reconciliation tool that matches purchase registers against GSTR-2B, flags blocked Input Tax Credit, and drafts vendor follow-up emails for human approval - deterministic matching first, AI arbitration only when genuinely ambiguous.",
-        "technologies": [
-            "Next.js",
-            "Supabase",
-            "Claude AI",
-            "GST"
-        ],
-        "status": "active",
-        "githubUrl": null,
-        "demoUrl": "https://vendor-itc-recovery-agent.vercel.app",
-        "detailUrl": "projects/vendor-itc-recovery-agent.html",
-        "featured": false,
-        "darkCard": false,
-        "order": 3
-    },
-    {
-        "id": "kwalifier",
-        "name": "Kwalifier",
-        "icon": "",
-        "description": "AI-powered bank offer eligibility assistant - tells customers exactly which offers, benefits, and products they qualify for based on their own account data and the bank's official offer catalogue. Grounded in RAG, never speculates.",
-        "technologies": [
-            "RAG",
-            "LLM",
-            "Banking",
-            "AI Agent"
-        ],
-        "status": "active",
-        "githubUrl": "https://github.com/curiowhiz/kwalifier",
-        "demoUrl": "https://kwalifierrag.vercel.app/",
-        "detailUrl": "projects/kwalifier.html",
-        "featured": false,
-        "darkCard": false,
-        "order": 4
-    }
+  {
+    "id": "kwalifier",
+    "name": "Kwalifier",
+    "icon": "",
+    "description": "AI-powered bank offer eligibility assistant - tells customers exactly which offers, benefits, and products they qualify for based on their own account data and the bank's official offer catalogue. Grounded in RAG, never speculates.",
+    "technologies": [
+      "RAG",
+      "LLM",
+      "Banking",
+      "AI Agent"
+    ],
+    "status": "active",
+    "githubUrl": "https://github.com/curiowhiz/kwalifier",
+    "demoUrl": "https://kwalifierrag.vercel.app/",
+    "detailUrl": "projects/kwalifier.html",
+    "featured": false,
+    "darkCard": false,
+    "order": 1
+  },
+  {
+    "id": "vendor-itc-recovery-agent",
+    "name": "Vendor ITC Recovery Agent",
+    "icon": "",
+    "description": "GST reconciliation tool that matches purchase registers against GSTR-2B, flags blocked Input Tax Credit, and drafts vendor follow-up emails for human approval - deterministic matching first, AI arbitration only when genuinely ambiguous.",
+    "technologies": [
+      "Next.js",
+      "Supabase",
+      "Claude AI",
+      "GST"
+    ],
+    "status": "active",
+    "githubUrl": null,
+    "demoUrl": "https://vendor-itc-recovery-agent.vercel.app",
+    "detailUrl": "projects/vendor-itc-recovery-agent.html",
+    "featured": false,
+    "darkCard": false,
+    "order": 2
+  },
+  {
+    "id": "n8n-research-automation",
+    "name": "N8n User Research Automation",
+    "icon": "",
+    "description": "Automated daily user research workflow that scrapes App Store and Play Store reviews, aggregates feedback, and surfaces themes - eliminating manual research bottlenecks.",
+    "technologies": [
+      "n8n",
+      "Automation",
+      "User Research"
+    ],
+    "status": "active",
+    "githubUrl": null,
+    "demoUrl": null,
+    "detailUrl": "projects/n8n-research-automation.html",
+    "featured": false,
+    "darkCard": false,
+    "internalNote": "Internal workflow",
+    "order": 3
+  },
+  {
+    "id": "rag-simulator",
+    "name": "RAG Simulator",
+    "icon": "",
+    "description": "Interactive simulator for understanding Retrieval-Augmented Generation systems - built to help PMs and engineers visualize AI retrieval flows.",
+    "technologies": [
+      "AI/LLM",
+      "RAG",
+      "Web"
+    ],
+    "status": "active",
+    "githubUrl": "https://github.com/curiowhiz/rag_simulation",
+    "demoUrl": "https://rajangupta.ca/rag_simulation/",
+    "detailUrl": "projects/rag-simulator.html",
+    "featured": true,
+    "darkCard": false,
+    "order": 4
+  }
 ]

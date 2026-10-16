@@ -945,23 +945,13 @@ a.profile-metric:hover .profile-metric-label {
     gap: var(--space-lg);
 }
 
-.project-card.featured {
-    grid-column: span 7;
-}
-
-.project-card:nth-child(2) {
-    grid-column: span 5;
-}
-
-.project-card:nth-child(3),
-.project-card:nth-child(4),
-.project-card:nth-child(5) {
-    grid-column: span 4;
-}
-
-.project-card:nth-child(6),
-.project-card:nth-child(7) {
+/* Projects are shown in the order of data/projects.json, two to a row */
+.project-card {
     grid-column: span 6;
+}
+
+.project-card.featured {
+    grid-column: span 12;
 }
 
 @media (max-width: 1024px) {

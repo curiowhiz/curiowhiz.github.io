@@ -1,5 +1,198 @@
 [
   {
+    "id": "boostcamp",
+    "title": "Boostcamp: Auto Progression Feature",
+    "description": "Comprehensive product management case study showcasing end-to-end product thinking, research, strategy, and execution.",
+    "thumbnail": "images/thumbnails/boostcamp.png",
+    "link": "projects/boostcamp.html",
+    "tags": [
+      "Product Strategy",
+      "User Research",
+      "Case Study"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Solving a critical P0 problem by designing and prototyping an intelligent progression system to improve user retention and unlock the core user journey.",
+    "overview": "This case study showcases my end-to-end product management approach to solving a critical user retention challenge at Boostcamp. Through user research, strategic PRD writing, and rapid prototyping using Google AI Studio, I identified and solved a fundamental flaw in Boostcamp's progression system that was alienating its most engaged users.",
+    "objective": "Design and build a working prototype of an intelligent auto-progression feature that dynamically adjusts difficulty based on actual performance metrics.",
+    "sections": [
+      {
+        "title": "The Problem: P0 - No Auto Progression",
+        "type": "problem-box",
+        "text": "<strong>Problem Statement:</strong><br><br>By failing to adjust target weights based on actual performance, Boostcamp's rigid, linear progression disrupts the core user journey and alienates its most engaged users."
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "",
+            "title": "User Retention",
+            "text": "Improve 30-day retention from 65% to 80% (+23% improvement)"
+          },
+          {
+            "icon": "",
+            "title": "Session Duration",
+            "text": "Increase average session time from 15 to 19 minutes (+25%)"
+          },
+          {
+            "icon": "",
+            "title": "Course Completion",
+            "text": "Increase learners completing 10+ lessons from 35% to 60% (+71%)"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu",
+        "label": "View Full Case Study on Gamma →",
+        "note": "Note: The full document includes detailed PRD, user research transcripts, prototype demonstrations, performance analysis, and implementation roadmap."
+      }
+    ]
+  },
+  {
+    "id": "spotify",
+    "title": "Spotify: Event Booking Experience",
+    "description": "Identified a broken event booking journey through user research and friction analysis, prioritized solutions using a RICE framework.",
+    "thumbnail": "images/thumbnails/spotify.png",
+    "link": "projects/spotify.html",
+    "tags": [
+      "User Research",
+      "RICE Framework",
+      "Retention Optimization"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Streamlining a broken event discovery and ticketing journey through user research, friction analysis, and RICE-prioritized solutions to improve user retention by 10%.",
+    "overview": "This case study showcases my end-to-end product management approach to solving a critical user engagement challenge at Spotify. Through user research, friction analysis, and strategic prioritization, I identified and addressed key barriers in the event booking journey that were preventing users from discovering and attending live events.",
+    "objective": "Identify friction points through user research, prioritize opportunities using RICE framework, and design a streamlined ticketing experience that reduces abandonment and improves user retention.",
+    "sections": [
+      {
+        "title": "The Problem: Broken Event Booking Journey",
+        "type": "problem-box",
+        "text": "<strong>Problem Statement:</strong><br><br>Spotify's event discovery and booking experience creates unnecessary friction at multiple touchpoints, causing users to abandon the journey and miss opportunities to deepen their engagement with artists and live content."
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "",
+            "title": "User Retention",
+            "text": "Improve 12-month retention by 10% through increased event engagement"
+          },
+          {
+            "icon": "",
+            "title": "Booking Conversion",
+            "text": "Reduce abandonment from 42% to 15% (64% improvement)"
+          },
+          {
+            "icon": "",
+            "title": "Time-to-Complete",
+            "text": "Reduce average booking time from 8 minutes to 2 minutes (75% faster)"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc",
+        "label": "View Full Case Study on Gamma →",
+        "note": "Note: The full document includes detailed user research transcripts, journey maps, wireframes, friction analysis, RICE prioritization matrix, prototype demonstrations, and business impact projections."
+      }
+    ]
+  },
+  {
+    "id": "strava",
+    "title": "Strava: Identify Critical Funnels",
+    "description": "Identified and optimized critical user funnels using product analytics, competitive research, and funnel analysis.",
+    "thumbnail": "images/thumbnails/strava.png",
+    "link": "projects/strava.html",
+    "tags": [
+      "Product Analytics",
+      "Funnels",
+      "Product Strategy"
+    ],
+    "featured": false,
+    "category": "Product Case Study",
+    "subtitle": "Analyzing key user funnels to identify growth opportunities for both athletes and business partners on the Strava platform.",
+    "overview": "This analytical deep-dive identified and optimized critical user conversion funnels at Strava, focusing on understanding the customer journey for both individual athletes and business partners (brands, gyms, races). The goal was to identify key value drivers that unlock business and customer success.",
+    "objective": "Identify bottlenecks in critical conversion funnels and develop targeted improvement strategies to increase user engagement, retention, and monetization opportunities.",
+    "sections": [
+      {
+        "title": "Critical Funnels Analyzed",
+        "type": "funnel-stage",
+        "items": [
+          {
+            "title": "Athlete Signup & Activation",
+            "flow": "Landing → App Download → Account Creation → First Activity Upload → Profile Completion",
+            "metric": "Current Conversion: 10% (Landing to Active User)"
+          },
+          {
+            "title": "Activity Engagement & Social Interaction",
+            "flow": "Record Activity → View Activity → Give Kudos → Follow Friends → Join Segment",
+            "metric": "Current Conversion: 22% (Record to Social Engagement)"
+          },
+          {
+            "title": "Premium Subscription Path",
+            "flow": "Free User → Discover Premium → Trial Signup → Paid Conversion → Retention",
+            "metric": "Current Conversion: 8% (Free to Paid)"
+          },
+          {
+            "title": "Business Partner Activation",
+            "flow": "Discover API → API Signup → Integration → Campaign Creation → Active Campaign",
+            "metric": "Current Conversion: 15% (Interest to Active Partner)"
+          }
+        ]
+      },
+      {
+        "title": "Data Analysis Methodology",
+        "type": "list",
+        "items": [
+          "<strong>Funnel Analysis:</strong> Tracked conversion rates and drop-off points across user journeys",
+          "<strong>Cohort Analysis:</strong> Analyzed user behavior by signup date, geography, and device type",
+          "<strong>Segment Analysis:</strong> Compared performance across casual vs. serious athletes",
+          "<strong>Competitive Benchmarking:</strong> Compared metrics against Fitbit, MapMyRun, and other fitness platforms",
+          "<strong>User Behavior Analysis:</strong> Session analytics, feature adoption, and engagement patterns"
+        ]
+      },
+      {
+        "title": "Expected Impact",
+        "type": "metric-box",
+        "items": [
+          {
+            "icon": "",
+            "title": "Athlete Signup to Active",
+            "text": "Improve from 10% to 18% (80% increase)"
+          },
+          {
+            "icon": "",
+            "title": "Free-to-Paid Conversion",
+            "text": "Improve from 8% to 15% (87% increase)"
+          },
+          {
+            "icon": "",
+            "title": "Partner Activation",
+            "text": "Improve from 15% to 28% (87% increase)"
+          },
+          {
+            "icon": "",
+            "title": "Overall ARR Impact",
+            "text": "Estimated +$15M-$25M annual revenue opportunity"
+          }
+        ]
+      },
+      {
+        "title": "View Full Case Study",
+        "type": "cta",
+        "url": "https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1",
+        "label": "View Full Funnel Analysis in Figma →",
+        "note": "Note: The Figma deck includes detailed funnel diagrams, cohort analysis, competitive benchmarking tables, and prioritized roadmap."
+      }
+    ]
+  },
+  {
     "id": "ladder-ai",
     "title": "Ladder AI: From AI Access to AI Fluency",
     "description": "Personal AI product initiative - designed a platform helping professionals bridge the gap between basic AI usage and true AI fluency through workflow automation and structured skill-building.",
@@ -10,7 +203,7 @@
       "User Research",
       "Product Strategy"
     ],
-    "featured": true,
+    "featured": false,
     "category": "AI Product Initiative",
     "subtitle": "Bridging the gap from AI access to AI fluency - a personal product initiative designed for AI Product Management.",
     "overview": "Ladder AI is a personal product initiative born from a critical observation: most professionals have AI access but lack AI fluency. Through user research across office workers, college graduates, and Product Managers, I identified three north star problems - the Prompting Gap, the Workflow Gap, and the Learning Gap - and designed a platform to systematically address them.",
@@ -158,74 +351,6 @@
           "<strong>Trust is Earned Through Wins:</strong> Small, reliable AI wins (one good prompt, one automated workflow) build momentum; large, unreliable demos break it",
           "<strong>Gamification Sustains Learning:</strong> Without streaks, levels, and social accountability, AI skill-building gets abandoned"
         ]
-      }
-    ]
-  },
-  {
-    "id": "google-calendar",
-    "title": "Google Calendar: Product Thinking",
-    "description": "Explored performance metrics, problem prioritization, and solution design through comprehensive product thinking framework.",
-    "thumbnail": "images/thumbnails/google-calendar.png",
-    "link": "projects/google-calendar.html",
-    "tags": [
-      "Product Thinking",
-      "Wireframes",
-      "Performance Metrics"
-    ],
-    "featured": false,
-    "category": "Product Case Study",
-    "subtitle": "A comprehensive product thinking exercise exploring performance metrics, problem prioritization, and solution design.",
-    "overview": "This case study showcases a deep dive into Google Calendar's product strategy, examining how to enhance user experience through data-driven decision making and user-centric design thinking.",
-    "objective": "Analyze Google Calendar's product landscape and propose strategic improvements through comprehensive product thinking frameworks.",
-    "sections": [
-      {
-        "title": "Key Focus Areas",
-        "type": "rich-list",
-        "items": [
-          "<strong>Performance Metrics:</strong> Understanding key KPIs including user engagement, scheduling frequency, and feature adoption rates",
-          "<strong>Problem Prioritization:</strong> Identifying and ranking user pain points such as scheduling conflicts, notification management, and multi-calendar coordination",
-          "<strong>Product Thinking:</strong> Developing a strategic framework for product improvements",
-          "<strong>Solution Prioritization:</strong> Evaluating solution impact, technical feasibility, and user value",
-          "<strong>Wireframes:</strong> Creating visual mockups for proposed features and UI improvements"
-        ]
-      },
-      {
-        "title": "Methodology",
-        "type": "list",
-        "items": [
-          "Competitive analysis of calendar applications",
-          "User research and pain point identification",
-          "Metrics analysis and KPI tracking",
-          "Solution ideation and prioritization",
-          "Wireframe design and user flow documentation"
-        ]
-      },
-      {
-        "title": "Key Insights",
-        "type": "highlight",
-        "items": [
-          "Users struggle with managing multiple calendar sources efficiently",
-          "Notification fatigue is a key pain point affecting user satisfaction",
-          "Integration with other Google Workspace tools drives adoption",
-          "Mobile scheduling experience needs optimization"
-        ]
-      },
-      {
-        "title": "Proposed Solutions",
-        "type": "list",
-        "items": [
-          "Enhanced multi-calendar management interface",
-          "Intelligent notification system with user preference controls",
-          "Improved mobile scheduling interface with quick-add features",
-          "Smart conflict detection and resolution suggestions"
-        ]
-      },
-      {
-        "title": "View Full Presentation",
-        "type": "cta",
-        "url": "https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing",
-        "label": "View Full Case Study Presentation →",
-        "note": "Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations."
       }
     ]
   },
@@ -441,195 +566,70 @@
     ]
   },
   {
-    "id": "strava",
-    "title": "Strava: Identify Critical Funnels",
-    "description": "Identified and optimized critical user funnels using product analytics, competitive research, and funnel analysis.",
-    "thumbnail": "images/thumbnails/strava.png",
-    "link": "projects/strava.html",
+    "id": "google-calendar",
+    "title": "Google Calendar: Product Thinking",
+    "description": "Explored performance metrics, problem prioritization, and solution design through comprehensive product thinking framework.",
+    "thumbnail": "images/thumbnails/google-calendar.png",
+    "link": "projects/google-calendar.html",
     "tags": [
-      "Product Analytics",
-      "Funnels",
-      "Product Strategy"
+      "Product Thinking",
+      "Wireframes",
+      "Performance Metrics"
     ],
     "featured": false,
     "category": "Product Case Study",
-    "subtitle": "Analyzing key user funnels to identify growth opportunities for both athletes and business partners on the Strava platform.",
-    "overview": "This analytical deep-dive identified and optimized critical user conversion funnels at Strava, focusing on understanding the customer journey for both individual athletes and business partners (brands, gyms, races). The goal was to identify key value drivers that unlock business and customer success.",
-    "objective": "Identify bottlenecks in critical conversion funnels and develop targeted improvement strategies to increase user engagement, retention, and monetization opportunities.",
+    "subtitle": "A comprehensive product thinking exercise exploring performance metrics, problem prioritization, and solution design.",
+    "overview": "This case study showcases a deep dive into Google Calendar's product strategy, examining how to enhance user experience through data-driven decision making and user-centric design thinking.",
+    "objective": "Analyze Google Calendar's product landscape and propose strategic improvements through comprehensive product thinking frameworks.",
     "sections": [
       {
-        "title": "Critical Funnels Analyzed",
-        "type": "funnel-stage",
+        "title": "Key Focus Areas",
+        "type": "rich-list",
         "items": [
-          {
-            "title": "Athlete Signup & Activation",
-            "flow": "Landing → App Download → Account Creation → First Activity Upload → Profile Completion",
-            "metric": "Current Conversion: 10% (Landing to Active User)"
-          },
-          {
-            "title": "Activity Engagement & Social Interaction",
-            "flow": "Record Activity → View Activity → Give Kudos → Follow Friends → Join Segment",
-            "metric": "Current Conversion: 22% (Record to Social Engagement)"
-          },
-          {
-            "title": "Premium Subscription Path",
-            "flow": "Free User → Discover Premium → Trial Signup → Paid Conversion → Retention",
-            "metric": "Current Conversion: 8% (Free to Paid)"
-          },
-          {
-            "title": "Business Partner Activation",
-            "flow": "Discover API → API Signup → Integration → Campaign Creation → Active Campaign",
-            "metric": "Current Conversion: 15% (Interest to Active Partner)"
-          }
+          "<strong>Performance Metrics:</strong> Understanding key KPIs including user engagement, scheduling frequency, and feature adoption rates",
+          "<strong>Problem Prioritization:</strong> Identifying and ranking user pain points such as scheduling conflicts, notification management, and multi-calendar coordination",
+          "<strong>Product Thinking:</strong> Developing a strategic framework for product improvements",
+          "<strong>Solution Prioritization:</strong> Evaluating solution impact, technical feasibility, and user value",
+          "<strong>Wireframes:</strong> Creating visual mockups for proposed features and UI improvements"
         ]
       },
       {
-        "title": "Data Analysis Methodology",
+        "title": "Methodology",
         "type": "list",
         "items": [
-          "<strong>Funnel Analysis:</strong> Tracked conversion rates and drop-off points across user journeys",
-          "<strong>Cohort Analysis:</strong> Analyzed user behavior by signup date, geography, and device type",
-          "<strong>Segment Analysis:</strong> Compared performance across casual vs. serious athletes",
-          "<strong>Competitive Benchmarking:</strong> Compared metrics against Fitbit, MapMyRun, and other fitness platforms",
-          "<strong>User Behavior Analysis:</strong> Session analytics, feature adoption, and engagement patterns"
+          "Competitive analysis of calendar applications",
+          "User research and pain point identification",
+          "Metrics analysis and KPI tracking",
+          "Solution ideation and prioritization",
+          "Wireframe design and user flow documentation"
         ]
       },
       {
-        "title": "Expected Impact",
-        "type": "metric-box",
+        "title": "Key Insights",
+        "type": "highlight",
         "items": [
-          {
-            "icon": "",
-            "title": "Athlete Signup to Active",
-            "text": "Improve from 10% to 18% (80% increase)"
-          },
-          {
-            "icon": "",
-            "title": "Free-to-Paid Conversion",
-            "text": "Improve from 8% to 15% (87% increase)"
-          },
-          {
-            "icon": "",
-            "title": "Partner Activation",
-            "text": "Improve from 15% to 28% (87% increase)"
-          },
-          {
-            "icon": "",
-            "title": "Overall ARR Impact",
-            "text": "Estimated +$15M-$25M annual revenue opportunity"
-          }
+          "Users struggle with managing multiple calendar sources efficiently",
+          "Notification fatigue is a key pain point affecting user satisfaction",
+          "Integration with other Google Workspace tools drives adoption",
+          "Mobile scheduling experience needs optimization"
         ]
       },
       {
-        "title": "View Full Case Study",
-        "type": "cta",
-        "url": "https://www.figma.com/deck/xUhJ6PldrUBOwb7PNQub0M/Strava-Funnel-Analysis?node-id=1-342&t=SosQZKxyoDkIeCXu-1&scaling=min-zoom&content-scaling=fixed&page-id=0:1",
-        "label": "View Full Funnel Analysis in Figma →",
-        "note": "Note: The Figma deck includes detailed funnel diagrams, cohort analysis, competitive benchmarking tables, and prioritized roadmap."
-      }
-    ]
-  },
-  {
-    "id": "boostcamp",
-    "title": "Boostcamp: Auto Progression Feature",
-    "description": "Comprehensive product management case study showcasing end-to-end product thinking, research, strategy, and execution.",
-    "thumbnail": "images/thumbnails/boostcamp.png",
-    "link": "projects/boostcamp.html",
-    "tags": [
-      "Product Strategy",
-      "User Research",
-      "Case Study"
-    ],
-    "featured": false,
-    "category": "Product Case Study",
-    "subtitle": "Solving a critical P0 problem by designing and prototyping an intelligent progression system to improve user retention and unlock the core user journey.",
-    "overview": "This case study showcases my end-to-end product management approach to solving a critical user retention challenge at Boostcamp. Through user research, strategic PRD writing, and rapid prototyping using Google AI Studio, I identified and solved a fundamental flaw in Boostcamp's progression system that was alienating its most engaged users.",
-    "objective": "Design and build a working prototype of an intelligent auto-progression feature that dynamically adjusts difficulty based on actual performance metrics.",
-    "sections": [
-      {
-        "title": "The Problem: P0 - No Auto Progression",
-        "type": "problem-box",
-        "text": "<strong>Problem Statement:</strong><br><br>By failing to adjust target weights based on actual performance, Boostcamp's rigid, linear progression disrupts the core user journey and alienates its most engaged users."
-      },
-      {
-        "title": "Expected Impact",
-        "type": "metric-box",
+        "title": "Proposed Solutions",
+        "type": "list",
         "items": [
-          {
-            "icon": "",
-            "title": "User Retention",
-            "text": "Improve 30-day retention from 65% to 80% (+23% improvement)"
-          },
-          {
-            "icon": "",
-            "title": "Session Duration",
-            "text": "Increase average session time from 15 to 19 minutes (+25%)"
-          },
-          {
-            "icon": "",
-            "title": "Course Completion",
-            "text": "Increase learners completing 10+ lessons from 35% to 60% (+71%)"
-          }
+          "Enhanced multi-calendar management interface",
+          "Intelligent notification system with user preference controls",
+          "Improved mobile scheduling interface with quick-add features",
+          "Smart conflict detection and resolution suggestions"
         ]
       },
       {
-        "title": "View Full Case Study",
+        "title": "View Full Presentation",
         "type": "cta",
-        "url": "https://gamma.app/docs/Assignment-2-Rajan-C49-BOOSTCAMP-pxhblass55oqxsu",
-        "label": "View Full Case Study on Gamma →",
-        "note": "Note: The full document includes detailed PRD, user research transcripts, prototype demonstrations, performance analysis, and implementation roadmap."
-      }
-    ]
-  },
-  {
-    "id": "spotify",
-    "title": "Spotify: Event Booking Experience",
-    "description": "Identified a broken event booking journey through user research and friction analysis, prioritized solutions using a RICE framework.",
-    "thumbnail": "images/thumbnails/spotify.png",
-    "link": "projects/spotify.html",
-    "tags": [
-      "User Research",
-      "RICE Framework",
-      "Retention Optimization"
-    ],
-    "featured": false,
-    "category": "Product Case Study",
-    "subtitle": "Streamlining a broken event discovery and ticketing journey through user research, friction analysis, and RICE-prioritized solutions to improve user retention by 10%.",
-    "overview": "This case study showcases my end-to-end product management approach to solving a critical user engagement challenge at Spotify. Through user research, friction analysis, and strategic prioritization, I identified and addressed key barriers in the event booking journey that were preventing users from discovering and attending live events.",
-    "objective": "Identify friction points through user research, prioritize opportunities using RICE framework, and design a streamlined ticketing experience that reduces abandonment and improves user retention.",
-    "sections": [
-      {
-        "title": "The Problem: Broken Event Booking Journey",
-        "type": "problem-box",
-        "text": "<strong>Problem Statement:</strong><br><br>Spotify's event discovery and booking experience creates unnecessary friction at multiple touchpoints, causing users to abandon the journey and miss opportunities to deepen their engagement with artists and live content."
-      },
-      {
-        "title": "Expected Impact",
-        "type": "metric-box",
-        "items": [
-          {
-            "icon": "",
-            "title": "User Retention",
-            "text": "Improve 12-month retention by 10% through increased event engagement"
-          },
-          {
-            "icon": "",
-            "title": "Booking Conversion",
-            "text": "Reduce abandonment from 42% to 15% (64% improvement)"
-          },
-          {
-            "icon": "",
-            "title": "Time-to-Complete",
-            "text": "Reduce average booking time from 8 minutes to 2 minutes (75% faster)"
-          }
-        ]
-      },
-      {
-        "title": "View Full Case Study",
-        "type": "cta",
-        "url": "https://gamma.app/docs/Spotify-Event-Booking-Experience-z7ydo83f3r4xphc",
-        "label": "View Full Case Study on Gamma →",
-        "note": "Note: The full document includes detailed user research transcripts, journey maps, wireframes, friction analysis, RICE prioritization matrix, prototype demonstrations, and business impact projections."
+        "url": "https://docs.google.com/presentation/d/194mL9vOWJioUbvZcuUShE7qesQ1hPuWkiUc9QjyJNR0/edit?usp=sharing",
+        "label": "View Full Case Study Presentation →",
+        "note": "Note: The presentation includes detailed wireframes, competitive analysis, and product strategy recommendations."
       }
     ]
   }
