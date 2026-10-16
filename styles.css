@@ -371,7 +371,7 @@ body.nav-open {
 /* The last link (Contact) is the one action a visitor may want to find
    from anywhere, so on desktop it is set as a button. */
 @media (min-width: 769px) {
-    .nav-links li:last-child a {
+    .nav-links li:nth-last-child(2) a {
         padding: 7px 16px;
         border: 1.5px solid var(--accent);
         border-radius: var(--radius-control);
@@ -379,13 +379,30 @@ body.nav-open {
         transition: background-color 0.15s ease, color 0.15s ease;
     }
 
-    .nav-links li:last-child a::after {
+    .nav-links li:nth-last-child(2) a::after {
         display: none;
     }
 
-    .nav-links li:last-child a:hover {
+    .nav-links li:nth-last-child(2) a:hover {
         background: var(--accent);
         color: var(--on-accent);
+    }
+}
+
+/* Link to the second design of this site: quiet, after a divider */
+@media (min-width: 769px) {
+    .nav-links li:last-child {
+        padding-left: var(--space-lg);
+        border-left: 1px solid var(--rule);
+    }
+
+    .nav-links li:last-child a {
+        font-size: 0.875rem;
+        color: var(--quiet);
+    }
+
+    .nav-links li:last-child a:hover {
+        color: var(--accent);
     }
 }
 
