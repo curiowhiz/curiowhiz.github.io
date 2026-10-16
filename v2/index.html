@@ -30,9 +30,9 @@
 
     <!-- Favicon REMOVED -->
 
-    <!-- Fonts are self-hosted (see styles.css): Big Shoulders Display for headlines, Barlow for text -->
-    <link rel="preload" href="fonts/big-shoulders-display-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Fonts are self-hosted (see styles.css): League Gothic for headlines, Libre Franklin for text -->
+    <link rel="preload" href="fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/libre-franklin-var.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -46,7 +46,7 @@
     <!-- ============================================================
          NAVIGATION
          ============================================================ -->
-    <nav class="navbar" aria-label="Main navigation">
+    <header class="navbar">
         <div class="container">
             <a href="#" class="logo">Rajan Gupta<span class="logo-dot">.</span></a>
 
@@ -57,7 +57,8 @@
                 <span></span>
             </button>
 
-            <ul class="nav-links" id="navLinks">
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#tools">Tools</a></li>
@@ -65,8 +66,9 @@
                 <li class="nav-contact"><a href="#contact">Contact</a></li>
                 <li class="nav-switch"><a href="../">Classic design</a></li>
             </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Backdrop OUTSIDE navbar (escapes stacking context) -->
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -97,7 +99,9 @@
                         </div>
 
                         <div class="hero-ctas">
-                            <a href="#projects" class="btn btn-primary">View Selected Work →</a>
+                            <a href="https://calendly.com/rajangupta28" target="_blank" rel="noopener"
+                                class="btn btn-primary">Book a call</a>
+                            <a href="#projects" class="btn btn-outline">View Selected Work →</a>
                             <a href="https://www.linkedin.com/in/rgdroll" target="_blank" rel="noopener"
                                 class="btn btn-outline">Connect on LinkedIn</a>
                         </div>
@@ -310,6 +314,7 @@
     </footer>
 
     <script src="js/loader.js"></script>
+    <script src="js/enhance.js"></script>
 
 </body>
 

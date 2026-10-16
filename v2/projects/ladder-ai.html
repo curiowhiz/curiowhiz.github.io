@@ -18,8 +18,8 @@
     <meta property="og:url" content="https://rajangupta.ca/projects/ladder-ai.html">
 
 
-    <link rel="preload" href="../fonts/big-shoulders-display-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/libre-franklin-var.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="project-detail.css">
@@ -30,7 +30,7 @@
     <a href="#main" class="skip-nav">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="navbar" aria-label="Main navigation">
+    <header class="navbar">
         <div class="container">
             <a href="../" class="logo">Rajan Gupta</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -38,7 +38,8 @@
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
                 <li><a href="../#about">About</a></li>
                 <li><a href="../#projects">Work</a></li>
                 <li><a href="../#tools">Tools</a></li>
@@ -46,8 +47,9 @@
                 <li class="nav-contact"><a href="../#contact">Contact</a></li>
                 <li class="nav-switch"><a href="../../projects/ladder-ai.html">Classic design</a></li>
             </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main id="main">
 
@@ -393,6 +395,7 @@
             });
         });
     </script>
+    <script src="../js/enhance.js"></script>
 </body>
 
 </html>

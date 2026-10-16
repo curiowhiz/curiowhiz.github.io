@@ -133,8 +133,12 @@ async function loadProfile() {
                         <span class="profile-metric-label">${esc(metric.label)}</span>
                     `;
                     const target = findEvidence(metric.value, experience);
+                    // The drawn arrow says "this goes somewhere"; the accessible name
+                    // says where, without adding any visible words.
+                    const cue = '<svg class="tag-cue" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v15M5 13l7 7 7-7"/></svg>';
+                    const label = `${metric.value} ${metric.label}, see where this comes from in Professional Experience`;
                     return target
-                        ? `<a class="profile-metric" href="#${esc(target)}">${inner}</a>`
+                        ? `<a class="profile-metric" href="#${esc(target)}" aria-label="${esc(label)}">${inner}${cue}</a>`
                         : `<div class="profile-metric">${inner}</div>`;
                 }).join('');
             });
@@ -255,7 +259,8 @@ function getProjectThumbnail(project) {
             </div>
         `;
     }
-    return `<img src="${esc(assetPath(project.thumbnail))}" alt="${esc(project.title)}" loading="lazy">`;
+    // The card's link already carries the title, so the picture is decorative.
+    return `<img src="${esc(assetPath(project.thumbnail))}" alt="" loading="lazy">`;
 }
 
 

@@ -4,8 +4,8 @@
 
    World: industrial inspection and wayfinding. Signal yellow is a committed
    field (the opening and the close), concrete grey sits between, ink is a
-   blue-black, corners are square, rules are heavy. Big Shoulders Display
-   carries headlines; Barlow carries reading and interface.
+   blue-black, corners are square, rules are heavy. League Gothic
+   carries headlines; Libre Franklin carries reading and interface.
    The one bold move: three tags hang from a rail at the foot of the opening
    field and swing once. Each links to the line of evidence behind it.
    Single light theme, chosen from the reading scene (a desk, in daylight).
@@ -15,41 +15,18 @@
    0. FONTS (self-hosted, latin subset)
    ============================================================ */
 @font-face {
-    font-family: 'Big Shoulders Display';
-    src: url('fonts/big-shoulders-display-var.woff2') format('woff2');
-    font-weight: 700 900;
+    font-family: 'League Gothic';
+    src: url('fonts/league-gothic.woff2') format('woff2');
+    /* one weight, declared across the range so nothing is faux-bolded */
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Barlow';
-    src: url('fonts/barlow-400.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Barlow';
-    src: url('fonts/barlow-500.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Barlow';
-    src: url('fonts/barlow-600.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Barlow';
-    src: url('fonts/barlow-700.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'Libre Franklin';
+    src: url('fonts/libre-franklin-var.woff2') format('woff2');
+    font-weight: 400 700;
     font-style: normal;
     font-display: swap;
 }
@@ -61,17 +38,17 @@
     color-scheme: light;
 
     /* Colour */
-    --yellow: #F5C400;
-    --yellow-press: #DDAE00;
-    --on-yellow-quiet: #3D3200;
-    --ink: #111315;
-    --ink-raised: #1D2023;
-    --concrete: #E4E6E4;
-    --panel: #F4F5F3;
-    --quiet: #4B5257;
-    --hair: #B4B9BB;
-    --on-ink: #F1F2EF;
-    --on-ink-quiet: #B7BDBF;
+    --field: #8EC9F5;
+    --field-press: #6DB4E8;
+    --on-field-quiet: #12304F;
+    --ink: #0B1F3A;
+    --ink-raised: #142C4D;
+    --concrete: #E2E9F0;
+    --panel: #F3F7FB;
+    --quiet: #43556B;
+    --hair: #B3BEC6;
+    --on-ink: #EDF3FA;
+    --on-ink-quiet: #A9BBD0;
     --focus: var(--ink);
 
     /* Status (squares, never the only signal: each has a text label) */
@@ -80,8 +57,8 @@
     --status-archived: #8D9396;
 
     /* Type */
-    --font-display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
-    --font-text: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'League Gothic', 'Arial Narrow', Impact, sans-serif;
+    --font-text: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
     --font-code: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
     /* Spacing */
@@ -93,6 +70,12 @@
     --space-2xl: 48px;
     --space-3xl: 64px;
     --space-4xl: 96px;
+
+    /* Type scale (League Gothic is condensed, so display sizes run large) */
+    --t-hero: clamp(3.75rem, 8.4vw, 6rem);
+    --t-section: clamp(2.75rem, 5.4vw, 4.5rem);
+    --t-feature: clamp(2.75rem, 4.8vw, 4rem);
+    --t-title: clamp(2rem, 2.8vw, 2.5rem);
 
     /* Layout */
     --max-width: 1200px;
@@ -133,7 +116,7 @@ body {
 
 /* The parts of the browser nobody draws */
 ::selection {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
@@ -151,7 +134,7 @@ img {
 a {
     color: var(--ink);
     text-decoration-line: underline;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--field);
     text-decoration-thickness: 3px;
     text-underline-offset: 3px;
     transition: text-decoration-color 0.15s ease;
@@ -185,20 +168,21 @@ h4 {
     line-height: 1;
     color: var(--ink);
     text-wrap: balance;
+    letter-spacing: 0.01em;
 }
 
 h1 {
-    font-size: clamp(3.25rem, 7.4vw, 5.5rem);
+    font-size: var(--t-hero);
     font-weight: 900;
-    line-height: 0.92;
+    line-height: 0.9;
 }
 
 h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: var(--t-section);
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: var(--t-title);
 }
 
 /* ============================================================
@@ -212,15 +196,15 @@ h3 {
 }
 
 .navbar :focus-visible {
-    outline-color: var(--yellow);
+    outline-color: var(--field);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     position: relative;
     z-index: 1003;
 }
@@ -228,7 +212,7 @@ h3 {
 .logo {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 1;
     color: var(--on-ink);
     text-decoration: none;
@@ -237,11 +221,11 @@ h3 {
 }
 
 .logo:hover {
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .logo-dot {
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .nav-links {
@@ -255,19 +239,19 @@ h3 {
     color: var(--on-ink);
     font-weight: 600;
     font-size: 0.9375rem;
-    padding: 6px 2px;
+    padding: 11px 4px;
     text-decoration: none;
     transition: color 0.15s ease;
 }
 
 .nav-links a:hover {
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .nav-links .nav-contact a {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
-    padding: 8px 18px;
+    padding: 11px 18px;
     font-weight: 700;
 }
 
@@ -278,7 +262,7 @@ h3 {
 
 .nav-links .nav-switch {
     padding-left: var(--space-lg);
-    border-left: 2px solid rgba(241, 242, 239, 0.28);
+    border-left: 2px solid rgba(237, 243, 250, 0.28);
 }
 
 .nav-links .nav-switch a {
@@ -288,7 +272,7 @@ h3 {
 }
 
 .nav-links .nav-switch a:hover {
-    color: var(--yellow);
+    color: var(--field);
 }
 
 /* Hamburger */
@@ -318,7 +302,7 @@ h3 {
 
 .hamburger.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    background: var(--yellow);
+    background: var(--field);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -327,14 +311,14 @@ h3 {
 
 .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    background: var(--yellow);
+    background: var(--field);
 }
 
 .nav-backdrop {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(17, 19, 21, 0.6);
+    background: rgba(11, 31, 58, 0.6);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -353,6 +337,13 @@ body.nav-open {
 
     .hamburger {
         display: flex;
+        order: 3;
+    }
+
+    /* the links live in a fixed panel, so the nav wrapper takes no room;
+       the hamburger still has to be last to sit at the right edge */
+    .navbar .container > nav {
+        order: 2;
     }
 
     .nav-backdrop {
@@ -378,7 +369,7 @@ body.nav-open {
         visibility: hidden;
         pointer-events: none;
         transition: transform 0.3s cubic-bezier(0.22, 0.8, 0.3, 1), visibility 0s linear 0.3s;
-        border-bottom: var(--rule-heavy) solid var(--yellow);
+        border-bottom: var(--rule-heavy) solid var(--field);
         z-index: 1002;
         max-height: 100vh;
         max-height: 100dvh;
@@ -393,16 +384,16 @@ body.nav-open {
     }
 
     .nav-links li {
-        border-bottom: 2px solid rgba(241, 242, 239, 0.18);
+        border-bottom: 2px solid rgba(237, 243, 250, 0.18);
     }
 
     .nav-links a {
         display: block;
         font-family: var(--font-display);
         font-weight: 800;
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 1;
-        padding: 16px 0;
+        padding: 14px 0;
     }
 
     .nav-links .nav-contact {
@@ -456,6 +447,7 @@ section {
 .about-headline {
     grid-column: 1;
     grid-row: 1;
+    font-size: var(--t-section);
 }
 
 .section-tag {
@@ -497,7 +489,7 @@ section {
    6. HERO: the yellow field
    ============================================================ */
 .hero {
-    background: var(--yellow);
+    background: var(--field);
     padding: var(--space-3xl) 0 0;
     position: relative;
     z-index: 2;
@@ -542,7 +534,7 @@ section {
 .hero-body {
     font-size: 1.1875rem;
     line-height: 1.6;
-    color: var(--on-yellow-quiet);
+    color: var(--on-field-quiet);
     margin-bottom: var(--space-xl);
     max-width: 50ch;
 }
@@ -612,7 +604,7 @@ section {
     padding-top: 12px;
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 1;
 }
 
@@ -669,7 +661,7 @@ section {
     position: relative;
     display: block;
     margin-top: 44px;
-    padding: 40px 20px 22px;
+    padding: 40px 20px 36px;
     background: var(--panel);
     border: 4px solid var(--ink);
     color: var(--ink);
@@ -707,7 +699,7 @@ section {
     height: 20px;
     border-radius: 50%;
     border: 3px solid var(--ink);
-    background: var(--yellow);
+    background: var(--field);
 }
 
 @keyframes tag-swing {
@@ -751,7 +743,7 @@ a.profile-metric:focus-visible {
     display: block;
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(2.5rem, 4.4vw, 3.75rem);
+    font-size: clamp(3rem, 5vw, 4.25rem);
     line-height: 0.95;
     letter-spacing: 0.005em;
 }
@@ -782,7 +774,7 @@ a.profile-metric:focus-visible {
     }
 
     .profile-metric-value {
-        font-size: 2.25rem;
+        font-size: 2.75rem;
     }
 
     .profile-metric-label {
@@ -792,7 +784,7 @@ a.profile-metric:focus-visible {
 
 @media (max-width: 420px) {
     .profile-metric-value {
-        font-size: 1.875rem;
+        font-size: 2.375rem;
     }
 }
 
@@ -821,13 +813,13 @@ a.profile-metric:focus-visible {
     line-height: 1.2;
     cursor: pointer;
     transition: background-color 0.15s ease, color 0.15s ease;
-    border: 3px solid var(--ink);
+    border: 2px solid var(--ink);
     text-decoration: none;
 }
 
 .btn-primary {
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .btn-primary:hover {
@@ -842,7 +834,7 @@ a.profile-metric:focus-visible {
 
 .btn-outline:hover {
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .btn-sm {
@@ -892,7 +884,7 @@ a.profile-metric:focus-visible {
 
 .about-paragraphs strong {
     font-weight: 700;
-    background: linear-gradient(transparent 58%, rgba(245, 196, 0, 0.7) 58%);
+    background: linear-gradient(transparent 58%, color-mix(in srgb, var(--field) 85%, transparent) 58%);
 }
 
 @media (max-width: 960px) {
@@ -927,7 +919,7 @@ a.profile-metric:focus-visible {
 }
 
 .capability-title {
-    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-size: var(--t-title);
     font-weight: 800;
 }
 
@@ -979,7 +971,7 @@ a.profile-metric:focus-visible {
 }
 
 .project-card:hover {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
@@ -1008,7 +1000,7 @@ a.profile-metric:focus-visible {
 }
 
 .project-title {
-    font-size: 1.875rem;
+    font-size: var(--t-title);
     font-weight: 800;
     margin-bottom: var(--space-sm);
 }
@@ -1062,7 +1054,7 @@ a.profile-metric:focus-visible {
     font-weight: 700;
     font-size: 1rem;
     text-decoration: underline;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--field);
     text-decoration-thickness: 3px;
     text-underline-offset: 4px;
 }
@@ -1089,7 +1081,7 @@ a.profile-metric:focus-visible {
 }
 
 .project-card.featured:focus-visible {
-    outline-color: var(--yellow);
+    outline-color: var(--field);
 }
 
 .project-card.featured .project-thumbnail {
@@ -1106,10 +1098,10 @@ a.profile-metric:focus-visible {
 }
 
 .project-card.featured .project-title {
-    font-size: clamp(2.5rem, 4.4vw, 3.75rem);
+    font-size: var(--t-feature);
     font-weight: 900;
     line-height: 0.95;
-    color: var(--yellow);
+    color: var(--field);
     margin-bottom: var(--space-md);
 }
 
@@ -1132,12 +1124,12 @@ a.profile-metric:focus-visible {
 }
 
 .project-card.featured .project-cta {
-    color: var(--yellow);
+    color: var(--field);
     margin-top: auto;
 }
 
 .featured-flag {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
     padding: 3px 9px;
     font-weight: 700;
@@ -1154,7 +1146,7 @@ a.profile-metric:focus-visible {
     display: flex;
     align-items: flex-end;
     padding: var(--space-lg);
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
@@ -1165,12 +1157,12 @@ a.profile-metric:focus-visible {
 .placeholder-label {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-size: clamp(2.5rem, 4.4vw, 3.75rem);
     line-height: 0.95;
 }
 
 .project-card:not(.featured) .placeholder-label {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -1220,7 +1212,7 @@ a.profile-metric:focus-visible {
 
 .tool-card {
     background: var(--panel);
-    border: 4px solid var(--ink);
+    border: 2px solid var(--ink);
     padding: var(--space-xl);
     display: flex;
     flex-direction: column;
@@ -1230,7 +1222,7 @@ a.profile-metric:focus-visible {
 }
 
 a.tool-card:hover {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
@@ -1238,7 +1230,7 @@ a.tool-card:hover {
     margin-top: var(--space-md);
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--field);
     text-decoration-thickness: 3px;
     text-underline-offset: 4px;
 }
@@ -1259,7 +1251,7 @@ a.tool-card.dark:hover {
 
 .tool-card.dark :focus-visible,
 a.tool-card.dark:focus-visible {
-    outline-color: var(--yellow);
+    outline-color: var(--field);
 }
 
 .tool-card.dark .tool-name {
@@ -1278,7 +1270,7 @@ a.tool-card.dark:focus-visible {
 }
 
 .tool-card.dark .tool-cta {
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .tool-icon:empty {
@@ -1291,7 +1283,7 @@ a.tool-card.dark:focus-visible {
 }
 
 .tool-name {
-    font-size: 2.25rem;
+    font-size: var(--t-title);
     font-weight: 900;
     margin-bottom: var(--space-sm);
 }
@@ -1365,7 +1357,7 @@ a.tool-card:hover .tool-description {
     font-size: 0.75rem;
     line-height: 1.6;
     color: var(--on-ink-quiet);
-    border: 2px solid rgba(241, 242, 239, 0.18);
+    border: 2px solid rgba(237, 243, 250, 0.18);
     overflow-x: auto;
 }
 
@@ -1424,7 +1416,7 @@ a.tool-card:hover .tool-description {
 }
 
 .timeline-item.current .timeline-marker {
-    background: var(--yellow);
+    background: var(--field);
 }
 
 .timeline-dates {
@@ -1442,7 +1434,7 @@ a.tool-card:hover .tool-description {
 }
 
 .timeline-item.current .timeline-date {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
     padding: 2px 8px;
     margin-left: -8px;
@@ -1455,7 +1447,7 @@ a.tool-card:hover .tool-description {
 }
 
 .timeline-title {
-    font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+    font-size: var(--t-title);
     font-weight: 800;
     margin-bottom: var(--space-sm);
 }
@@ -1463,7 +1455,7 @@ a.tool-card:hover .tool-description {
 .current-badge {
     display: inline-block;
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
     padding: 3px 8px;
     font-family: var(--font-text);
     font-weight: 700;
@@ -1511,7 +1503,7 @@ a.tool-card:hover .tool-description {
 
 /* The line a hanging tag points to */
 .timeline-achievements li.is-target {
-    background: var(--yellow);
+    background: var(--field);
 }
 
 .timeline-tags {
@@ -1565,7 +1557,7 @@ a.tool-card:hover .tool-description {
    13. CONTACT: the close, in yellow
    ============================================================ */
 .contact {
-    background: var(--yellow);
+    background: var(--field);
     border-top: var(--rule-heavy) solid var(--ink);
     padding-bottom: var(--space-4xl);
 }
@@ -1584,10 +1576,10 @@ a.tool-card:hover .tool-description {
 .contact-headline {
     grid-column: 1;
     grid-row: 1;
-    font-size: clamp(3rem, 7.4vw, 6rem);
+    font-size: var(--t-hero);
     font-weight: 900;
     line-height: 0.92;
-    max-width: 12ch;
+    max-width: 18ch;
     margin-bottom: var(--space-lg);
 }
 
@@ -1600,7 +1592,7 @@ a.tool-card:hover .tool-description {
 .contact-intro {
     font-size: 1.25rem;
     line-height: 1.55;
-    color: var(--on-yellow-quiet);
+    color: var(--on-field-quiet);
     max-width: 50ch;
     margin-bottom: var(--space-xl);
 }
@@ -1617,7 +1609,7 @@ a.tool-card:hover .tool-description {
     align-items: center;
     gap: 10px;
     padding: 13px 20px;
-    border: 3px solid var(--ink);
+    border: 2px solid var(--ink);
     background: transparent;
     color: var(--ink);
     font-weight: 700;
@@ -1628,12 +1620,12 @@ a.tool-card:hover .tool-description {
 
 .contact-link:hover {
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .contact-link-primary {
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
 }
 
 .contact-link-primary:hover {
@@ -1738,7 +1730,7 @@ a.tool-card:hover .tool-description {
     top: -100px;
     left: 0;
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
     padding: 10px 18px;
     z-index: 9999;
     font-weight: 700;
@@ -1791,5 +1783,96 @@ a.tool-card:hover .tool-description {
 
     section {
         padding: 18pt 0;
+    }
+}
+
+
+/* ============================================================
+   17. ADDITIONS FROM THE ACCESSIBILITY AND DESIGN REVIEW
+   ============================================================ */
+
+/* A drawn arrow on each hanging tag: it says "this goes somewhere"
+   without adding any words. */
+.tag-cue {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: square;
+    transition: transform 0.2s ease;
+}
+
+a.profile-metric:hover .tag-cue,
+a.profile-metric:focus-visible .tag-cue {
+    transform: translateY(3px);
+}
+
+/* Screen-reader-only text (used for the "opens in a new tab" note) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Very small phones (320px): the three tags need every pixel */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .profile-metrics {
+        gap: 6px;
+    }
+
+    .profile-metric {
+        padding: 34px 5px 28px;
+    }
+
+    .profile-metric-label {
+        font-size: 0.75rem;
+        letter-spacing: -0.01em;
+        overflow-wrap: break-word;
+    }
+
+    .tag-cue {
+        right: 6px;
+        bottom: 6px;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Windows high-contrast and other forced-colour modes: keep the structure
+   (borders and focus) when the page's colours are replaced. */
+@media (forced-colors: active) {
+
+    .profile-metric,
+    .btn,
+    .contact-link,
+    .title-block,
+    .profile-photo,
+    .tool-card,
+    .project-card.featured,
+    .section-tag {
+        border-color: CanvasText;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline-color: Highlight;
+    }
+
+    .timeline-achievements li.is-target {
+        outline: 2px solid Highlight;
     }
 }

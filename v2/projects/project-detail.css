@@ -9,7 +9,7 @@
    not above the title.
    ============================================================ */
 .project-hero {
-    background: var(--yellow);
+    background: var(--field);
     padding: var(--space-2xl) 0 var(--space-3xl);
     border-bottom: var(--rule-heavy) solid var(--ink);
 }
@@ -40,7 +40,7 @@
 
 .project-hero h1 {
     grid-row: 2;
-    font-size: clamp(3rem, 6.8vw, 5.5rem);
+    font-size: var(--t-hero);
     max-width: 15ch;
     margin-bottom: var(--space-lg);
 }
@@ -95,7 +95,7 @@
 .project-metadata-strip {
     padding: 0;
     background: var(--panel);
-    border-bottom: 4px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
 }
 
 .metadata-grid {
@@ -146,7 +146,7 @@
 
 .metadata-value.highlight {
     align-self: flex-start;
-    background: var(--yellow);
+    background: var(--field);
     padding: 0 6px;
 }
 
@@ -176,13 +176,16 @@
 
 @media (max-width: 800px) {
     .summary-cards-grid {
-        grid-template-columns: 1fr;
+        /* minmax(0, ...) lets the column shrink below its widest content */
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
 .summary-card {
+    min-width: 0;
+    overflow-wrap: break-word;
     background: var(--panel);
-    border: 4px solid var(--ink);
+    border: 2px solid var(--ink);
     padding: var(--space-xl);
 }
 
@@ -193,7 +196,7 @@
 }
 
 .summary-card h3 {
-    font-size: 2.125rem;
+    font-size: var(--t-title);
     font-weight: 900;
     margin-bottom: var(--space-md);
 }
@@ -226,14 +229,14 @@
     font-size: 0.8125rem;
     line-height: 1.7;
     color: var(--on-ink);
-    border: 2px solid rgba(241, 242, 239, 0.18);
+    border: 2px solid rgba(237, 243, 250, 0.18);
     overflow-x: auto;
 }
 
 .eval-data-block .data-header {
-    color: var(--yellow);
+    color: var(--field);
     font-weight: 600;
-    border-bottom: 2px solid rgba(241, 242, 239, 0.18);
+    border-bottom: 2px solid rgba(237, 243, 250, 0.18);
     padding-bottom: 4px;
     margin-bottom: 6px;
 }
@@ -246,7 +249,7 @@
 }
 
 .eval-data-block .data-value {
-    color: var(--yellow);
+    color: var(--field);
     font-weight: 600;
 }
 
@@ -273,16 +276,16 @@
 }
 
 .metrics-band-item {
-    border-top: 6px solid var(--yellow);
+    border-top: 6px solid var(--field);
     padding-top: var(--space-md);
 }
 
 .metrics-band-item .metric-value {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(3.5rem, 6.4vw, 5.5rem);
     line-height: 0.95;
-    color: var(--yellow);
+    color: var(--field);
     margin-bottom: var(--space-sm);
 }
 
@@ -307,11 +310,11 @@
 
 .notes-accordion {
     max-width: 860px;
-    border-bottom: 4px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
 }
 
 .accordion-item {
-    border-top: 4px solid var(--ink);
+    border-top: 2px solid var(--ink);
 }
 
 .accordion-header {
@@ -325,7 +328,7 @@
     gap: var(--space-md);
     cursor: pointer;
     font-family: var(--font-display);
-    font-size: 1.875rem;
+    font-size: var(--t-title);
     font-weight: 800;
     line-height: 1.05;
     color: var(--ink);
@@ -333,7 +336,7 @@
 }
 
 .accordion-header:hover .accordion-toggle {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
@@ -344,7 +347,7 @@
     display: grid;
     place-items: center;
     background: var(--ink);
-    color: var(--yellow);
+    color: var(--field);
     font-family: var(--font-text);
     font-size: 1.5rem;
     font-weight: 700;
@@ -359,11 +362,14 @@
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    visibility: hidden;
+    transition: max-height 0.3s ease, visibility 0s linear 0.3s;
 }
 
 .accordion-item.open .accordion-content {
     max-height: 2000px;
+    visibility: visible;
+    transition: max-height 0.3s ease, visibility 0s linear 0s;
 }
 
 .accordion-body {
@@ -409,14 +415,14 @@
    6. BOTTOM CTA: the close, in yellow
    ============================================================ */
 .bottom-cta-section {
-    background: var(--yellow);
+    background: var(--field);
     border-top: var(--rule-heavy) solid var(--ink);
     padding: var(--space-4xl) 0;
     text-align: left;
 }
 
 .bottom-cta-section h2 {
-    font-size: clamp(2.75rem, 6vw, 4.75rem);
+    font-size: var(--t-section);
     font-weight: 900;
     line-height: 0.95;
     max-width: 16ch;
@@ -426,7 +432,7 @@
 .bottom-cta-section p {
     font-size: 1.25rem;
     line-height: 1.55;
-    color: var(--on-yellow-quiet);
+    color: var(--on-field-quiet);
     max-width: 50ch;
     margin: 0 0 var(--space-xl);
 }
@@ -480,20 +486,20 @@
     gap: 4px;
     padding: var(--space-md) var(--space-lg);
     background: var(--panel);
-    border: 3px solid var(--ink);
+    border: 2px solid var(--ink);
     color: var(--ink);
     text-decoration: none;
     transition: background-color 0.15s ease;
 }
 
 .related-project-link:hover {
-    background: var(--yellow);
+    background: var(--field);
     color: var(--ink);
 }
 
 .related-project-name {
     font-family: var(--font-display);
-    font-size: 1.625rem;
+    font-size: 1.875rem;
     font-weight: 800;
     line-height: 1.05;
     display: flex;
@@ -528,7 +534,7 @@
 
 .footer-social a {
     color: var(--on-ink);
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--field);
 }
 
 .footer-social a:hover {
@@ -536,7 +542,7 @@
 }
 
 .footer :focus-visible {
-    outline-color: var(--yellow);
+    outline-color: var(--field);
 }
 
 /* ============================================================
@@ -565,5 +571,34 @@
 
     .accordion-content {
         max-height: none !important;
+    }
+}
+
+/* Small phones: nothing may push the page wider than the screen */
+.metadata-item {
+    min-width: 0;
+}
+
+.metadata-value {
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 700px) {
+    .project-hero .eyebrow {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 380px) {
+    .metadata-item {
+        padding: 14px 10px 14px 0;
+    }
+
+    .metadata-item + .metadata-item {
+        padding-left: 10px;
+    }
+
+    .summary-card {
+        padding: 20px;
     }
 }
