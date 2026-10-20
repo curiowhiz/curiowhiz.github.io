@@ -1,8 +1,6 @@
-cat > robots.txt << 'EOF'
 # https://rajangupta.ca robots policy
 
 User-agent: *
 Disallow: /admin/
 
 Allow: /
-EOF

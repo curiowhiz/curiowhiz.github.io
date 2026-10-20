@@ -29,9 +29,9 @@
 
     <!-- Favicon REMOVED -->
 
-    <!-- Fonts are self-hosted (see styles.css): Literata for headlines and narrative, IBM Plex Sans for interface -->
-    <link rel="preload" href="fonts/literata-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Fonts are self-hosted (see styles.css): League Gothic for headlines, Libre Franklin for text -->
+    <link rel="preload" href="fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/libre-franklin-var.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -43,9 +43,9 @@
     <a href="#main" class="skip-nav">Skip to main content</a>
 
     <!-- ============================================================
-         NAVIGATION  (UPDATED - added logo dot, aria-controls, backdrop)
+         NAVIGATION
          ============================================================ -->
-    <nav class="navbar" aria-label="Main navigation">
+    <header class="navbar">
         <div class="container">
             <a href="#" class="logo">Rajan Gupta<span class="logo-dot">.</span></a>
 
@@ -56,16 +56,17 @@
                 <span></span>
             </button>
 
-            <ul class="nav-links" id="navLinks">
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#tools">Tools</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="v2/">New design</a></li>
+                <li class="nav-contact"><a href="#contact">Contact</a></li>
             </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Backdrop OUTSIDE navbar (escapes stacking context) -->
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
@@ -79,9 +80,8 @@
             <div class="container">
                 <div class="hero-grid">
 
-                    <!-- LEFT: Editorial content -->
+                    <!-- LEFT: headline and actions -->
                     <div class="hero-left">
-                        <span id="hero-eyebrow" class="eyebrow">AI PRODUCT MANAGER · TORONTO</span>
                         <h1 id="hero-tagline" class="hero-tagline">I find where AI products break, slow down, or overspend before users do.</h1>
                         <p id="hero-subtitle" class="hero-subtitle">AI Product Manager, 15+ years in performance engineering across banking, enterprise SaaS, and the public sector.</p>
                         <p id="hero-body" class="hero-body">I start with the user's problem, then decide what is worth building.</p>
@@ -100,26 +100,26 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT: Profile card -->
+                    <!-- RIGHT: portrait and title block -->
                     <div class="hero-right">
                         <div class="profile-card">
                             <img id="profile-photo" class="profile-photo" src="images/profile-pic.jpg"
                                 alt="Rajan Gupta - AI Product Manager">
-                            <p id="profile-name" class="profile-name">Rajan Gupta</p>
-                            <p id="profile-role" class="profile-role">Performance Test Lead · Bank of Montreal</p>
 
-                            <div id="profile-chips" class="profile-chips">
-                                <!-- Populated by loader.js -->
+                            <div class="title-block">
+                                <p id="hero-eyebrow" class="tb-row tb-role-line">AI PRODUCT MANAGER · TORONTO</p>
+                                <p id="profile-name" class="tb-row tb-name">Rajan Gupta</p>
+                                <p id="profile-role" class="tb-row tb-role">Performance Test Lead · Bank of Montreal</p>
+                                <div id="profile-chips" class="profile-chips">
+                                    <!-- Populated by loader.js -->
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Decorative response curve, drawn by js/trace.js -->
-                <canvas id="hero-trace" class="hero-trace" aria-hidden="true"></canvas>
-
-                <!-- Results ledger: three headline measurements, populated by loader.js -->
+                <!-- Three tags hang from the rail; each links to the line of evidence it came from -->
                 <div id="profile-metrics" class="profile-metrics">
                     <!-- Populated by loader.js -->
                 </div>
@@ -131,19 +131,13 @@
              ============================================================ -->
         <section id="about" class="about">
             <div class="container">
-                <div class="about-grid">
+                <div class="section-header about-head">
+                    <h2 id="about-headline" class="about-headline">Engineering rigor meets product judgment.</h2>
+                    <span class="section-tag">ABOUT</span>
+                </div>
 
-                    <div class="about-left">
-                        <span class="eyebrow">ABOUT</span>
-                        <h2 id="about-headline" class="about-headline">Engineering rigor meets product judgment.</h2>
-                    </div>
-
-                    <div class="about-right">
-                        <div id="about-paragraphs" class="about-paragraphs">
-                            <!-- Populated by loader.js -->
-                        </div>
-                    </div>
-
+                <div id="about-paragraphs" class="about-paragraphs">
+                    <!-- Populated by loader.js -->
                 </div>
             </div>
         </section>
@@ -154,8 +148,8 @@
         <section class="capabilities" aria-label="Problems I solve">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow section-eyebrow">WHAT I DO</span>
                     <h2 class="section-title">Problems I Solve</h2>
+                    <span class="section-tag">WHAT I DO</span>
                     <p class="section-subtitle">Where AI products tend to fail, and what I do about it.</p>
                 </div>
 
@@ -171,8 +165,8 @@
         <section id="projects" class="projects">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow section-eyebrow">SELECTED WORK</span>
                     <h2 class="section-title">Product Teardowns</h2>
+                    <span class="section-tag">SELECTED WORK</span>
                     <p class="section-subtitle">Problems I found in products people use, and how I would fix them. Results are projections unless noted.</p>
                 </div>
 
@@ -188,8 +182,8 @@
         <section id="tools" class="tools">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow section-eyebrow">TOOLS & SYSTEMS</span>
                     <h2 class="section-title">Tools & Products</h2>
+                    <span class="section-tag">TOOLS & SYSTEMS</span>
                     <p class="section-subtitle">Open-source tools and AI workflows I've built to scale research,
                         evaluation, and prototyping.</p>
                 </div>
@@ -206,8 +200,8 @@
         <section id="experience" class="experience">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow section-eyebrow">EXPERIENCE</span>
                     <h2 class="section-title">Professional Experience</h2>
+                    <span class="section-tag">EXPERIENCE</span>
                     <p class="section-subtitle">15+ years across banking, enterprise SaaS, and public sector.</p>
                 </div>
 
@@ -218,13 +212,13 @@
         </section>
 
         <!-- ============================================================
-     CONTACT SECTION
-     ============================================================ -->
+             CONTACT SECTION
+             ============================================================ -->
         <section id="contact" class="contact">
             <div class="container">
                 <div class="contact-inner">
-                    <span class="eyebrow section-eyebrow">GET IN TOUCH</span>
                     <h2 class="contact-headline">Hiring for an AI PM role? Let's talk.</h2>
+                    <span class="section-tag">GET IN TOUCH</span>
                     <p class="contact-intro">Open to senior Product Manager and AI Product Manager roles.
                         Always happy to discuss AI evaluation, system reliability, or product strategy.</p>
 
@@ -293,21 +287,16 @@
     </main>
 
     <!-- ============================================================
-     FOOTER
-     ============================================================ -->
+         FOOTER
+         ============================================================ -->
     <footer class="footer">
         <div class="container">
             <p class="footer-text">&copy; 2026 Rajan Gupta · Built with care in Toronto.</p>
         </div>
     </footer>
 
-    <!-- ============================================================
-         NAVIGATION SCRIPT (NEW - handles hamburger + scroll state)
-         ============================================================ -->
-
-    <!-- Loader Script -->
     <script src="js/loader.js"></script>
-    <script src="js/trace.js"></script>
+    <script src="js/enhance.js"></script>
 
 </body>
 
