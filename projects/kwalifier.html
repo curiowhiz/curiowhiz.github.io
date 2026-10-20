@@ -53,7 +53,7 @@
                 <h1>Kwalifier</h1>
                 <p class="subtitle">Bank offer pages list every product's terms in the abstract, but almost never
                     answer the one question a customer actually has: "what do I qualify for, right now, given my own
-                    account?" Kwalifier answers that directly - a deterministic eligibility verdict backed by an
+                    account?" Kwalifier answers that directly: a deterministic eligibility verdict backed by an
                     AI-written explanation, grounded strictly in the customer's account data and the bank's own offer
                     catalogue.</p>
                 <div class="hero-ctas">
@@ -78,7 +78,7 @@
                     </div>
                     <div class="metadata-item">
                         <span class="metadata-label">Role</span>
-                        <span class="metadata-value">Solo Builder - Product, Prompts &amp; Code</span>
+                        <span class="metadata-value">Solo Builder: Product, Prompts, and Code</span>
                     </div>
                     <div class="metadata-item">
                         <span class="metadata-label">Stack</span>
@@ -98,14 +98,14 @@
                     <div class="summary-card">
                         <h3>The Problem</h3>
                         <p>Eligibility for a bank offer usually depends on account details a customer would have to
-                            dig up and cross-reference against fine print themselves - minimum balance, product
+                            dig up and cross-reference against fine print themselves: minimum balance, product
                             tenure, transaction history. Most people give up before finishing that comparison, and
                             end up missing benefits they already qualify for.</p>
                     </div>
                     <div class="summary-card">
                         <h3>The Approach</h3>
-                        <p>A deterministic rules engine decides eligibility first - eligible, not eligible, or a
-                            near-miss - by evaluating the customer's actual account data against the bank's offer
+                        <p>A deterministic rules engine decides eligibility first (eligible, not eligible, or a
+                            near-miss) by evaluating the customer's actual account data against the bank's offer
                             catalogue. The verdict itself is never left to the model; an LLM (Google Gemini) is
                             called only afterward, to turn that verdict into a clear, plain-language explanation.</p>
                     </div>
@@ -113,14 +113,14 @@
                         <h3>Grounded, Not Guessed</h3>
                         <p>The core guarantee the product is built around: the assistant never speculates about
                             eligibility. Every explanation is grounded in retrieval over the customer's real account
-                            data and the bank's official offer terms - if the data doesn't support a claim, the
+                            data and the bank's official offer terms; if the data doesn't support a claim, the
                             assistant doesn't make it.</p>
                     </div>
                     <div class="summary-card">
                         <h3>The Experience</h3>
                         <p>An eligibility snapshot shows verdicts across the offer catalogue at a glance, and a chat
-                            interface lets the customer ask follow-up questions in plain language - "why don't I
-                            qualify for the premium card?" - and get an answer grounded in their own data rather than
+                            interface lets the customer ask follow-up questions in plain language ("why don't I
+                            qualify for the premium card?") and get an answer grounded in their own data rather than
                             a generic FAQ response.</p>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                                         evaluates account data against offer criteria deterministically, so the same
                                         inputs always produce the same verdict</li>
                                     <li><strong>The LLM's job starts after the verdict exists:</strong> Gemini
-                                        explains a decision that has already been made - it never decides eligibility
+                                        explains a decision that has already been made; it never decides eligibility
                                         itself</li>
                                     <li><strong>Near-misses are a first-class outcome:</strong> customers who are
                                         close to qualifying see exactly what's missing, not just a flat no</li>
@@ -183,8 +183,7 @@
         <section class="bottom-cta-section">
             <div class="container">
                 <h2>Try It Yourself</h2>
-                <p>Switch between three sample customer profiles and ask what they qualify for - no account or
-                    real data required. Watch the eligibility snapshot update instantly, then ask a follow-up
+                <p>Switch between three sample customer profiles and ask what they qualify for, with no account or real data required. Watch the eligibility snapshot update instantly, then ask a follow-up
                     question in chat to see the same verdicts explained in plain language.</p>
                 <div class="bottom-cta-buttons">
                     <a href="https://kwalifierrag.vercel.app/" target="_blank" rel="noopener"
