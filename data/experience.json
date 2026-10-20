@@ -8,8 +8,8 @@
         "endDate": "Present",
         "current": true,
         "achievements": [
-            "Leading product roadmap and performance testing for a Canadian digital banking platform migrating on-premise services to AWS Lambda, improving deployment speed by 40%.",
-            "Conducted extensive pre- and post-migration user research, achieving a 'Very Satisfied' CSAT score by optimizing response times and latency."
+            "Moving a Canadian digital banking platform's on-premise services to AWS Lambda risked slower, less reliable experiences for customers. I owned the product roadmap and the performance testing, and deployments became 40% faster.",
+            "I ran user research before and after the migration to check that customers felt the change. Optimizing response times and latency earned a 'Very Satisfied' CSAT score."
         ],
         "tags": [
             "AWS Lambda",
@@ -27,8 +27,8 @@
         "endDate": "Jun 2024",
         "current": false,
         "achievements": [
-            "Managed CashPro Mobile product roadmap, boosting performance and increasing user retention by 7% in global wholesale banking applications.",
-            "Spearheaded key initiatives including cheque deposits and cross-border remittances, improving user engagement by 11% through targeted research and feature prioritization."
+            "Global wholesale banking clients needed CashPro Mobile to be faster and to cover more of their work. I managed the product roadmap and prioritized features, which raised user retention by 7%.",
+            "I led cheque deposits and cross-border remittances, using targeted research and feature prioritization, which lifted user engagement by 11%."
         ],
         "tags": [
             "Mobile Product",
@@ -45,8 +45,8 @@
         "endDate": "Feb 2023",
         "current": false,
         "achievements": [
-            "Led enhancement of user journeys for U.S. public sector agencies, driving 663% revenue growth from $157K to $1.2M in 14 months by standardizing performance portfolios and collaborating across Sales and Marketing for GTM strategies.",
-            "Identified key issues and prioritized solutions in healthcare, childcare grants, and licensing systems, delivering seamless user flows via MVPs and prototypes."
+            "U.S. public sector agencies wanted a single CRM application across their healthcare, childcare grant, and licensing systems for their designated user base. I led the enhancement of those user journeys, shipped MVPs and prototypes, and worked with Sales and Marketing on go-to-market strategy.",
+            "I standardized the performance portfolios and contributed to revenue growth of 663%, from $157K to $1.2M in 14 months."
         ],
         "tags": [
             "GTM Strategy",
@@ -64,8 +64,8 @@
         "endDate": "Jul 2020",
         "current": false,
         "achievements": [
-            "Managed microservices for SAP Concur, improving test coverage by 40% and reducing deployment time by 37% through Agile coaching and cross-functional collaboration.",
-            "Developed product strategies for SAP Lumira, leading transition from MVP to final stage and aligning success metrics with business KPIs."
+            "SAP Concur's microservices needed faster, safer releases and had to accommodate different countries across Europe, Australia, and New Zealand. I managed their quality and coached teams on Agile, which raised test coverage by 40% and cut deployment time by 37%.",
+            "For SAP Lumira, I set the product strategy to move it from MVP to final stage, with success metrics tied to business KPIs."
         ],
         "tags": [
             "Microservices",
@@ -83,8 +83,8 @@
         "endDate": "Aug 2014",
         "current": false,
         "achievements": [
-            "Optimized Tesco's e-commerce application performance, contributing to a 17% increase in Black Friday sales through robust load and stress testing.",
-            "Led performance testing for Heineken's SAP GUI and CRM systems, increasing order processing by 83%, from 30K to 55K per hour."
+            "Tesco's e-commerce site had to hold up on Black Friday. I led the load and stress testing, contributing to a 17% increase in Black Friday sales.",
+            "Heineken's SAP GUI and CRM systems capped how many sales orders could be processed. My performance testing raised order processing by 83%, from 30K to 55K per hour."
         ],
         "tags": [
             "E-Commerce",

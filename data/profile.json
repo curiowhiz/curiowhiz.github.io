@@ -1,9 +1,9 @@
 {
   "name": "Rajan Gupta",
   "eyebrowLabel": "AI PRODUCT MANAGER · TORONTO",
-  "tagline": "Building AI products with engineering rigor.",
-  "subtitle": "AI Product Manager specializing in LLM evaluation, system reliability, and cost optimization.",
-  "supportingBody": "15+ years across banking, enterprise SaaS, and public sector, applying performance engineering rigor to AI-powered products.",
+  "tagline": "I find where AI products break, slow down, or overspend before users do.",
+  "subtitle": "AI Product Manager, 15+ years in performance engineering across banking, enterprise SaaS, and the public sector.",
+  "supportingBody": "I start with the user's problem, then decide what is worth building.",
   "profilePhoto": "images/profile-pic.jpg",
   "currentRole": "Performance Test Lead · Bank of Montreal",
   "metadataChips": [
@@ -14,7 +14,7 @@
   "heroMetrics": [
     {
       "value": "$1.2M",
-      "label": "Revenue Impact"
+      "label": "MTX Group revenue, up from $157K"
     },
     {
       "value": "40%",
@@ -27,45 +27,30 @@
   ],
   "aboutHeadline": "Engineering rigor meets product judgment.",
   "aboutParagraphs": [
-    "I lead performance and product initiatives at Bank of Montreal, where I'm migrating on-premise services to AWS Lambda, improving deployment speed by 40% and optimizing latency-cost trade-offs. Previously, I delivered <strong>663% revenue growth</strong> at MTX Group (from $157K to $1.2M in 14 months) and led product roadmaps for Bank of America's CashPro Mobile, improving user retention by 7%.",
-    "My 15+ years in <strong>Performance Engineering and Quality Assurance</strong> translates directly into AI Product Management: I've spent my career testing and engineering applications, finding bottlenecks, auditing edge cases, and managing trade-offs between latency, accuracy, and cost, which are the exact problems LLM-powered products face in 2026.",
-    "I use a modern AI-powered PM stack: <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, and <strong>n8n</strong> for workflow automation."
+    "I'm an AI Product Manager who starts with the problem and works toward the smallest fix that solves it. At Bank of Montreal, I lead performance and product work on moving on-premise services to AWS Lambda, which improved deployment speed by 40%. Before that, I contributed to <strong>663% revenue growth</strong> at MTX Group, from $157K to $1.2M in 14 months, and led the product roadmap for Bank of America's CashPro Mobile, where user retention rose 7%.",
+    "For 15+ years in <strong>Performance Engineering and Quality Assurance</strong>, I have found bottlenecks and audited edge cases, so I ask one question first: what is going wrong for the user, and what does it cost? AI products fail in familiar ways: they are slow, wrong, or too expensive to run. Managing the trade-offs between latency, accuracy, and cost is the daily work of LLM-powered products in 2026.",
+    "My working stack: <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, and <strong>n8n</strong> for workflow automation."
   ],
   "capabilities": [
     {
       "icon": "",
-      "title": "System Reliability",
+      "title": "AI that breaks in production",
       "description": "Audit failure modes, edge cases, and prompt injection vulnerabilities."
     },
     {
       "icon": "",
-      "title": "Cost Optimization",
+      "title": "AI that is slow or costs too much",
       "description": "Manage trade-offs between latency, accuracy, and token economics."
     },
     {
       "icon": "",
-      "title": "Product Strategy",
-      "description": "Translate user research into AI-native product roadmaps and measurable outcomes."
+      "title": "Roadmaps built on assumptions",
+      "description": "Turn user research into AI-native roadmaps with measurable outcomes."
     },
     {
       "icon": "",
-      "title": "Performance Engineering",
-      "description": "15+ years optimizing systems at enterprise scale across banking and SaaS."
-    },
-    {
-      "icon": "",
-      "title": "User Research",
-      "description": "Cross-functional interviews and behavioral analysis to identify high-signal pain points."
-    },
-    {
-      "icon": "",
-      "title": "Cross-Functional Leadership",
-      "description": "Align engineering, design, and stakeholder teams around shared outcomes."
-    },
-    {
-      "icon": "",
-      "title": "AI-Powered Workflows",
-      "description": "Build automation pipelines using n8n, Claude, and Python to scale research."
+      "title": "Teams pulling in different directions",
+      "description": "Align engineering, design, and stakeholders around shared outcomes."
     }
   ],
   "location": "Toronto, Ontario, Canada",
