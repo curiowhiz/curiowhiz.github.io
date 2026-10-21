@@ -8,7 +8,7 @@
         "endDate": "Present",
         "current": true,
         "achievements": [
-            "Moving a Canadian digital banking platform's on-premise services to AWS Lambda risked slower, less reliable experiences for customers. I owned the product roadmap and the performance testing, and deployments became 40% faster.",
+            "Moving a Canadian digital banking platform's on-premise services to AWS Lambda risked slower, less reliable experiences for customers. I led the performance testing and influenced the product roadmap from the performance side, and deployments became 40% faster.",
             "I ran user research before and after the migration to check that customers felt the change. Optimizing response times and latency earned a 'Very Satisfied' CSAT score."
         ],
         "tags": [
@@ -27,8 +27,8 @@
         "endDate": "Jun 2024",
         "current": false,
         "achievements": [
-            "Global wholesale banking clients needed CashPro Mobile to be faster. I managed the product roadmap and prioritized features, which raised user retention by 7%.",
-            "I led cheque deposits and cross-border remittances, using targeted research and feature prioritization, which lifted user engagement by 11%."
+            "Global wholesale banking clients needed CashPro Mobile to be faster. From the performance side, I influenced the product roadmap and feature priorities, and user retention rose by 7%.",
+            "I contributed to cheque deposits and cross-border remittances, using targeted research and feature prioritization, and user engagement rose by 11%."
         ],
         "tags": [
             "Mobile Product",
@@ -45,7 +45,7 @@
         "endDate": "Feb 2023",
         "current": false,
         "achievements": [
-            "U.S. public sector agencies wanted a single CRM application across their healthcare, childcare grant, and licensing systems for their designated user base. I led the enhancement of those user journeys, shipped MVPs and prototypes, and worked with Sales and Marketing on go-to-market strategy.",
+            "U.S. public sector agencies wanted a single CRM application across their healthcare, childcare grant, and licensing systems for their designated user base. I worked with the Sales and product teams to understand each agency's customer-centric gaps, then managed and delivered those projects, including MVPs and prototypes.",
             "I standardized the performance portfolios and contributed to revenue growth of 663%, from $157K to $1.2M in 14 months."
         ],
         "tags": [

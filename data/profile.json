@@ -2,7 +2,7 @@
   "name": "Rajan Gupta",
   "eyebrowLabel": "AI PRODUCT MANAGER · TORONTO",
   "tagline": "I find where AI products break, slow down, or overspend before users do.",
-  "subtitle": "AI Product Manager, 15+ years in performance engineering across banking, enterprise SaaS, and the public sector.",
+  "subtitle": "AI Product Manager, moving from 15+ years in performance engineering across banking, enterprise SaaS, and the public sector.",
   "supportingBody": "I start with the user's problem, then decide what is worth building.",
   "profilePhoto": "images/profile-pic.jpg",
   "currentRole": "Performance Test Lead · Bank of Montreal",
@@ -27,7 +27,7 @@
   ],
   "aboutHeadline": "Engineering rigor meets product judgment.",
   "aboutParagraphs": [
-    "I'm an AI Product Manager who starts with the problem and works toward the smallest fix that solves it. At Bank of Montreal, I lead performance and product work on moving on-premise services to AWS Lambda, which improved deployment speed by 40%. Before that, I contributed to <strong>663% revenue growth</strong> at MTX Group, from $157K to $1.2M in 14 months, and led the product roadmap for Bank of America's CashPro Mobile, where user retention rose 7%.",
+    "I'm a performance engineering lead moving into AI product management, where I start with the problem and work toward the smallest fix that solves it. At Bank of Montreal, I lead the performance work on moving on-premise services to AWS Lambda, which improved deployment speed by 40%, and I influence the product roadmap from that seat. Before that, I contributed to <strong>663% revenue growth</strong> at MTX Group, from $157K to $1.2M in 14 months, and influenced the CashPro Mobile roadmap at Bank of America, where user retention rose 7%.",
     "For 15+ years in <strong>Performance Engineering and Quality Assurance</strong>, I have found bottlenecks and audited edge cases, so I ask one question first: what is going wrong for the user, and what does it cost? AI products fail in familiar ways: they are slow, wrong, or too expensive to run. Managing the trade-offs between latency, accuracy, and cost is the daily work of LLM-powered products in 2026.",
     "My working stack: <strong>Claude AI</strong> for research synthesis, <strong>Google AI Studio</strong> for rapid prototyping, and <strong>n8n</strong> for workflow automation."
   ],

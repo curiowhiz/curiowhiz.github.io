@@ -3,7 +3,7 @@
     "id": "kwalifier",
     "name": "Kwalifier",
     "icon": "",
-    "description": "People miss bank offers they already qualify for. This AI assistant tells customers exactly which offers, benefits, and products they qualify for, based on their own account data and the bank's official offer catalogue. Grounded in RAG, it never speculates.",
+    "description": "People miss bank offers they already qualify for. Kwalifier started as a PRD assignment and became a working side project: an AI assistant that tells customers exactly which offers, benefits, and products they qualify for, based on their own account data and the bank's official offer catalogue. Grounded in RAG, it never speculates.",
     "technologies": [
       "RAG",
       "LLM",
